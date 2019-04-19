@@ -49,3 +49,4 @@ def convert(self, s, numRows):
                     zigzag += s[(2 * numRows - i) + (n * space) - 1]
                 n += 1
     return zigzag
+
