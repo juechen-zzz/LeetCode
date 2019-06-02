@@ -37,7 +37,6 @@ class Solution:
                         # append when heights[i] > stack top value
                         if stack[-1][0] != heights[i]:
                             stack.append((heights[i], start_i))
-
                         break
                     else:
                         h, start_i = stack.pop()
