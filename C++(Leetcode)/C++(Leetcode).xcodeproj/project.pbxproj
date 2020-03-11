@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		81BADB3D241987C8009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB3C241987C8009BB2E8 /* main.cpp */; };
 		81BADB4A24198843009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB4924198843009BB2E8 /* main.cpp */; };
+		81BADB5524198D8F009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB5424198D8F009BB2E8 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		81BADB5024198D8F009BB2E8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +47,8 @@
 		81BADB3C241987C8009BB2E8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		81BADB4724198843009BB2E8 /* 0001_Two Sum */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0001_Two Sum"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BADB4924198843009BB2E8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		81BADB5224198D8F009BB2E8 /* 0002_Add Two Numbers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0002_Add Two Numbers"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81BADB5424198D8F009BB2E8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		81BADB4F24198D8F009BB2E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -62,6 +81,7 @@
 			children = (
 				81BADB3B241987C8009BB2E8 /* test */,
 				81BADB4824198843009BB2E8 /* 0001_Two Sum */,
+				81BADB5324198D8F009BB2E8 /* 0002_Add Two Numbers */,
 				81BADB3A241987C8009BB2E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +91,7 @@
 			children = (
 				81BADB39241987C8009BB2E8 /* C++(Leetcode) */,
 				81BADB4724198843009BB2E8 /* 0001_Two Sum */,
+				81BADB5224198D8F009BB2E8 /* 0002_Add Two Numbers */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +110,14 @@
 				81BADB4924198843009BB2E8 /* main.cpp */,
 			);
 			path = "0001_Two Sum";
+			sourceTree = "<group>";
+		};
+		81BADB5324198D8F009BB2E8 /* 0002_Add Two Numbers */ = {
+			isa = PBXGroup;
+			children = (
+				81BADB5424198D8F009BB2E8 /* main.cpp */,
+			);
+			path = "0002_Add Two Numbers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +157,23 @@
 			productReference = 81BADB4724198843009BB2E8 /* 0001_Two Sum */;
 			productType = "com.apple.product-type.tool";
 		};
+		81BADB5124198D8F009BB2E8 /* 0002_Add Two Numbers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81BADB5824198D8F009BB2E8 /* Build configuration list for PBXNativeTarget "0002_Add Two Numbers" */;
+			buildPhases = (
+				81BADB4E24198D8F009BB2E8 /* Sources */,
+				81BADB4F24198D8F009BB2E8 /* Frameworks */,
+				81BADB5024198D8F009BB2E8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0002_Add Two Numbers";
+			productName = "0002_Add Two Numbers";
+			productReference = 81BADB5224198D8F009BB2E8 /* 0002_Add Two Numbers */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -141,6 +187,9 @@
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					81BADB4624198843009BB2E8 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					81BADB5124198D8F009BB2E8 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
@@ -160,6 +209,7 @@
 			targets = (
 				81BADB38241987C8009BB2E8 /* C++(Leetcode) */,
 				81BADB4624198843009BB2E8 /* 0001_Two Sum */,
+				81BADB5124198D8F009BB2E8 /* 0002_Add Two Numbers */,
 			);
 		};
 /* End PBXProject section */
@@ -178,6 +228,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				81BADB4A24198843009BB2E8 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81BADB4E24198D8F009BB2E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81BADB5524198D8F009BB2E8 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +383,22 @@
 			};
 			name = Release;
 		};
+		81BADB5624198D8F009BB2E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		81BADB5724198D8F009BB2E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -351,6 +425,15 @@
 			buildConfigurations = (
 				81BADB4C24198843009BB2E8 /* Debug */,
 				81BADB4D24198843009BB2E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81BADB5824198D8F009BB2E8 /* Build configuration list for PBXNativeTarget "0002_Add Two Numbers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81BADB5624198D8F009BB2E8 /* Debug */,
+				81BADB5724198D8F009BB2E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
