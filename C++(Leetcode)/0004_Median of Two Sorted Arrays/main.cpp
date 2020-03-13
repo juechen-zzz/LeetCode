@@ -55,3 +55,27 @@ public:
         return ans;
     }
 };
+
+//class Solution {
+//public:
+//    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+//        double ans = 0;
+//        vector<int> sorted_list(nums1.size() + nums2.size());
+//
+//        merge(nums1.begin(),nums1.end(),nums2.begin(),nums2.end(),sorted_list.begin());
+//
+//        double median_pos = (double)(sorted_list.size() + 1 ) / 2;
+//        //cout<<median_pos<<endl;
+//        //cout<<sorted_list.size()<<endl;
+//
+//        if ((int)std::floor(median_pos) == (int)std::ceil(median_pos)) {
+//            ans = (double)sorted_list[(int)median_pos - 1];
+//        }
+//        else{
+//            ans = (double)(sorted_list[(int)std::floor(median_pos) - 1] + sorted_list[(int)std::ceil(median_pos) - 1] ) /2;
+//        }
+//
+//        return ans;
+//
+//    }
+//};
