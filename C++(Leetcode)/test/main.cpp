@@ -7,9 +7,21 @@
 //
 
 #include <iostream>
+#include <vector>
+using namespace std;
+
+void PrintVector(vector<int> &v){
+    for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {
+        cout << (*it) << " ";
+    }
+}
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    vector<int> idx(96, -1);
+    PrintVector(idx);
+    string s = " ";
+    if (s[0] >= 32) {
+        cout << "123";
+    }
     return 0;
 }

@@ -10,6 +10,8 @@
 		81BADB3D241987C8009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB3C241987C8009BB2E8 /* main.cpp */; };
 		81BADB4A24198843009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB4924198843009BB2E8 /* main.cpp */; };
 		81BADB5524198D8F009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB5424198D8F009BB2E8 /* main.cpp */; };
+		81BADB60241BDAB9009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB5F241BDAB9009BB2E8 /* main.cpp */; };
+		81BADB6B241BEBEB009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB6A241BEBEB009BB2E8 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		81BADB5B241BDAB9009BB2E8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		81BADB66241BEBEB009BB2E8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +69,10 @@
 		81BADB4924198843009BB2E8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		81BADB5224198D8F009BB2E8 /* 0002_Add Two Numbers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0002_Add Two Numbers"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BADB5424198D8F009BB2E8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		81BADB5D241BDAB9009BB2E8 /* 0003_Longest Substring Without Repeating Characters */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0003_Longest Substring Without Repeating Characters"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81BADB5F241BDAB9009BB2E8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		81BADB68241BEBEB009BB2E8 /* 0004_Median of Two Sorted Arrays */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0004_Median of Two Sorted Arrays"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81BADB6A241BEBEB009BB2E8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +97,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		81BADB5A241BDAB9009BB2E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81BADB65241BEBEB009BB2E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +120,8 @@
 				81BADB3B241987C8009BB2E8 /* test */,
 				81BADB4824198843009BB2E8 /* 0001_Two Sum */,
 				81BADB5324198D8F009BB2E8 /* 0002_Add Two Numbers */,
+				81BADB5E241BDAB9009BB2E8 /* 0003_Longest Substring Without Repeating Characters */,
+				81BADB69241BEBEB009BB2E8 /* 0004_Median of Two Sorted Arrays */,
 				81BADB3A241987C8009BB2E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +132,8 @@
 				81BADB39241987C8009BB2E8 /* C++(Leetcode) */,
 				81BADB4724198843009BB2E8 /* 0001_Two Sum */,
 				81BADB5224198D8F009BB2E8 /* 0002_Add Two Numbers */,
+				81BADB5D241BDAB9009BB2E8 /* 0003_Longest Substring Without Repeating Characters */,
+				81BADB68241BEBEB009BB2E8 /* 0004_Median of Two Sorted Arrays */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +160,22 @@
 				81BADB5424198D8F009BB2E8 /* main.cpp */,
 			);
 			path = "0002_Add Two Numbers";
+			sourceTree = "<group>";
+		};
+		81BADB5E241BDAB9009BB2E8 /* 0003_Longest Substring Without Repeating Characters */ = {
+			isa = PBXGroup;
+			children = (
+				81BADB5F241BDAB9009BB2E8 /* main.cpp */,
+			);
+			path = "0003_Longest Substring Without Repeating Characters";
+			sourceTree = "<group>";
+		};
+		81BADB69241BEBEB009BB2E8 /* 0004_Median of Two Sorted Arrays */ = {
+			isa = PBXGroup;
+			children = (
+				81BADB6A241BEBEB009BB2E8 /* main.cpp */,
+			);
+			path = "0004_Median of Two Sorted Arrays";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +232,40 @@
 			productReference = 81BADB5224198D8F009BB2E8 /* 0002_Add Two Numbers */;
 			productType = "com.apple.product-type.tool";
 		};
+		81BADB5C241BDAB9009BB2E8 /* 0003_Longest Substring Without Repeating Characters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81BADB63241BDAB9009BB2E8 /* Build configuration list for PBXNativeTarget "0003_Longest Substring Without Repeating Characters" */;
+			buildPhases = (
+				81BADB59241BDAB9009BB2E8 /* Sources */,
+				81BADB5A241BDAB9009BB2E8 /* Frameworks */,
+				81BADB5B241BDAB9009BB2E8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0003_Longest Substring Without Repeating Characters";
+			productName = "0003_Longest Substring Without Repeating Characters";
+			productReference = 81BADB5D241BDAB9009BB2E8 /* 0003_Longest Substring Without Repeating Characters */;
+			productType = "com.apple.product-type.tool";
+		};
+		81BADB67241BEBEB009BB2E8 /* 0004_Median of Two Sorted Arrays */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81BADB6C241BEBEB009BB2E8 /* Build configuration list for PBXNativeTarget "0004_Median of Two Sorted Arrays" */;
+			buildPhases = (
+				81BADB64241BEBEB009BB2E8 /* Sources */,
+				81BADB65241BEBEB009BB2E8 /* Frameworks */,
+				81BADB66241BEBEB009BB2E8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0004_Median of Two Sorted Arrays";
+			productName = "0004_Median of Two Sorted Arrays";
+			productReference = 81BADB68241BEBEB009BB2E8 /* 0004_Median of Two Sorted Arrays */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -190,6 +282,12 @@
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					81BADB5124198D8F009BB2E8 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					81BADB5C241BDAB9009BB2E8 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					81BADB67241BEBEB009BB2E8 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
@@ -210,6 +308,8 @@
 				81BADB38241987C8009BB2E8 /* C++(Leetcode) */,
 				81BADB4624198843009BB2E8 /* 0001_Two Sum */,
 				81BADB5124198D8F009BB2E8 /* 0002_Add Two Numbers */,
+				81BADB5C241BDAB9009BB2E8 /* 0003_Longest Substring Without Repeating Characters */,
+				81BADB67241BEBEB009BB2E8 /* 0004_Median of Two Sorted Arrays */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +336,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				81BADB5524198D8F009BB2E8 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81BADB59241BDAB9009BB2E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81BADB60241BDAB9009BB2E8 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81BADB64241BEBEB009BB2E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81BADB6B241BEBEB009BB2E8 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +515,38 @@
 			};
 			name = Release;
 		};
+		81BADB61241BDAB9009BB2E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		81BADB62241BDAB9009BB2E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		81BADB6D241BEBEB009BB2E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		81BADB6E241BEBEB009BB2E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -434,6 +582,24 @@
 			buildConfigurations = (
 				81BADB5624198D8F009BB2E8 /* Debug */,
 				81BADB5724198D8F009BB2E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81BADB63241BDAB9009BB2E8 /* Build configuration list for PBXNativeTarget "0003_Longest Substring Without Repeating Characters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81BADB61241BDAB9009BB2E8 /* Debug */,
+				81BADB62241BDAB9009BB2E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81BADB6C241BEBEB009BB2E8 /* Build configuration list for PBXNativeTarget "0004_Median of Two Sorted Arrays" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81BADB6D241BEBEB009BB2E8 /* Debug */,
+				81BADB6E241BEBEB009BB2E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

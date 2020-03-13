@@ -29,7 +29,6 @@ public:
     vector<int> twoSum(vector<int>& nums, int target) {
         std::map<int, int> number;
         vector<int> result;
-        bool ret = false;
         
         for(int i = 0; i<nums.size(); i++){
             int tag = target-nums[i];
@@ -37,11 +36,7 @@ public:
             if(number.count(tag) && number[tag] !=i){
                 result.push_back(number[tag]);
                 result.push_back(i);
-                ret = true;
                 break;
-            }
-            if(ret == true){
-               break;
             }
             // 存储值-键对
             number[nums[i]] = i;
