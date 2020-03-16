@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81047A4B241F63A4000E848F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81047A4A241F63A4000E848F /* main.cpp */; };
+		81047A56241F7363000E848F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81047A55241F7363000E848F /* main.cpp */; };
 		81BADB3D241987C8009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB3C241987C8009BB2E8 /* main.cpp */; };
 		81BADB4A24198843009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB4924198843009BB2E8 /* main.cpp */; };
 		81BADB5524198D8F009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB5424198D8F009BB2E8 /* main.cpp */; };
@@ -15,6 +17,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		81047A46241F63A4000E848F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		81047A51241F7363000E848F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		81BADB37241987C8009BB2E8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +83,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		81047A48241F63A4000E848F /* 0005_Longest Palindromic Substring */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0005_Longest Palindromic Substring"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81047A4A241F63A4000E848F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		81047A53241F7363000E848F /* 0006_ZigZag Conversion */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0006_ZigZag Conversion"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81047A55241F7363000E848F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		81BADB39241987C8009BB2E8 /* C++(Leetcode) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++(Leetcode)"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BADB3C241987C8009BB2E8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		81BADB4724198843009BB2E8 /* 0001_Two Sum */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0001_Two Sum"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +100,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		81047A45241F63A4000E848F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81047A50241F7363000E848F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81BADB36241987C8009BB2E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -114,6 +152,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81047A49241F63A4000E848F /* 0005_Longest Palindromic Substring */ = {
+			isa = PBXGroup;
+			children = (
+				81047A4A241F63A4000E848F /* main.cpp */,
+			);
+			path = "0005_Longest Palindromic Substring";
+			sourceTree = "<group>";
+		};
+		81047A54241F7363000E848F /* 0006_ZigZag Conversion */ = {
+			isa = PBXGroup;
+			children = (
+				81047A55241F7363000E848F /* main.cpp */,
+			);
+			path = "0006_ZigZag Conversion";
+			sourceTree = "<group>";
+		};
 		81BADB30241987C8009BB2E8 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +176,8 @@
 				81BADB5324198D8F009BB2E8 /* 0002_Add Two Numbers */,
 				81BADB5E241BDAB9009BB2E8 /* 0003_Longest Substring Without Repeating Characters */,
 				81BADB69241BEBEB009BB2E8 /* 0004_Median of Two Sorted Arrays */,
+				81047A49241F63A4000E848F /* 0005_Longest Palindromic Substring */,
+				81047A54241F7363000E848F /* 0006_ZigZag Conversion */,
 				81BADB3A241987C8009BB2E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,6 +190,8 @@
 				81BADB5224198D8F009BB2E8 /* 0002_Add Two Numbers */,
 				81BADB5D241BDAB9009BB2E8 /* 0003_Longest Substring Without Repeating Characters */,
 				81BADB68241BEBEB009BB2E8 /* 0004_Median of Two Sorted Arrays */,
+				81047A48241F63A4000E848F /* 0005_Longest Palindromic Substring */,
+				81047A53241F7363000E848F /* 0006_ZigZag Conversion */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,6 +239,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		81047A47241F63A4000E848F /* 0005_Longest Palindromic Substring */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81047A4E241F63A4000E848F /* Build configuration list for PBXNativeTarget "0005_Longest Palindromic Substring" */;
+			buildPhases = (
+				81047A44241F63A4000E848F /* Sources */,
+				81047A45241F63A4000E848F /* Frameworks */,
+				81047A46241F63A4000E848F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0005_Longest Palindromic Substring";
+			productName = "0005_Longest Palindromic Substring";
+			productReference = 81047A48241F63A4000E848F /* 0005_Longest Palindromic Substring */;
+			productType = "com.apple.product-type.tool";
+		};
+		81047A52241F7363000E848F /* 0006_ZigZag Conversion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81047A57241F7363000E848F /* Build configuration list for PBXNativeTarget "0006_ZigZag Conversion" */;
+			buildPhases = (
+				81047A4F241F7363000E848F /* Sources */,
+				81047A50241F7363000E848F /* Frameworks */,
+				81047A51241F7363000E848F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0006_ZigZag Conversion";
+			productName = "0006_ZigZag Conversion";
+			productReference = 81047A53241F7363000E848F /* 0006_ZigZag Conversion */;
+			productType = "com.apple.product-type.tool";
+		};
 		81BADB38241987C8009BB2E8 /* C++(Leetcode) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81BADB40241987C8009BB2E8 /* Build configuration list for PBXNativeTarget "C++(Leetcode)" */;
@@ -275,6 +367,12 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = nihaopeng;
 				TargetAttributes = {
+					81047A47241F63A4000E848F = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					81047A52241F7363000E848F = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					81BADB38241987C8009BB2E8 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -310,11 +408,29 @@
 				81BADB5124198D8F009BB2E8 /* 0002_Add Two Numbers */,
 				81BADB5C241BDAB9009BB2E8 /* 0003_Longest Substring Without Repeating Characters */,
 				81BADB67241BEBEB009BB2E8 /* 0004_Median of Two Sorted Arrays */,
+				81047A47241F63A4000E848F /* 0005_Longest Palindromic Substring */,
+				81047A52241F7363000E848F /* 0006_ZigZag Conversion */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		81047A44241F63A4000E848F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81047A4B241F63A4000E848F /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81047A4F241F7363000E848F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81047A56241F7363000E848F /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81BADB35241987C8009BB2E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -358,6 +474,38 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		81047A4C241F63A4000E848F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		81047A4D241F63A4000E848F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		81047A58241F7363000E848F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		81047A59241F7363000E848F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		81BADB3E241987C8009BB2E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -550,6 +698,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		81047A4E241F63A4000E848F /* Build configuration list for PBXNativeTarget "0005_Longest Palindromic Substring" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81047A4C241F63A4000E848F /* Debug */,
+				81047A4D241F63A4000E848F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81047A57241F7363000E848F /* Build configuration list for PBXNativeTarget "0006_ZigZag Conversion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81047A58241F7363000E848F /* Debug */,
+				81047A59241F7363000E848F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		81BADB34241987C8009BB2E8 /* Build configuration list for PBXProject "C++(Leetcode)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
