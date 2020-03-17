@@ -6,53 +6,105 @@
 	<dict>
 		<key>0001_Two Sum.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>0002_Add Two Numbers.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>0003_Longest Substring Without Repeating Characters.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>0004_Median of Two Sorted Arrays.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>0005_Longest Palindromic Substring.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
-		</dict>
-		<key>0006_ZigZag Conversion.xcscheme_^#shared#^_</key>
-		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>0007_Reverse Integer.xcscheme_^#shared#^_</key>
+		<key>0003_Longest Substring Without Repeating Characters.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>3</integer>
 		</dict>
-		<key>0008_String to Integer (atoi).xcscheme_^#shared#^_</key>
+		<key>0004_Median of Two Sorted Arrays.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>4</integer>
+		</dict>
+		<key>0005_Longest Palindromic Substring.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>0009_Palindrome Number.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
 		<key>C++(Leetcode).xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>81047A47241F63A4000E848F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>81047A52241F7363000E848F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>81047A5D24206B84000E848F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>81047A6824207103000E848F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>81047A7324207528000E848F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>81BADB38241987C8009BB2E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>81BADB4624198843009BB2E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>81BADB5124198D8F009BB2E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>81BADB5C241BDAB9009BB2E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>81BADB67241BEBEB009BB2E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
