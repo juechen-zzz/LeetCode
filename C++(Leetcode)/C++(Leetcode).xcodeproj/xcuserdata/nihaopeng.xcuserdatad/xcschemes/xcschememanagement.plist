@@ -44,7 +44,17 @@
 			<key>isShown</key>
 			<true/>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>6</integer>
+		</dict>
+		<key>0011_Container With Most Water.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>0014_Longest Common Prefix.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>C++(Leetcode).xcscheme_^#shared#^_</key>
 		<dict>
