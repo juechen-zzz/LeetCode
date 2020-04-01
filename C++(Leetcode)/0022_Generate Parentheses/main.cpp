@@ -7,6 +7,7 @@
 //
 
 /*
+ 生成所有可能的括号组合
  DFS问题：用走迷宫的思路，相当于先走，如果此路不通，则回退到上一步再走
  
  Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
