@@ -33,9 +33,9 @@ public:
         vector<int> result;
         
         for(int i = 0; i<nums.size(); i++){
-            int tag = target-nums[i];
+            int tag = target - nums[i];
             // count返回被查找元素的个数，有则为1，后边则是因为题目要求不能用相同的元素两次
-            if(number.count(tag) && number[tag] !=i){
+            if(number.count(tag) && number[tag] != i){
                 result.push_back(number[tag]);
                 result.push_back(i);
                 break;

@@ -30,6 +30,8 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+
+
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode *l1, ListNode *l2) {
@@ -38,32 +40,33 @@ public:
         ListNode *prev=NULL;
         bool carry=0;
         int sum;
+        
         while(l1!=NULL || l2!=NULL){
             // 当前l1若存在，返回l1->val，否则返回0，同时带上前一位有可能的进位1
-            sum=carry+(l1?l1->val:0)+(l2?l2->val:0);
+            sum = carry + (l1?l1->val:0) + (l2?l2->val:0);
             // 判定sum是否大于10，大于等于则为1，小于为0（就是先将对应位相加，若大于10，再进行别的操作）
-            carry=(sum>=10)?1:0;
-            sum=sum%10;
+            carry = (sum>=10)?1:0;
+            sum = sum%10;
             // 定义临时指针，存放对应位相加后的、对10求过余的值
-            ListNode* temp=new ListNode(sum);
+            ListNode* temp = new ListNode(sum);
             if(not ans){
-                ans=temp;
-                prev=ans;
+                ans = temp;
+                prev = ans;
             }else{
-                prev->next=temp;
-                prev=prev->next;
+                prev->next = temp;
+                prev = prev->next;
             }
             // 向后遍历
             if(l1){
-                l1=l1->next;
+                l1 = l1->next;
             }
             if(l2){
-                l2=l2->next;
+                l2 = l2->next;
             }
         }
         // 当最高位相加也需要进位时，再多创建一个节点接到最后
         if(carry){
-            prev->next=new ListNode(carry);
+            prev->next = new ListNode(carry);
         }
         return ans;
     }

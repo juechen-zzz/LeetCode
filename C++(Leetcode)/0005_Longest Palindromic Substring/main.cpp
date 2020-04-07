@@ -26,7 +26,7 @@
 using namespace std;
 
 // 函数功能：返回当前字符所能达到的最大回文串长度
-int PalindromicSearch(string& s, int toLeft, int toRight)
+int PalindromicSearch(string &s, int toLeft, int toRight)
 {
     while(toLeft >= 0 && toRight < s.size() && s[toLeft] == s[toRight])
     {
@@ -44,6 +44,7 @@ string longestPalindrome(string s) {
         int len1 = PalindromicSearch(s, i, i);          // 回文为单数
         int len2 = PalindromicSearch(s, i, i + 1);      // 回文为双数
         int longer = max(len1, len2);
+        
         if (longer > max_len)
         {
             // 定位起始索引

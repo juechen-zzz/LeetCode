@@ -7,7 +7,7 @@
 //
 
 /*
- 求字符串中无重复的最大子串
+ 求字符串中无重复的最大子串的长度
  
  Given a string, find the length of the longest substring without repeating characters.
 
@@ -39,6 +39,7 @@ int lengthOfLongestSubstring(string s) {
     int ans = 0;
     int t_ans = 0;
     string temp;
+    
     for (int i = 0; i < s.size(); i++){
         int index_s = (int)temp.find(s[i]);
         if (index_s == -1){
