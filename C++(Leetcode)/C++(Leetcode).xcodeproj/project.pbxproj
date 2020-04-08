@@ -23,6 +23,8 @@
 		81742AE32429F21B00AF30A8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81742AE22429F21B00AF30A8 /* main.cpp */; };
 		81742AEE242B483100AF30A8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81742AED242B483100AF30A8 /* main.cpp */; };
 		81742AF9242B50DC00AF30A8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81742AF8242B50DC00AF30A8 /* main.cpp */; };
+		81A8F948243E24220009813E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81A8F947243E24220009813E /* main.cpp */; };
+		81A8F953243E31750009813E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81A8F952243E31750009813E /* main.cpp */; };
 		81BADB3D241987C8009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB3C241987C8009BB2E8 /* main.cpp */; };
 		81BADB4A24198843009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB4924198843009BB2E8 /* main.cpp */; };
 		81BADB5524198D8F009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB5424198D8F009BB2E8 /* main.cpp */; };
@@ -202,6 +204,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		81A8F943243E24220009813E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		81A8F94E243E31750009813E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		81BADB37241987C8009BB2E8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,6 +305,10 @@
 		81742AED242B483100AF30A8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		81742AF6242B50DC00AF30A8 /* 0024_Swap Nodes in Pairs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0024_Swap Nodes in Pairs"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81742AF8242B50DC00AF30A8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		81A8F945243E24220009813E /* 0033_Search in Rotated Sorted Array */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0033_Search in Rotated Sorted Array"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A8F947243E24220009813E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		81A8F950243E31750009813E /* 0034_Find First and Last Position of Element in Sorted Array */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0034_Find First and Last Position of Element in Sorted Array"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A8F952243E31750009813E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		81BADB39241987C8009BB2E8 /* C++(Leetcode) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++(Leetcode)"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BADB3C241987C8009BB2E8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		81BADB4724198843009BB2E8 /* 0001_Two Sum */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0001_Two Sum"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -425,6 +449,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		81742AF3242B50DC00AF30A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81A8F942243E24220009813E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81A8F94D243E31750009813E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -597,6 +635,22 @@
 			path = "0024_Swap Nodes in Pairs";
 			sourceTree = "<group>";
 		};
+		81A8F946243E24220009813E /* 0033_Search in Rotated Sorted Array */ = {
+			isa = PBXGroup;
+			children = (
+				81A8F947243E24220009813E /* main.cpp */,
+			);
+			path = "0033_Search in Rotated Sorted Array";
+			sourceTree = "<group>";
+		};
+		81A8F951243E31750009813E /* 0034_Find First and Last Position of Element in Sorted Array */ = {
+			isa = PBXGroup;
+			children = (
+				81A8F952243E31750009813E /* main.cpp */,
+			);
+			path = "0034_Find First and Last Position of Element in Sorted Array";
+			sourceTree = "<group>";
+		};
 		81BADB30241987C8009BB2E8 = {
 			isa = PBXGroup;
 			children = (
@@ -621,6 +675,8 @@
 				811A2EEE242CD0D7001AC238 /* 0027_Remove Element */,
 				811138B42434FBBA001806B5 /* 0031_Next Permutation */,
 				811138BF24351155001806B5 /* 0032_Longest Valid Parentheses */,
+				81A8F946243E24220009813E /* 0033_Search in Rotated Sorted Array */,
+				81A8F951243E31750009813E /* 0034_Find First and Last Position of Element in Sorted Array */,
 				81BADB3A241987C8009BB2E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -652,6 +708,8 @@
 				811A2EED242CD0D7001AC238 /* 0027_Remove Element */,
 				811138B32434FBBA001806B5 /* 0031_Next Permutation */,
 				811138BE24351155001806B5 /* 0032_Longest Valid Parentheses */,
+				81A8F945243E24220009813E /* 0033_Search in Rotated Sorted Array */,
+				81A8F950243E31750009813E /* 0034_Find First and Last Position of Element in Sorted Array */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1022,6 +1080,40 @@
 			productReference = 81742AF6242B50DC00AF30A8 /* 0024_Swap Nodes in Pairs */;
 			productType = "com.apple.product-type.tool";
 		};
+		81A8F944243E24220009813E /* 0033_Search in Rotated Sorted Array */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81A8F94B243E24220009813E /* Build configuration list for PBXNativeTarget "0033_Search in Rotated Sorted Array" */;
+			buildPhases = (
+				81A8F941243E24220009813E /* Sources */,
+				81A8F942243E24220009813E /* Frameworks */,
+				81A8F943243E24220009813E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0033_Search in Rotated Sorted Array";
+			productName = "0033_Search in Rotated Sorted Array";
+			productReference = 81A8F945243E24220009813E /* 0033_Search in Rotated Sorted Array */;
+			productType = "com.apple.product-type.tool";
+		};
+		81A8F94F243E31750009813E /* 0034_Find First and Last Position of Element in Sorted Array */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81A8F954243E31750009813E /* Build configuration list for PBXNativeTarget "0034_Find First and Last Position of Element in Sorted Array" */;
+			buildPhases = (
+				81A8F94C243E31750009813E /* Sources */,
+				81A8F94D243E31750009813E /* Frameworks */,
+				81A8F94E243E31750009813E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0034_Find First and Last Position of Element in Sorted Array";
+			productName = "0034_Find First and Last Position of Element in Sorted Array";
+			productReference = 81A8F950243E31750009813E /* 0034_Find First and Last Position of Element in Sorted Array */;
+			productType = "com.apple.product-type.tool";
+		};
 		81BADB38241987C8009BB2E8 /* C++(Leetcode) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81BADB40241987C8009BB2E8 /* Build configuration list for PBXNativeTarget "C++(Leetcode)" */;
@@ -1173,6 +1265,12 @@
 					81742AF5242B50DC00AF30A8 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
+					81A8F944243E24220009813E = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					81A8F94F243E31750009813E = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					81BADB38241987C8009BB2E8 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -1227,6 +1325,8 @@
 				811A2EEC242CD0D7001AC238 /* 0027_Remove Element */,
 				811138B22434FBBA001806B5 /* 0031_Next Permutation */,
 				811138BD24351155001806B5 /* 0032_Longest Valid Parentheses */,
+				81A8F944243E24220009813E /* 0033_Search in Rotated Sorted Array */,
+				81A8F94F243E31750009813E /* 0034_Find First and Last Position of Element in Sorted Array */,
 			);
 		};
 /* End PBXProject section */
@@ -1378,6 +1478,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				81742AF9242B50DC00AF30A8 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81A8F941243E24220009813E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81A8F948243E24220009813E /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81A8F94C243E31750009813E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81A8F953243E31750009813E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1721,6 +1837,38 @@
 			name = Debug;
 		};
 		81742AFC242B50DC00AF30A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		81A8F949243E24220009813E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		81A8F94A243E24220009813E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		81A8F955243E31750009813E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		81A8F956243E31750009813E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -2087,6 +2235,24 @@
 			buildConfigurations = (
 				81742AFB242B50DC00AF30A8 /* Debug */,
 				81742AFC242B50DC00AF30A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81A8F94B243E24220009813E /* Build configuration list for PBXNativeTarget "0033_Search in Rotated Sorted Array" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81A8F949243E24220009813E /* Debug */,
+				81A8F94A243E24220009813E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81A8F954243E31750009813E /* Build configuration list for PBXNativeTarget "0034_Find First and Last Position of Element in Sorted Array" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81A8F955243E31750009813E /* Debug */,
+				81A8F956243E31750009813E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
