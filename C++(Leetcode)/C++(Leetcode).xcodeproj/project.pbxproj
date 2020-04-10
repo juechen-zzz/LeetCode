@@ -25,6 +25,9 @@
 		81742AF9242B50DC00AF30A8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81742AF8242B50DC00AF30A8 /* main.cpp */; };
 		81A8F948243E24220009813E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81A8F947243E24220009813E /* main.cpp */; };
 		81A8F953243E31750009813E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81A8F952243E31750009813E /* main.cpp */; };
+		81A8F95E2440B84C0009813E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81A8F95D2440B84C0009813E /* main.cpp */; };
+		81A8F9692440B8E30009813E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81A8F9682440B8E30009813E /* main.cpp */; };
+		81A8F9742440C02E0009813E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81A8F9732440C02E0009813E /* main.cpp */; };
 		81BADB3D241987C8009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB3C241987C8009BB2E8 /* main.cpp */; };
 		81BADB4A24198843009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB4924198843009BB2E8 /* main.cpp */; };
 		81BADB5524198D8F009BB2E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81BADB5424198D8F009BB2E8 /* main.cpp */; };
@@ -222,6 +225,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		81A8F9592440B84C0009813E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		81A8F9642440B8E30009813E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		81A8F96F2440C02E0009813E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		81BADB37241987C8009BB2E8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +339,12 @@
 		81A8F947243E24220009813E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		81A8F950243E31750009813E /* 0034_Find First and Last Position of Element in Sorted Array */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0034_Find First and Last Position of Element in Sorted Array"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A8F952243E31750009813E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		81A8F95B2440B84C0009813E /* 0035_Search Insert Position */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0035_Search Insert Position"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A8F95D2440B84C0009813E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		81A8F9662440B8E30009813E /* 0036_Valid Sudoku */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0036_Valid Sudoku"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A8F9682440B8E30009813E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		81A8F9712440C02E0009813E /* 0037_Sudoku Solver */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0037_Sudoku Solver"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A8F9732440C02E0009813E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		81BADB39241987C8009BB2E8 /* C++(Leetcode) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++(Leetcode)"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BADB3C241987C8009BB2E8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		81BADB4724198843009BB2E8 /* 0001_Two Sum */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0001_Two Sum"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -463,6 +499,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		81A8F94D243E31750009813E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81A8F9582440B84C0009813E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81A8F9632440B8E30009813E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81A8F96E2440C02E0009813E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -651,6 +708,30 @@
 			path = "0034_Find First and Last Position of Element in Sorted Array";
 			sourceTree = "<group>";
 		};
+		81A8F95C2440B84C0009813E /* 0035_Search Insert Position */ = {
+			isa = PBXGroup;
+			children = (
+				81A8F95D2440B84C0009813E /* main.cpp */,
+			);
+			path = "0035_Search Insert Position";
+			sourceTree = "<group>";
+		};
+		81A8F9672440B8E30009813E /* 0036_Valid Sudoku */ = {
+			isa = PBXGroup;
+			children = (
+				81A8F9682440B8E30009813E /* main.cpp */,
+			);
+			path = "0036_Valid Sudoku";
+			sourceTree = "<group>";
+		};
+		81A8F9722440C02E0009813E /* 0037_Sudoku Solver */ = {
+			isa = PBXGroup;
+			children = (
+				81A8F9732440C02E0009813E /* main.cpp */,
+			);
+			path = "0037_Sudoku Solver";
+			sourceTree = "<group>";
+		};
 		81BADB30241987C8009BB2E8 = {
 			isa = PBXGroup;
 			children = (
@@ -677,6 +758,9 @@
 				811138BF24351155001806B5 /* 0032_Longest Valid Parentheses */,
 				81A8F946243E24220009813E /* 0033_Search in Rotated Sorted Array */,
 				81A8F951243E31750009813E /* 0034_Find First and Last Position of Element in Sorted Array */,
+				81A8F95C2440B84C0009813E /* 0035_Search Insert Position */,
+				81A8F9672440B8E30009813E /* 0036_Valid Sudoku */,
+				81A8F9722440C02E0009813E /* 0037_Sudoku Solver */,
 				81BADB3A241987C8009BB2E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -710,6 +794,9 @@
 				811138BE24351155001806B5 /* 0032_Longest Valid Parentheses */,
 				81A8F945243E24220009813E /* 0033_Search in Rotated Sorted Array */,
 				81A8F950243E31750009813E /* 0034_Find First and Last Position of Element in Sorted Array */,
+				81A8F95B2440B84C0009813E /* 0035_Search Insert Position */,
+				81A8F9662440B8E30009813E /* 0036_Valid Sudoku */,
+				81A8F9712440C02E0009813E /* 0037_Sudoku Solver */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1114,6 +1201,57 @@
 			productReference = 81A8F950243E31750009813E /* 0034_Find First and Last Position of Element in Sorted Array */;
 			productType = "com.apple.product-type.tool";
 		};
+		81A8F95A2440B84C0009813E /* 0035_Search Insert Position */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81A8F9612440B84C0009813E /* Build configuration list for PBXNativeTarget "0035_Search Insert Position" */;
+			buildPhases = (
+				81A8F9572440B84C0009813E /* Sources */,
+				81A8F9582440B84C0009813E /* Frameworks */,
+				81A8F9592440B84C0009813E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0035_Search Insert Position";
+			productName = "0035_Search Insert Position";
+			productReference = 81A8F95B2440B84C0009813E /* 0035_Search Insert Position */;
+			productType = "com.apple.product-type.tool";
+		};
+		81A8F9652440B8E30009813E /* 0036_Valid Sudoku */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81A8F96A2440B8E30009813E /* Build configuration list for PBXNativeTarget "0036_Valid Sudoku" */;
+			buildPhases = (
+				81A8F9622440B8E30009813E /* Sources */,
+				81A8F9632440B8E30009813E /* Frameworks */,
+				81A8F9642440B8E30009813E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0036_Valid Sudoku";
+			productName = "0036_Valid Sudoku";
+			productReference = 81A8F9662440B8E30009813E /* 0036_Valid Sudoku */;
+			productType = "com.apple.product-type.tool";
+		};
+		81A8F9702440C02E0009813E /* 0037_Sudoku Solver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81A8F9752440C02E0009813E /* Build configuration list for PBXNativeTarget "0037_Sudoku Solver" */;
+			buildPhases = (
+				81A8F96D2440C02E0009813E /* Sources */,
+				81A8F96E2440C02E0009813E /* Frameworks */,
+				81A8F96F2440C02E0009813E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0037_Sudoku Solver";
+			productName = "0037_Sudoku Solver";
+			productReference = 81A8F9712440C02E0009813E /* 0037_Sudoku Solver */;
+			productType = "com.apple.product-type.tool";
+		};
 		81BADB38241987C8009BB2E8 /* C++(Leetcode) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81BADB40241987C8009BB2E8 /* Build configuration list for PBXNativeTarget "C++(Leetcode)" */;
@@ -1271,6 +1409,15 @@
 					81A8F94F243E31750009813E = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
+					81A8F95A2440B84C0009813E = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					81A8F9652440B8E30009813E = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					81A8F9702440C02E0009813E = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					81BADB38241987C8009BB2E8 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -1327,6 +1474,9 @@
 				811138BD24351155001806B5 /* 0032_Longest Valid Parentheses */,
 				81A8F944243E24220009813E /* 0033_Search in Rotated Sorted Array */,
 				81A8F94F243E31750009813E /* 0034_Find First and Last Position of Element in Sorted Array */,
+				81A8F95A2440B84C0009813E /* 0035_Search Insert Position */,
+				81A8F9652440B8E30009813E /* 0036_Valid Sudoku */,
+				81A8F9702440C02E0009813E /* 0037_Sudoku Solver */,
 			);
 		};
 /* End PBXProject section */
@@ -1494,6 +1644,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				81A8F953243E31750009813E /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81A8F9572440B84C0009813E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81A8F95E2440B84C0009813E /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81A8F9622440B8E30009813E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81A8F9692440B8E30009813E /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81A8F96D2440C02E0009813E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81A8F9742440C02E0009813E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1869,6 +2043,54 @@
 			name = Debug;
 		};
 		81A8F956243E31750009813E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		81A8F95F2440B84C0009813E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		81A8F9602440B84C0009813E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		81A8F96B2440B8E30009813E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		81A8F96C2440B8E30009813E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		81A8F9762440C02E0009813E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		81A8F9772440C02E0009813E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -2253,6 +2475,33 @@
 			buildConfigurations = (
 				81A8F955243E31750009813E /* Debug */,
 				81A8F956243E31750009813E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81A8F9612440B84C0009813E /* Build configuration list for PBXNativeTarget "0035_Search Insert Position" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81A8F95F2440B84C0009813E /* Debug */,
+				81A8F9602440B84C0009813E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81A8F96A2440B8E30009813E /* Build configuration list for PBXNativeTarget "0036_Valid Sudoku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81A8F96B2440B8E30009813E /* Debug */,
+				81A8F96C2440B8E30009813E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81A8F9752440C02E0009813E /* Build configuration list for PBXNativeTarget "0037_Sudoku Solver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81A8F9762440C02E0009813E /* Debug */,
+				81A8F9772440C02E0009813E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
