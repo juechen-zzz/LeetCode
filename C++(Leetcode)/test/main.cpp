@@ -14,26 +14,50 @@ void PrintVector(vector<int> &v){
     for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {
         cout << (*it) << " ";
     }
+    cout << endl;
 }
 
-bool isPalindrome(int x) {
-    if (x < 0) {return false;}
-    int res = 0;
-    while(x){
-        res *= 10;
-        res += x % 10;
-        x = x / 10;
+void PrintVector2(vector<vector<int>> &v){
+    cout << "[" << endl;
+    for (int i = 0; i < v.size(); i++) {
+        cout << "[";
+        for (int j = 0; j < v[i].size(); j++) {
+            cout << v[i][j] << " ";
+        }
+        cout << "]" << endl;
     }
-    return (x == res);
+    cout << "]" << endl;
 }
+
+void DeleteDuplicate(vector<vector<int>> &ans){
+    for (vector<vector<int>>::iterator it = ans.begin(); it != ans.end(); it++){
+        vector<vector<int>>::iterator right = ans.end()-1;
+        while (it != right) {
+            if ((*it) == (*right)) {
+                ans.erase(right);
+            }
+            right--;
+        }
+    }
+}
+
 
 int main(int argc, const char * argv[]) {
-//    vector<int> idx(96, -1);
-//    PrintVector(idx);
-//    string s = " ";
-//    if (s[0] >= 32) {
-//        cout << "123";
-//    }
-    cout << isPalindrome(121) << endl;
+    int a[] = {1, 1, 6};
+    vector<int> a1(a, a+3);
+    int b[] = {1, 2, 5};
+    vector<int> a2(b, b+3);
+    int c[] = {1, 3, 5};
+    vector<int> a3(c, c+3);
+    
+    vector<vector<int>> ans;
+    ans.push_back(a1);
+    ans.push_back(a2);
+    ans.push_back(a1);
+    ans.push_back(a3);
+    PrintVector2(ans);
+    
+    DeleteDuplicate(ans);
+    PrintVector2(ans);
     return 0;
 }
