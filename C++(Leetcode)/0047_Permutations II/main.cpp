@@ -13,8 +13,7 @@ For example:[1,2,3], Combination only has [1,2,3]. Permutations includes[1,2,3],
 1.Combination Sum
 Because it is combination, so [1,2,3] and [3,2,1] are duplicates.
 If we take [1,5,2,3] as an example, when we iterate to index 2 where value is 2, it makes no sense to start before index 2, because [1,5,2] and [2,1,5] are the same.
-That's the meaning i_start(or begin) has,
-and this begin may make sense in other questions, we should keep it in mind.
+That's the meaning i_start(or begin) has, and this begin may make sense in other questions, we should keep it in mind.
 
 class Solution {
 private:
