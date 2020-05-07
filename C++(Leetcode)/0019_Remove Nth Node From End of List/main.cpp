@@ -8,6 +8,7 @@
 
 /*
  删除链表倒数第n个数
+ 推荐解法：双指针
  
  Given a linked list, remove the n-th node from the end of list and return its head.
 
