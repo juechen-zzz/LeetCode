@@ -48,3 +48,23 @@ public:
         return arr[m-1][n-1];
     }
 };
+
+
+// solution 2
+int uniquePaths(int m, int n)
+{
+    int prev = 0,active = 1,columnCount = min(m,n),elementCount=0;
+    vector<vector<int>> temp(2,vector<int>(columnCount,1));
+    while(elementCount<((m-1)*(n-1)))
+    {
+        for(int i=1;i<columnCount;i++)
+        {
+            temp[active][i] = temp[prev][i]+temp[active][(i-1)];
+            elementCount++;
+        }
+        swap(prev,active);
+    }
+
+    return temp[prev][columnCount-1];
+}
+
