@@ -224,17 +224,17 @@
 		<key>0064_Minimum Path Sum.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>43</integer>
 		</dict>
 		<key>0070_Climbing Stairs.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>43</integer>
+			<integer>7</integer>
 		</dict>
 		<key>0073_Set Matrix Zeroes.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>45</integer>
+			<integer>44</integer>
 		</dict>
 		<key>0074_Search a 2D Matrix.xcscheme_^#shared#^_</key>
 		<dict>
@@ -244,27 +244,37 @@
 		<key>0075_Sort Colors.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>44</integer>
+			<integer>47</integer>
 		</dict>
 		<key>0077_Combinations.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>47</integer>
+			<integer>48</integer>
 		</dict>
 		<key>0078_Subsets.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>48</integer>
+			<integer>49</integer>
 		</dict>
 		<key>0080_Remove Duplicates from Sorted Array II.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>49</integer>
+			<integer>50</integer>
 		</dict>
 		<key>0081_Search in Rotated Sorted Array II.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>50</integer>
+			<integer>51</integer>
+		</dict>
+		<key>0082_Remove Duplicates from Sorted List II.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>45</integer>
+		</dict>
+		<key>0083_Remove Duplicates from Sorted List.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>52</integer>
 		</dict>
 		<key>C++(Leetcode).xcscheme_^#shared#^_</key>
 		<dict>
