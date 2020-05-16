@@ -43,32 +43,8 @@ void DeleteDuplicate(vector<vector<int>> &ans){
 
 
 int main(int argc, const char * argv[]) {
-//    int a[] = {1, 1, 6};
-//    vector<int> a1(a, a+3);
-//    int b[] = {1, 2, 5};
-//    vector<int> a2(b, b+3);
-//    int c[] = {1, 3, 5};
-//    vector<int> a3(c, c+3);
-//
-//    vector<vector<int>> ans;
-//    ans.push_back(a1);
-//    ans.push_back(a2);
-//    ans.push_back(a1);
-//    ans.push_back(a3);
-//    PrintVector2(ans);
-//
-//    DeleteDuplicate(ans);
-//    PrintVector2(ans);
-//
-    
-    int fact[10];           // 存放阶乘
-    fact[0]=1;
-    string s;               // 输出一个"12345"
-    for(int i=1;i<=5;i++){
-        fact[i]=i*fact[i-1];
-        s+= i+'0';
-    }
-    s.erase(s.begin()+1);
-    cout << s << endl;
+    int n = 5;
+    cout << (1<<n) << endl;
+    cout << (0 & 1) << endl;
     return 0;
 }
