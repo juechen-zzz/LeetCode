@@ -76,7 +76,8 @@ public:
         int loop = n-m+1;
         if(loop==0) return head;
         
-        if(m==1) first = NULL;
+        // 定位
+        if(m==1) {first = NULL;}
         else{
             m--;
             while(--m>0){
@@ -86,7 +87,7 @@ public:
             temp = temp->next;
             first->next = NULL;
         }
-        //reverse the list from index m to n
+        // 反转
         while(loop--){
             if(!prev) last = temp;
             curr = temp->next;
@@ -94,7 +95,7 @@ public:
             prev = temp;
             temp = curr;
         }
-        //connect prev to first and last to temp
+        // 链接
         if(!first) {head=prev;}
         else {first->next = prev;}
         last->next = temp;
