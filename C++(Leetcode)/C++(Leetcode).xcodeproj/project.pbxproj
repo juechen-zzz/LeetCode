@@ -28,6 +28,11 @@
 		81335C01247C200600F2C3B9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81335C00247C200600F2C3B9 /* main.cpp */; };
 		81335C0C247C211000F2C3B9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81335C0B247C211000F2C3B9 /* main.cpp */; };
 		81335C17247C248500F2C3B9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81335C16247C248500F2C3B9 /* main.cpp */; };
+		81335C22247EC16C00F2C3B9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81335C21247EC16C00F2C3B9 /* main.cpp */; };
+		81335C2D247EC28F00F2C3B9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81335C2C247EC28F00F2C3B9 /* main.cpp */; };
+		81335C38247EC64300F2C3B9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81335C37247EC64300F2C3B9 /* main.cpp */; };
+		81335C43247EC80000F2C3B9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81335C42247EC80000F2C3B9 /* main.cpp */; };
+		81335C4E247EC9F400F2C3B9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81335C4D247EC9F400F2C3B9 /* main.cpp */; };
 		8141AAA8244DD3540053EAC8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8141AAA7244DD3540053EAC8 /* main.cpp */; };
 		8141AAB3244DD7240053EAC8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8141AAB2244DD7240053EAC8 /* main.cpp */; };
 		8141AAC92451F4C10053EAC8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8141AAC82451F4C10053EAC8 /* main.cpp */; };
@@ -285,6 +290,51 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		81335C12247C248500F2C3B9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		81335C1D247EC16C00F2C3B9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		81335C28247EC28F00F2C3B9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		81335C33247EC64300F2C3B9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		81335C3E247EC80000F2C3B9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		81335C49247EC9F400F2C3B9 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -764,6 +814,16 @@
 		81335C0B247C211000F2C3B9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		81335C14247C248500F2C3B9 /* 0106_Construct Binary Tree from Inorder and Postorder Traversal */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0106_Construct Binary Tree from Inorder and Postorder Traversal"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81335C16247C248500F2C3B9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		81335C1F247EC16C00F2C3B9 /* 0107_Binary Tree Level Order Traversal II */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0107_Binary Tree Level Order Traversal II"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81335C21247EC16C00F2C3B9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		81335C2A247EC28F00F2C3B9 /* 0108_Convert Sorted Array to Binary Search Tree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0108_Convert Sorted Array to Binary Search Tree"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81335C2C247EC28F00F2C3B9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		81335C35247EC64300F2C3B9 /* 0109_Convert Sorted List to Binary Search Tree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0109_Convert Sorted List to Binary Search Tree"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81335C37247EC64300F2C3B9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		81335C40247EC80000F2C3B9 /* 0110_Balanced Binary Tree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0110_Balanced Binary Tree"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81335C42247EC80000F2C3B9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		81335C4B247EC9F400F2C3B9 /* 0111_Minimum Depth of Binary Tree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0111_Minimum Depth of Binary Tree"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81335C4D247EC9F400F2C3B9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8141AAA5244DD3540053EAC8 /* 0049_Group Anagrams */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0049_Group Anagrams"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8141AAA7244DD3540053EAC8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8141AAB0244DD7240053EAC8 /* 0053_Maximum Subarray */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0053_Maximum Subarray"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1022,6 +1082,41 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		81335C11247C248500F2C3B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81335C1C247EC16C00F2C3B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81335C27247EC28F00F2C3B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81335C32247EC64300F2C3B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81335C3D247EC80000F2C3B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81335C48247EC9F400F2C3B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1528,6 +1623,46 @@
 			path = "0106_Construct Binary Tree from Inorder and Postorder Traversal";
 			sourceTree = "<group>";
 		};
+		81335C20247EC16C00F2C3B9 /* 0107_Binary Tree Level Order Traversal II */ = {
+			isa = PBXGroup;
+			children = (
+				81335C21247EC16C00F2C3B9 /* main.cpp */,
+			);
+			path = "0107_Binary Tree Level Order Traversal II";
+			sourceTree = "<group>";
+		};
+		81335C2B247EC28F00F2C3B9 /* 0108_Convert Sorted Array to Binary Search Tree */ = {
+			isa = PBXGroup;
+			children = (
+				81335C2C247EC28F00F2C3B9 /* main.cpp */,
+			);
+			path = "0108_Convert Sorted Array to Binary Search Tree";
+			sourceTree = "<group>";
+		};
+		81335C36247EC64300F2C3B9 /* 0109_Convert Sorted List to Binary Search Tree */ = {
+			isa = PBXGroup;
+			children = (
+				81335C37247EC64300F2C3B9 /* main.cpp */,
+			);
+			path = "0109_Convert Sorted List to Binary Search Tree";
+			sourceTree = "<group>";
+		};
+		81335C41247EC80000F2C3B9 /* 0110_Balanced Binary Tree */ = {
+			isa = PBXGroup;
+			children = (
+				81335C42247EC80000F2C3B9 /* main.cpp */,
+			);
+			path = "0110_Balanced Binary Tree";
+			sourceTree = "<group>";
+		};
+		81335C4C247EC9F400F2C3B9 /* 0111_Minimum Depth of Binary Tree */ = {
+			isa = PBXGroup;
+			children = (
+				81335C4D247EC9F400F2C3B9 /* main.cpp */,
+			);
+			path = "0111_Minimum Depth of Binary Tree";
+			sourceTree = "<group>";
+		};
 		8141AAA6244DD3540053EAC8 /* 0049_Group Anagrams */ = {
 			isa = PBXGroup;
 			children = (
@@ -1926,6 +2061,11 @@
 				81335BFF247C200600F2C3B9 /* 0104_Maximum Depth of Binary Tree */,
 				81335C0A247C211000F2C3B9 /* 0105_Construct Binary Tree from Preorder and Inorder Traversal */,
 				81335C15247C248500F2C3B9 /* 0106_Construct Binary Tree from Inorder and Postorder Traversal */,
+				81335C20247EC16C00F2C3B9 /* 0107_Binary Tree Level Order Traversal II */,
+				81335C2B247EC28F00F2C3B9 /* 0108_Convert Sorted Array to Binary Search Tree */,
+				81335C36247EC64300F2C3B9 /* 0109_Convert Sorted List to Binary Search Tree */,
+				81335C41247EC80000F2C3B9 /* 0110_Balanced Binary Tree */,
+				81335C4C247EC9F400F2C3B9 /* 0111_Minimum Depth of Binary Tree */,
 				81BADB3A241987C8009BB2E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -2004,6 +2144,11 @@
 				81335BFE247C200600F2C3B9 /* 0104_Maximum Depth of Binary Tree */,
 				81335C09247C211000F2C3B9 /* 0105_Construct Binary Tree from Preorder and Inorder Traversal */,
 				81335C14247C248500F2C3B9 /* 0106_Construct Binary Tree from Inorder and Postorder Traversal */,
+				81335C1F247EC16C00F2C3B9 /* 0107_Binary Tree Level Order Traversal II */,
+				81335C2A247EC28F00F2C3B9 /* 0108_Convert Sorted Array to Binary Search Tree */,
+				81335C35247EC64300F2C3B9 /* 0109_Convert Sorted List to Binary Search Tree */,
+				81335C40247EC80000F2C3B9 /* 0110_Balanced Binary Tree */,
+				81335C4B247EC9F400F2C3B9 /* 0111_Minimum Depth of Binary Tree */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2457,6 +2602,91 @@
 			name = "0106_Construct Binary Tree from Inorder and Postorder Traversal";
 			productName = "0106_Construct Binary Tree from Inorder and Postorder Traversal";
 			productReference = 81335C14247C248500F2C3B9 /* 0106_Construct Binary Tree from Inorder and Postorder Traversal */;
+			productType = "com.apple.product-type.tool";
+		};
+		81335C1E247EC16C00F2C3B9 /* 0107_Binary Tree Level Order Traversal II */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81335C25247EC16C00F2C3B9 /* Build configuration list for PBXNativeTarget "0107_Binary Tree Level Order Traversal II" */;
+			buildPhases = (
+				81335C1B247EC16C00F2C3B9 /* Sources */,
+				81335C1C247EC16C00F2C3B9 /* Frameworks */,
+				81335C1D247EC16C00F2C3B9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0107_Binary Tree Level Order Traversal II";
+			productName = "0107_Binary Tree Level Order Traversal II";
+			productReference = 81335C1F247EC16C00F2C3B9 /* 0107_Binary Tree Level Order Traversal II */;
+			productType = "com.apple.product-type.tool";
+		};
+		81335C29247EC28F00F2C3B9 /* 0108_Convert Sorted Array to Binary Search Tree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81335C2E247EC28F00F2C3B9 /* Build configuration list for PBXNativeTarget "0108_Convert Sorted Array to Binary Search Tree" */;
+			buildPhases = (
+				81335C26247EC28F00F2C3B9 /* Sources */,
+				81335C27247EC28F00F2C3B9 /* Frameworks */,
+				81335C28247EC28F00F2C3B9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0108_Convert Sorted Array to Binary Search Tree";
+			productName = "0108_Convert Sorted Array to Binary Search Tree";
+			productReference = 81335C2A247EC28F00F2C3B9 /* 0108_Convert Sorted Array to Binary Search Tree */;
+			productType = "com.apple.product-type.tool";
+		};
+		81335C34247EC64300F2C3B9 /* 0109_Convert Sorted List to Binary Search Tree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81335C39247EC64300F2C3B9 /* Build configuration list for PBXNativeTarget "0109_Convert Sorted List to Binary Search Tree" */;
+			buildPhases = (
+				81335C31247EC64300F2C3B9 /* Sources */,
+				81335C32247EC64300F2C3B9 /* Frameworks */,
+				81335C33247EC64300F2C3B9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0109_Convert Sorted List to Binary Search Tree";
+			productName = "0109_Convert Sorted List to Binary Search Tree";
+			productReference = 81335C35247EC64300F2C3B9 /* 0109_Convert Sorted List to Binary Search Tree */;
+			productType = "com.apple.product-type.tool";
+		};
+		81335C3F247EC80000F2C3B9 /* 0110_Balanced Binary Tree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81335C44247EC80000F2C3B9 /* Build configuration list for PBXNativeTarget "0110_Balanced Binary Tree" */;
+			buildPhases = (
+				81335C3C247EC80000F2C3B9 /* Sources */,
+				81335C3D247EC80000F2C3B9 /* Frameworks */,
+				81335C3E247EC80000F2C3B9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0110_Balanced Binary Tree";
+			productName = "0110_Balanced Binary Tree";
+			productReference = 81335C40247EC80000F2C3B9 /* 0110_Balanced Binary Tree */;
+			productType = "com.apple.product-type.tool";
+		};
+		81335C4A247EC9F400F2C3B9 /* 0111_Minimum Depth of Binary Tree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81335C4F247EC9F400F2C3B9 /* Build configuration list for PBXNativeTarget "0111_Minimum Depth of Binary Tree" */;
+			buildPhases = (
+				81335C47247EC9F400F2C3B9 /* Sources */,
+				81335C48247EC9F400F2C3B9 /* Frameworks */,
+				81335C49247EC9F400F2C3B9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0111_Minimum Depth of Binary Tree";
+			productName = "0111_Minimum Depth of Binary Tree";
+			productReference = 81335C4B247EC9F400F2C3B9 /* 0111_Minimum Depth of Binary Tree */;
 			productType = "com.apple.product-type.tool";
 		};
 		8141AAA4244DD3540053EAC8 /* 0049_Group Anagrams */ = {
@@ -3340,6 +3570,21 @@
 					81335C13247C248500F2C3B9 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
+					81335C1E247EC16C00F2C3B9 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					81335C29247EC28F00F2C3B9 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					81335C34247EC64300F2C3B9 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					81335C3F247EC80000F2C3B9 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					81335C4A247EC9F400F2C3B9 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					8141AAA4244DD3540053EAC8 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -3567,6 +3812,11 @@
 				81335BFD247C200600F2C3B9 /* 0104_Maximum Depth of Binary Tree */,
 				81335C08247C211000F2C3B9 /* 0105_Construct Binary Tree from Preorder and Inorder Traversal */,
 				81335C13247C248500F2C3B9 /* 0106_Construct Binary Tree from Inorder and Postorder Traversal */,
+				81335C1E247EC16C00F2C3B9 /* 0107_Binary Tree Level Order Traversal II */,
+				81335C29247EC28F00F2C3B9 /* 0108_Convert Sorted Array to Binary Search Tree */,
+				81335C34247EC64300F2C3B9 /* 0109_Convert Sorted List to Binary Search Tree */,
+				81335C3F247EC80000F2C3B9 /* 0110_Balanced Binary Tree */,
+				81335C4A247EC9F400F2C3B9 /* 0111_Minimum Depth of Binary Tree */,
 			);
 		};
 /* End PBXProject section */
@@ -3758,6 +4008,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				81335C17247C248500F2C3B9 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81335C1B247EC16C00F2C3B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81335C22247EC16C00F2C3B9 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81335C26247EC28F00F2C3B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81335C2D247EC28F00F2C3B9 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81335C31247EC64300F2C3B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81335C38247EC64300F2C3B9 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81335C3C247EC80000F2C3B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81335C43247EC80000F2C3B9 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81335C47247EC9F400F2C3B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81335C4E247EC9F400F2C3B9 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4516,6 +4806,86 @@
 			name = Debug;
 		};
 		81335C19247C248500F2C3B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		81335C23247EC16C00F2C3B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		81335C24247EC16C00F2C3B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		81335C2F247EC28F00F2C3B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		81335C30247EC28F00F2C3B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		81335C3A247EC64300F2C3B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		81335C3B247EC64300F2C3B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		81335C45247EC80000F2C3B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		81335C46247EC80000F2C3B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		81335C50247EC9F400F2C3B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		81335C51247EC9F400F2C3B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -5605,6 +5975,51 @@
 			buildConfigurations = (
 				81335C18247C248500F2C3B9 /* Debug */,
 				81335C19247C248500F2C3B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81335C25247EC16C00F2C3B9 /* Build configuration list for PBXNativeTarget "0107_Binary Tree Level Order Traversal II" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81335C23247EC16C00F2C3B9 /* Debug */,
+				81335C24247EC16C00F2C3B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81335C2E247EC28F00F2C3B9 /* Build configuration list for PBXNativeTarget "0108_Convert Sorted Array to Binary Search Tree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81335C2F247EC28F00F2C3B9 /* Debug */,
+				81335C30247EC28F00F2C3B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81335C39247EC64300F2C3B9 /* Build configuration list for PBXNativeTarget "0109_Convert Sorted List to Binary Search Tree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81335C3A247EC64300F2C3B9 /* Debug */,
+				81335C3B247EC64300F2C3B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81335C44247EC80000F2C3B9 /* Build configuration list for PBXNativeTarget "0110_Balanced Binary Tree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81335C45247EC80000F2C3B9 /* Debug */,
+				81335C46247EC80000F2C3B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81335C4F247EC9F400F2C3B9 /* Build configuration list for PBXNativeTarget "0111_Minimum Depth of Binary Tree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81335C50247EC9F400F2C3B9 /* Debug */,
+				81335C51247EC9F400F2C3B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
