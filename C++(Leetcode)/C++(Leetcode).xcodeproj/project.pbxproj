@@ -49,6 +49,9 @@
 		8178E2DB24489D3300BE06A9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8178E2DA24489D3300BE06A9 /* main.cpp */; };
 		8178E2E62448A58B00BE06A9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8178E2E52448A58B00BE06A9 /* main.cpp */; };
 		8178E2F12448AA5C00BE06A9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8178E2F02448AA5C00BE06A9 /* main.cpp */; };
+		819AB1EA24912B9000D935A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819AB1E924912B9000D935A5 /* main.cpp */; };
+		819AB1F5249132AD00D935A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819AB1F4249132AD00D935A5 /* main.cpp */; };
+		819AB2002491331000D935A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819AB1FF2491331000D935A5 /* main.cpp */; };
 		819E182F247038C400170D90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819E182E247038C400170D90 /* main.cpp */; };
 		819E183A24703EE200170D90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819E183924703EE200170D90 /* main.cpp */; };
 		819E18452472E0CB00170D90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819E18442472E0CB00170D90 /* main.cpp */; };
@@ -490,6 +493,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		819AB1E524912B9000D935A5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		819AB1F0249132AD00D935A5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		819AB1FB2491331000D935A5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		819E182A247038C400170D90 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -886,6 +916,12 @@
 		8178E2E52448A58B00BE06A9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8178E2EE2448AA5C00BE06A9 /* 0047_Permutations II */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0047_Permutations II"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8178E2F02448AA5C00BE06A9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		819AB1E724912B9000D935A5 /* 0116_Populating Next Right Pointers in Each Node */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0116_Populating Next Right Pointers in Each Node"; sourceTree = BUILT_PRODUCTS_DIR; };
+		819AB1E924912B9000D935A5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		819AB1F2249132AD00D935A5 /* 0117_Populating Next Right Pointers in Each Node II */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0117_Populating Next Right Pointers in Each Node II"; sourceTree = BUILT_PRODUCTS_DIR; };
+		819AB1F4249132AD00D935A5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		819AB1FD2491331000D935A5 /* 0118_Pascal's Triangle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0118_Pascal's Triangle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		819AB1FF2491331000D935A5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		819E182C247038C400170D90 /* 0085_Partition List_ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0085_Partition List_"; sourceTree = BUILT_PRODUCTS_DIR; };
 		819E182E247038C400170D90 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		819E183724703EE200170D90 /* 0090_Subsets II */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0090_Subsets II"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1265,6 +1301,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8178E2EB2448AA5C00BE06A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB1E424912B9000D935A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB1EF249132AD00D935A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB1FA2491331000D935A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1848,6 +1905,30 @@
 			path = "0047_Permutations II";
 			sourceTree = "<group>";
 		};
+		819AB1E824912B9000D935A5 /* 0116_Populating Next Right Pointers in Each Node */ = {
+			isa = PBXGroup;
+			children = (
+				819AB1E924912B9000D935A5 /* main.cpp */,
+			);
+			path = "0116_Populating Next Right Pointers in Each Node";
+			sourceTree = "<group>";
+		};
+		819AB1F3249132AD00D935A5 /* 0117_Populating Next Right Pointers in Each Node II */ = {
+			isa = PBXGroup;
+			children = (
+				819AB1F4249132AD00D935A5 /* main.cpp */,
+			);
+			path = "0117_Populating Next Right Pointers in Each Node II";
+			sourceTree = "<group>";
+		};
+		819AB1FE2491331000D935A5 /* 0118_Pascal's Triangle */ = {
+			isa = PBXGroup;
+			children = (
+				819AB1FF2491331000D935A5 /* main.cpp */,
+			);
+			path = "0118_Pascal's Triangle";
+			sourceTree = "<group>";
+		};
 		819E182D247038C400170D90 /* 0085_Partition List_ */ = {
 			isa = PBXGroup;
 			children = (
@@ -2126,6 +2207,9 @@
 				81E945652489467F00BFE5F5 /* 0112_Path Sum */,
 				81E9457024894AF100BFE5F5 /* 0113_Path Sum II */,
 				81E9457B24894CC600BFE5F5 /* 0114_Flatten Binary Tree to Linked List */,
+				819AB1E824912B9000D935A5 /* 0116_Populating Next Right Pointers in Each Node */,
+				819AB1F3249132AD00D935A5 /* 0117_Populating Next Right Pointers in Each Node II */,
+				819AB1FE2491331000D935A5 /* 0118_Pascal's Triangle */,
 				81BADB3A241987C8009BB2E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -2212,6 +2296,9 @@
 				81E945642489467F00BFE5F5 /* 0112_Path Sum */,
 				81E9456F24894AF100BFE5F5 /* 0113_Path Sum II */,
 				81E9457A24894CC600BFE5F5 /* 0114_Flatten Binary Tree to Linked List */,
+				819AB1E724912B9000D935A5 /* 0116_Populating Next Right Pointers in Each Node */,
+				819AB1F2249132AD00D935A5 /* 0117_Populating Next Right Pointers in Each Node II */,
+				819AB1FD2491331000D935A5 /* 0118_Pascal's Triangle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3048,6 +3135,57 @@
 			productReference = 8178E2EE2448AA5C00BE06A9 /* 0047_Permutations II */;
 			productType = "com.apple.product-type.tool";
 		};
+		819AB1E624912B9000D935A5 /* 0116_Populating Next Right Pointers in Each Node */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 819AB1ED24912B9000D935A5 /* Build configuration list for PBXNativeTarget "0116_Populating Next Right Pointers in Each Node" */;
+			buildPhases = (
+				819AB1E324912B9000D935A5 /* Sources */,
+				819AB1E424912B9000D935A5 /* Frameworks */,
+				819AB1E524912B9000D935A5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0116_Populating Next Right Pointers in Each Node";
+			productName = "0116_Populating Next Right Pointers in Each Node";
+			productReference = 819AB1E724912B9000D935A5 /* 0116_Populating Next Right Pointers in Each Node */;
+			productType = "com.apple.product-type.tool";
+		};
+		819AB1F1249132AD00D935A5 /* 0117_Populating Next Right Pointers in Each Node II */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 819AB1F6249132AD00D935A5 /* Build configuration list for PBXNativeTarget "0117_Populating Next Right Pointers in Each Node II" */;
+			buildPhases = (
+				819AB1EE249132AD00D935A5 /* Sources */,
+				819AB1EF249132AD00D935A5 /* Frameworks */,
+				819AB1F0249132AD00D935A5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0117_Populating Next Right Pointers in Each Node II";
+			productName = "0117_Populating Next Right Pointers in Each Node II";
+			productReference = 819AB1F2249132AD00D935A5 /* 0117_Populating Next Right Pointers in Each Node II */;
+			productType = "com.apple.product-type.tool";
+		};
+		819AB1FC2491331000D935A5 /* 0118_Pascal's Triangle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 819AB2012491331000D935A5 /* Build configuration list for PBXNativeTarget "0118_Pascal's Triangle" */;
+			buildPhases = (
+				819AB1F92491331000D935A5 /* Sources */,
+				819AB1FA2491331000D935A5 /* Frameworks */,
+				819AB1FB2491331000D935A5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0118_Pascal's Triangle";
+			productName = "0118_Pascal's Triangle";
+			productReference = 819AB1FD2491331000D935A5 /* 0118_Pascal's Triangle */;
+			productType = "com.apple.product-type.tool";
+		};
 		819E182B247038C400170D90 /* 0085_Partition List_ */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 819E1832247038C400170D90 /* Build configuration list for PBXNativeTarget "0085_Partition List_" */;
@@ -3771,6 +3909,15 @@
 					8178E2ED2448AA5C00BE06A9 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
+					819AB1E624912B9000D935A5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					819AB1F1249132AD00D935A5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					819AB1FC2491331000D935A5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					819E182B247038C400170D90 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -3967,6 +4114,9 @@
 				81E945632489467F00BFE5F5 /* 0112_Path Sum */,
 				81E9456E24894AF100BFE5F5 /* 0113_Path Sum II */,
 				81E9457924894CC600BFE5F5 /* 0114_Flatten Binary Tree to Linked List */,
+				819AB1E624912B9000D935A5 /* 0116_Populating Next Right Pointers in Each Node */,
+				819AB1F1249132AD00D935A5 /* 0117_Populating Next Right Pointers in Each Node II */,
+				819AB1FC2491331000D935A5 /* 0118_Pascal's Triangle */,
 			);
 		};
 /* End PBXProject section */
@@ -4326,6 +4476,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				8178E2F12448AA5C00BE06A9 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB1E324912B9000D935A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				819AB1EA24912B9000D935A5 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB1EE249132AD00D935A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				819AB1F5249132AD00D935A5 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB1F92491331000D935A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				819AB2002491331000D935A5 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5316,6 +5490,54 @@
 			name = Debug;
 		};
 		8178E2F42448AA5C00BE06A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		819AB1EB24912B9000D935A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		819AB1EC24912B9000D935A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		819AB1F7249132AD00D935A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		819AB1F8249132AD00D935A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		819AB2022491331000D935A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		819AB2032491331000D935A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -6386,6 +6608,33 @@
 			buildConfigurations = (
 				8178E2F32448AA5C00BE06A9 /* Debug */,
 				8178E2F42448AA5C00BE06A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		819AB1ED24912B9000D935A5 /* Build configuration list for PBXNativeTarget "0116_Populating Next Right Pointers in Each Node" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				819AB1EB24912B9000D935A5 /* Debug */,
+				819AB1EC24912B9000D935A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		819AB1F6249132AD00D935A5 /* Build configuration list for PBXNativeTarget "0117_Populating Next Right Pointers in Each Node II" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				819AB1F7249132AD00D935A5 /* Debug */,
+				819AB1F8249132AD00D935A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		819AB2012491331000D935A5 /* Build configuration list for PBXNativeTarget "0118_Pascal's Triangle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				819AB2022491331000D935A5 /* Debug */,
+				819AB2032491331000D935A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

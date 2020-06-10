@@ -354,7 +354,7 @@
 		<key>0108_Convert Sorted Array to Binary Search Tree.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>69</integer>
+			<integer>68</integer>
 		</dict>
 		<key>0109_Convert Sorted List to Binary Search Tree.xcscheme_^#shared#^_</key>
 		<dict>
@@ -374,17 +374,32 @@
 		<key>0112_Path Sum.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>68</integer>
+			<integer>73</integer>
 		</dict>
 		<key>0113_Path Sum II.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>73</integer>
+			<integer>74</integer>
 		</dict>
 		<key>0114_Flatten Binary Tree to Linked List.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>74</integer>
+			<integer>75</integer>
+		</dict>
+		<key>0116_Populating Next Right Pointers in Each Node.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>69</integer>
+		</dict>
+		<key>0117_Populating Next Right Pointers in Each Node II.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>76</integer>
+		</dict>
+		<key>0118_Pascal's Triangle.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>77</integer>
 		</dict>
 		<key>C++(Leetcode).xcscheme_^#shared#^_</key>
 		<dict>
