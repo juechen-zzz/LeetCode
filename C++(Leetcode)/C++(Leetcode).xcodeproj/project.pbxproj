@@ -52,6 +52,10 @@
 		819AB1EA24912B9000D935A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819AB1E924912B9000D935A5 /* main.cpp */; };
 		819AB1F5249132AD00D935A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819AB1F4249132AD00D935A5 /* main.cpp */; };
 		819AB2002491331000D935A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819AB1FF2491331000D935A5 /* main.cpp */; };
+		819AB20B2492812400D935A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819AB20A2492812400D935A5 /* main.cpp */; };
+		819AB2162492828200D935A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819AB2152492828200D935A5 /* main.cpp */; };
+		819AB221249285B000D935A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819AB220249285B000D935A5 /* main.cpp */; };
+		819AB22C2492868F00D935A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819AB22B2492868F00D935A5 /* main.cpp */; };
 		819E182F247038C400170D90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819E182E247038C400170D90 /* main.cpp */; };
 		819E183A24703EE200170D90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819E183924703EE200170D90 /* main.cpp */; };
 		819E18452472E0CB00170D90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819E18442472E0CB00170D90 /* main.cpp */; };
@@ -520,6 +524,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		819AB2062492812400D935A5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		819AB2112492828200D935A5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		819AB21C249285B000D935A5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		819AB2272492868F00D935A5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		819E182A247038C400170D90 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -922,6 +962,14 @@
 		819AB1F4249132AD00D935A5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		819AB1FD2491331000D935A5 /* 0118_Pascal's Triangle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0118_Pascal's Triangle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		819AB1FF2491331000D935A5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		819AB2082492812400D935A5 /* 0119_Pascal's Triangle II */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0119_Pascal's Triangle II"; sourceTree = BUILT_PRODUCTS_DIR; };
+		819AB20A2492812400D935A5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		819AB2132492828200D935A5 /* 0120_Triangle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 0120_Triangle; sourceTree = BUILT_PRODUCTS_DIR; };
+		819AB2152492828200D935A5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		819AB21E249285B000D935A5 /* 0121_Best Time to Buy and Sell Stock */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0121_Best Time to Buy and Sell Stock"; sourceTree = BUILT_PRODUCTS_DIR; };
+		819AB220249285B000D935A5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		819AB2292492868F00D935A5 /* 0122_Best Time to Buy and Sell Stock II */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0122_Best Time to Buy and Sell Stock II"; sourceTree = BUILT_PRODUCTS_DIR; };
+		819AB22B2492868F00D935A5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		819E182C247038C400170D90 /* 0085_Partition List_ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0085_Partition List_"; sourceTree = BUILT_PRODUCTS_DIR; };
 		819E182E247038C400170D90 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		819E183724703EE200170D90 /* 0090_Subsets II */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0090_Subsets II"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1322,6 +1370,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		819AB1FA2491331000D935A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB2052492812400D935A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB2102492828200D935A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB21B249285B000D935A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB2262492868F00D935A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1929,6 +2005,38 @@
 			path = "0118_Pascal's Triangle";
 			sourceTree = "<group>";
 		};
+		819AB2092492812400D935A5 /* 0119_Pascal's Triangle II */ = {
+			isa = PBXGroup;
+			children = (
+				819AB20A2492812400D935A5 /* main.cpp */,
+			);
+			path = "0119_Pascal's Triangle II";
+			sourceTree = "<group>";
+		};
+		819AB2142492828200D935A5 /* 0120_Triangle */ = {
+			isa = PBXGroup;
+			children = (
+				819AB2152492828200D935A5 /* main.cpp */,
+			);
+			path = 0120_Triangle;
+			sourceTree = "<group>";
+		};
+		819AB21F249285B000D935A5 /* 0121_Best Time to Buy and Sell Stock */ = {
+			isa = PBXGroup;
+			children = (
+				819AB220249285B000D935A5 /* main.cpp */,
+			);
+			path = "0121_Best Time to Buy and Sell Stock";
+			sourceTree = "<group>";
+		};
+		819AB22A2492868F00D935A5 /* 0122_Best Time to Buy and Sell Stock II */ = {
+			isa = PBXGroup;
+			children = (
+				819AB22B2492868F00D935A5 /* main.cpp */,
+			);
+			path = "0122_Best Time to Buy and Sell Stock II";
+			sourceTree = "<group>";
+		};
 		819E182D247038C400170D90 /* 0085_Partition List_ */ = {
 			isa = PBXGroup;
 			children = (
@@ -2210,6 +2318,10 @@
 				819AB1E824912B9000D935A5 /* 0116_Populating Next Right Pointers in Each Node */,
 				819AB1F3249132AD00D935A5 /* 0117_Populating Next Right Pointers in Each Node II */,
 				819AB1FE2491331000D935A5 /* 0118_Pascal's Triangle */,
+				819AB2092492812400D935A5 /* 0119_Pascal's Triangle II */,
+				819AB2142492828200D935A5 /* 0120_Triangle */,
+				819AB21F249285B000D935A5 /* 0121_Best Time to Buy and Sell Stock */,
+				819AB22A2492868F00D935A5 /* 0122_Best Time to Buy and Sell Stock II */,
 				81BADB3A241987C8009BB2E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -2299,6 +2411,10 @@
 				819AB1E724912B9000D935A5 /* 0116_Populating Next Right Pointers in Each Node */,
 				819AB1F2249132AD00D935A5 /* 0117_Populating Next Right Pointers in Each Node II */,
 				819AB1FD2491331000D935A5 /* 0118_Pascal's Triangle */,
+				819AB2082492812400D935A5 /* 0119_Pascal's Triangle II */,
+				819AB2132492828200D935A5 /* 0120_Triangle */,
+				819AB21E249285B000D935A5 /* 0121_Best Time to Buy and Sell Stock */,
+				819AB2292492868F00D935A5 /* 0122_Best Time to Buy and Sell Stock II */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3186,6 +3302,74 @@
 			productReference = 819AB1FD2491331000D935A5 /* 0118_Pascal's Triangle */;
 			productType = "com.apple.product-type.tool";
 		};
+		819AB2072492812400D935A5 /* 0119_Pascal's Triangle II */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 819AB20E2492812400D935A5 /* Build configuration list for PBXNativeTarget "0119_Pascal's Triangle II" */;
+			buildPhases = (
+				819AB2042492812400D935A5 /* Sources */,
+				819AB2052492812400D935A5 /* Frameworks */,
+				819AB2062492812400D935A5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0119_Pascal's Triangle II";
+			productName = "0119_Pascal's Triangle II";
+			productReference = 819AB2082492812400D935A5 /* 0119_Pascal's Triangle II */;
+			productType = "com.apple.product-type.tool";
+		};
+		819AB2122492828200D935A5 /* 0120_Triangle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 819AB2172492828200D935A5 /* Build configuration list for PBXNativeTarget "0120_Triangle" */;
+			buildPhases = (
+				819AB20F2492828200D935A5 /* Sources */,
+				819AB2102492828200D935A5 /* Frameworks */,
+				819AB2112492828200D935A5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 0120_Triangle;
+			productName = 0120_Triangle;
+			productReference = 819AB2132492828200D935A5 /* 0120_Triangle */;
+			productType = "com.apple.product-type.tool";
+		};
+		819AB21D249285B000D935A5 /* 0121_Best Time to Buy and Sell Stock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 819AB222249285B000D935A5 /* Build configuration list for PBXNativeTarget "0121_Best Time to Buy and Sell Stock" */;
+			buildPhases = (
+				819AB21A249285B000D935A5 /* Sources */,
+				819AB21B249285B000D935A5 /* Frameworks */,
+				819AB21C249285B000D935A5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0121_Best Time to Buy and Sell Stock";
+			productName = "0121_Best Time to Buy and Sell Stock";
+			productReference = 819AB21E249285B000D935A5 /* 0121_Best Time to Buy and Sell Stock */;
+			productType = "com.apple.product-type.tool";
+		};
+		819AB2282492868F00D935A5 /* 0122_Best Time to Buy and Sell Stock II */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 819AB22D2492868F00D935A5 /* Build configuration list for PBXNativeTarget "0122_Best Time to Buy and Sell Stock II" */;
+			buildPhases = (
+				819AB2252492868F00D935A5 /* Sources */,
+				819AB2262492868F00D935A5 /* Frameworks */,
+				819AB2272492868F00D935A5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0122_Best Time to Buy and Sell Stock II";
+			productName = "0122_Best Time to Buy and Sell Stock II";
+			productReference = 819AB2292492868F00D935A5 /* 0122_Best Time to Buy and Sell Stock II */;
+			productType = "com.apple.product-type.tool";
+		};
 		819E182B247038C400170D90 /* 0085_Partition List_ */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 819E1832247038C400170D90 /* Build configuration list for PBXNativeTarget "0085_Partition List_" */;
@@ -3918,6 +4102,18 @@
 					819AB1FC2491331000D935A5 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
+					819AB2072492812400D935A5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					819AB2122492828200D935A5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					819AB21D249285B000D935A5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					819AB2282492868F00D935A5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					819E182B247038C400170D90 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -4117,6 +4313,10 @@
 				819AB1E624912B9000D935A5 /* 0116_Populating Next Right Pointers in Each Node */,
 				819AB1F1249132AD00D935A5 /* 0117_Populating Next Right Pointers in Each Node II */,
 				819AB1FC2491331000D935A5 /* 0118_Pascal's Triangle */,
+				819AB2072492812400D935A5 /* 0119_Pascal's Triangle II */,
+				819AB2122492828200D935A5 /* 0120_Triangle */,
+				819AB21D249285B000D935A5 /* 0121_Best Time to Buy and Sell Stock */,
+				819AB2282492868F00D935A5 /* 0122_Best Time to Buy and Sell Stock II */,
 			);
 		};
 /* End PBXProject section */
@@ -4500,6 +4700,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				819AB2002491331000D935A5 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB2042492812400D935A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				819AB20B2492812400D935A5 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB20F2492828200D935A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				819AB2162492828200D935A5 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB21A249285B000D935A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				819AB221249285B000D935A5 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB2252492868F00D935A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				819AB22C2492868F00D935A5 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5538,6 +5770,70 @@
 			name = Debug;
 		};
 		819AB2032491331000D935A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		819AB20C2492812400D935A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		819AB20D2492812400D935A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		819AB2182492828200D935A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		819AB2192492828200D935A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		819AB223249285B000D935A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		819AB224249285B000D935A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		819AB22E2492868F00D935A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		819AB22F2492868F00D935A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -6635,6 +6931,42 @@
 			buildConfigurations = (
 				819AB2022491331000D935A5 /* Debug */,
 				819AB2032491331000D935A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		819AB20E2492812400D935A5 /* Build configuration list for PBXNativeTarget "0119_Pascal's Triangle II" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				819AB20C2492812400D935A5 /* Debug */,
+				819AB20D2492812400D935A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		819AB2172492828200D935A5 /* Build configuration list for PBXNativeTarget "0120_Triangle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				819AB2182492828200D935A5 /* Debug */,
+				819AB2192492828200D935A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		819AB222249285B000D935A5 /* Build configuration list for PBXNativeTarget "0121_Best Time to Buy and Sell Stock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				819AB223249285B000D935A5 /* Debug */,
+				819AB224249285B000D935A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		819AB22D2492868F00D935A5 /* Build configuration list for PBXNativeTarget "0122_Best Time to Buy and Sell Stock II" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				819AB22E2492868F00D935A5 /* Debug */,
+				819AB22F2492868F00D935A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
