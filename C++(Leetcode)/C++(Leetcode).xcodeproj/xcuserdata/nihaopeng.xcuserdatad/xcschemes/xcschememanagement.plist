@@ -364,7 +364,7 @@
 		<key>0110_Balanced Binary Tree.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>71</integer>
+			<integer>70</integer>
 		</dict>
 		<key>0111_Minimum Depth of Binary Tree.xcscheme_^#shared#^_</key>
 		<dict>
@@ -394,12 +394,12 @@
 		<key>0117_Populating Next Right Pointers in Each Node II.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>70</integer>
+			<integer>77</integer>
 		</dict>
 		<key>0118_Pascal's Triangle.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>77</integer>
+			<integer>71</integer>
 		</dict>
 		<key>0119_Pascal's Triangle II.xcscheme_^#shared#^_</key>
 		<dict>
@@ -409,7 +409,7 @@
 		<key>0120_Triangle.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>80</integer>
+			<integer>79</integer>
 		</dict>
 		<key>0121_Best Time to Buy and Sell Stock.xcscheme_^#shared#^_</key>
 		<dict>
@@ -424,12 +424,22 @@
 		<key>0125_Valid Palindrome.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>79</integer>
+			<integer>83</integer>
 		</dict>
 		<key>0128_Longest Consecutive Sequence.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>83</integer>
+			<integer>84</integer>
+		</dict>
+		<key>0129_Sum Root to Leaf Numbers.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>80</integer>
+		</dict>
+		<key>0131_Palindrome Partitioning.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>85</integer>
 		</dict>
 		<key>C++(Leetcode).xcscheme_^#shared#^_</key>
 		<dict>

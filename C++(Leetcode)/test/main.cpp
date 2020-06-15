@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <vector>
+#include <iomanip>      // 设置小数精度用
 using namespace std;
 
 void PrintVector(vector<int> &v){
@@ -46,5 +47,6 @@ int main(int argc, const char * argv[]) {
     int n = 5;
     cout << (1<<n) << endl;
     cout << (0 & 1) << endl;
+    cout << setprecision(2) << fixed << (2.0 / 3) << endl;
     return 0;
 }
