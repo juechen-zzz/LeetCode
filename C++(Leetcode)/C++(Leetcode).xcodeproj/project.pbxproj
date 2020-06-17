@@ -60,6 +60,7 @@
 		819AB2422493DBCD00D935A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819AB2412493DBCD00D935A5 /* main.cpp */; };
 		819AB24D2497C66000D935A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819AB24C2497C66000D935A5 /* main.cpp */; };
 		819AB2582497C7D400D935A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819AB2572497C7D400D935A5 /* main.cpp */; };
+		819AB263249A692600D935A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819AB262249A692600D935A5 /* main.cpp */; };
 		819E182F247038C400170D90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819E182E247038C400170D90 /* main.cpp */; };
 		819E183A24703EE200170D90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819E183924703EE200170D90 /* main.cpp */; };
 		819E18452472E0CB00170D90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 819E18442472E0CB00170D90 /* main.cpp */; };
@@ -600,6 +601,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		819AB25E249A692600D935A5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		819E182A247038C400170D90 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1018,6 +1028,8 @@
 		819AB24C2497C66000D935A5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		819AB2552497C7D400D935A5 /* 0131_Palindrome Partitioning */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0131_Palindrome Partitioning"; sourceTree = BUILT_PRODUCTS_DIR; };
 		819AB2572497C7D400D935A5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		819AB260249A692600D935A5 /* 0132_Palindrome Partitioning II */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0132_Palindrome Partitioning II"; sourceTree = BUILT_PRODUCTS_DIR; };
+		819AB262249A692600D935A5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		819E182C247038C400170D90 /* 0085_Partition List_ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0085_Partition List_"; sourceTree = BUILT_PRODUCTS_DIR; };
 		819E182E247038C400170D90 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		819E183724703EE200170D90 /* 0090_Subsets II */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "0090_Subsets II"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1474,6 +1486,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		819AB2522497C7D400D935A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB25D249A692600D935A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2145,6 +2164,14 @@
 			path = "0131_Palindrome Partitioning";
 			sourceTree = "<group>";
 		};
+		819AB261249A692600D935A5 /* 0132_Palindrome Partitioning II */ = {
+			isa = PBXGroup;
+			children = (
+				819AB262249A692600D935A5 /* main.cpp */,
+			);
+			path = "0132_Palindrome Partitioning II";
+			sourceTree = "<group>";
+		};
 		819E182D247038C400170D90 /* 0085_Partition List_ */ = {
 			isa = PBXGroup;
 			children = (
@@ -2434,6 +2461,7 @@
 				819AB2402493DBCD00D935A5 /* 0128_Longest Consecutive Sequence */,
 				819AB24B2497C66000D935A5 /* 0129_Sum Root to Leaf Numbers */,
 				819AB2562497C7D400D935A5 /* 0131_Palindrome Partitioning */,
+				819AB261249A692600D935A5 /* 0132_Palindrome Partitioning II */,
 				81BADB3A241987C8009BB2E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -2531,6 +2559,7 @@
 				819AB23F2493DBCD00D935A5 /* 0128_Longest Consecutive Sequence */,
 				819AB24A2497C66000D935A5 /* 0129_Sum Root to Leaf Numbers */,
 				819AB2552497C7D400D935A5 /* 0131_Palindrome Partitioning */,
+				819AB260249A692600D935A5 /* 0132_Palindrome Partitioning II */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3554,6 +3583,23 @@
 			productReference = 819AB2552497C7D400D935A5 /* 0131_Palindrome Partitioning */;
 			productType = "com.apple.product-type.tool";
 		};
+		819AB25F249A692600D935A5 /* 0132_Palindrome Partitioning II */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 819AB266249A692600D935A5 /* Build configuration list for PBXNativeTarget "0132_Palindrome Partitioning II" */;
+			buildPhases = (
+				819AB25C249A692600D935A5 /* Sources */,
+				819AB25D249A692600D935A5 /* Frameworks */,
+				819AB25E249A692600D935A5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "0132_Palindrome Partitioning II";
+			productName = "0132_Palindrome Partitioning II";
+			productReference = 819AB260249A692600D935A5 /* 0132_Palindrome Partitioning II */;
+			productType = "com.apple.product-type.tool";
+		};
 		819E182B247038C400170D90 /* 0085_Partition List_ */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 819E1832247038C400170D90 /* Build configuration list for PBXNativeTarget "0085_Partition List_" */;
@@ -4310,6 +4356,9 @@
 					819AB2542497C7D400D935A5 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
+					819AB25F249A692600D935A5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					819E182B247038C400170D90 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -4517,6 +4566,7 @@
 				819AB23E2493DBCD00D935A5 /* 0128_Longest Consecutive Sequence */,
 				819AB2492497C66000D935A5 /* 0129_Sum Root to Leaf Numbers */,
 				819AB2542497C7D400D935A5 /* 0131_Palindrome Partitioning */,
+				819AB25F249A692600D935A5 /* 0132_Palindrome Partitioning II */,
 			);
 		};
 /* End PBXProject section */
@@ -4964,6 +5014,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				819AB2582497C7D400D935A5 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		819AB25C249A692600D935A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				819AB263249A692600D935A5 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6137,6 +6195,22 @@
 			};
 			name = Release;
 		};
+		819AB264249A692600D935A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		819AB265249A692600D935A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		819E1830247038C400170D90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -7299,6 +7373,15 @@
 			buildConfigurations = (
 				819AB25A2497C7D400D935A5 /* Debug */,
 				819AB25B2497C7D400D935A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		819AB266249A692600D935A5 /* Build configuration list for PBXNativeTarget "0132_Palindrome Partitioning II" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				819AB264249A692600D935A5 /* Debug */,
+				819AB265249A692600D935A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -14,15 +14,17 @@ class Solution {
 public:
     vector<vector<string>> out;
     
+    // 判断字符串是否回文
     bool isPalindrome(string s)
     {
         for(int i = 0; i < s.size()/2; i++)
         {
-            if(s[i] != s[s.size()-1-i]) return false;
+            if(s[i] != s[s.size()-1-i]) {return false;}
         }
         return true;
     }
     
+    // 回溯
     void helper(string s, vector<string> v)
     {
         if(s == "") {out.push_back(v);}
