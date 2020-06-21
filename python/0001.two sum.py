@@ -1,9 +1,8 @@
 '''
 leetcode 1
 
-Given an array of integers, return indices of the two numbers such that they add up to a specific target.
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
+给定一个数组，找到数组中两数和为给定值，返回两数的索引
+ 
 Example:
 Given nums = [2, 7, 11, 15], target = 9,
 Because nums[0] + nums[1] = 2 + 7 = 9,
@@ -21,6 +20,5 @@ def twoSum(self, nums, target):
         if m in d:
             return [d[m], i]
         else:
+            # 字典中存储值-键对
             d[n] = i
-
-
