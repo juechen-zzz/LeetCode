@@ -369,12 +369,12 @@
 		<key>0111_Minimum Depth of Binary Tree.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>72</integer>
 		</dict>
 		<key>0112_Path Sum.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>72</integer>
+			<integer>7</integer>
 		</dict>
 		<key>0113_Path Sum II.xcscheme_^#shared#^_</key>
 		<dict>
@@ -404,17 +404,17 @@
 		<key>0119_Pascal's Triangle II.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>79</integer>
+			<integer>78</integer>
 		</dict>
 		<key>0120_Triangle.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>80</integer>
+			<integer>79</integer>
 		</dict>
 		<key>0121_Best Time to Buy and Sell Stock.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>78</integer>
+			<integer>80</integer>
 		</dict>
 		<key>0122_Best Time to Buy and Sell Stock II.xcscheme_^#shared#^_</key>
 		<dict>
@@ -445,6 +445,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>86</integer>
+		</dict>
+		<key>0133_Clone Graph.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>87</integer>
 		</dict>
 		<key>C++(Leetcode).xcscheme_^#shared#^_</key>
 		<dict>
