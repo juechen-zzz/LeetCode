@@ -1,8 +1,5 @@
 '''
-leetcode 3
-
-Given a string, find the length of the longest substring without repeating characters.
-
+给定一个字符串，返回其中无重复最大子串的长度
 Example 1:
 
 Input: "abcabcbb"
@@ -21,18 +18,21 @@ Explanation: The answer is "wke", with the length of 3.
 Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
 '''
-def lengthOfLongestSubstring(self, s):
-    """
-    :type s: str
-    :rtype: int
-    """
-    start = 0 
-    max_length = 0
-    substring = {}
-    for i, c in enumerate(s):
-        if c in substring and start <= substring[c]:
-            start = substring[c] + 1
-        else:
-            max_length = max(max_length, i - start + 1)
-        substring[c]             
-    return max_length
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        if len(s) == 0:
+            return 0
+        if len(s) == 1:
+            return 1
+        
+        max_len = 1
+        index = 0
+        substr = {}
+        for k, v in enumerate(s):
+            # 字典中查找的是键（key）
+            if v in substr and index <= substr[v]:
+                index = substr[v] + 1
+            else:
+                max_len = max(max_len, k-index+1)
+            substr[v] = k
+        return max_len

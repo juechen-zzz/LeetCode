@@ -22,7 +22,7 @@ class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         carry = 0
         head = ListNode(0)
-        currentNode = head
+        curr = head
         while (l1 or l2):
             if l1:
                 carry += l1.val
@@ -30,10 +30,10 @@ class Solution:
             if l2:
                 carry += l2.val
                 l2 = l2.next
-            currentNode.next = ListNode(carry % 10)
-            currentNode = currentNode.next
+            curr.next = ListNode(carry % 10)
+            curr = curr.next
             carry = carry // 10
         if carry == 1:
-            currentNode.next = ListNode(1)
-            currentNode = currentNode.next
+            curr.next = ListNode(1)
+            curr = curr.next
         return head.next

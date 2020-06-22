@@ -1,11 +1,5 @@
 '''
-leetcode 4
-
-There are two sorted arrays nums1 and nums2 of size m and n respectively.
-
-Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
-
-You may assume nums1 and nums2 cannot be both empty.
+给定两个数组，查找中位数r
 
 Example 1:
 
@@ -21,13 +15,13 @@ nums2 = [3, 4]
 The median is (2 + 3)/2 = 2.5
 
 '''
-def findMedianSortedArrays(self, nums1, nums2):
-    """
-    :type nums1: List[int]
-    :type nums2: List[int]
-    :rtype: float
-    """
-    res = nums1 + nums2
-    res.sort()
-    n = len(res)//2
-    return res[n] if len(res)%2 ==1 else  (res[n]+res[n-1])/2
+class Solution:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+        ans = nums1 + nums2
+        # 数组可以直接加连，然后排序
+        ans.sort()
+        n = len(ans) // 2
+        if len(ans) % 2 == 1:
+            return ans[n]
+        else:
+            return (ans[n] + ans[n-1]) / 2
