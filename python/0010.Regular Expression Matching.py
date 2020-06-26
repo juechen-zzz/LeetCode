@@ -1,16 +1,5 @@
 '''
-leetcode 10
-
-Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '*'.
-
-'.' Matches any single character.
-'*' Matches zero or more of the preceding element.
-The matching should cover the entire input string (not partial).
-
-Note:
-
-s could be empty and contains only lowercase letters a-z.
-p could be empty and contains only lowercase letters a-z, and characters like . or *.
+字符串匹配，有特殊字符（万能） 
 Example 1:
 
 Input:
@@ -46,27 +35,17 @@ s = "mississippi"
 p = "mis*is*p*."
 Output: false
 '''
-
 class Solution:
-    def isMatch(self, s, p):
-        """
-        :type s: str
-        :type p: str
-        :rtype: bool
-        """
-        pl=len(p)
-        sl=len(s)
-        if pl==0: return sl==0  
-        
-        if pl==1:
-            return sl==1 and (s[0] == p[0] or p[0] =='.')
-        
-        if p[1] != '*':
-            if sl ==0 : return False
-            return (s[0]==p[0] or p[0]=='.') and self.isMatch(s[1:],p[1:])
-        
-        while (len(s) !=0 and (s[0]==p[0] or p[0]=='.')):
-            if self.isMatch(s,p[2:]): return True
-            s=s[1:]
-            
-        return self.isMatch(s,p[2:])
+    def isMatch(self, s: str, p: str) -> bool:
+        s_len, p_len = len(s), len(p)
+        if p_len == 0:return s_len == 0
+
+        # 首先判断len(p)>1 and p[1]=="*"，如果是的话，说明*在p的第二位，我们就要判断s[0]和p[0]能否匹配，
+        # 如果可以匹配的话，我们继续判断isMatch(s[1:], p)（也就是*匹配了一次，我们会继续使用.*或者?*去参与比较），
+        # 同时需要判断isMatch(s,p[2:])是不是成立（也就是*表示匹配0次）
+        if p_len > 1 and p[1] == "*":
+            return self.isMatch(s, p[2:]) or \
+                (s_len != 0 and (s[0] == p[0] or p[0] == '.') and self.isMatch(s[1:], p))
+        # 如果*不在p的第二位，我们就要判断s[0]和p[0]能否匹配
+        else:
+            return s_len != 0 and (s[0] == p[0] or p[0] == '.') and self.isMatch(s[1:], p[1:]) 

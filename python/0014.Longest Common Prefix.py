@@ -15,21 +15,20 @@ Explanation: There is no common prefix among the input strings.
 '''
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        if not strs:
-            return ""
-        elif len(strs) == 1:
-            return strs[0]
+        if not strs: return ""
+        elif len(strs) == 1: return strs[0]
         else:
-            min_len1 = min(len(s) for s in strs)
-            flag = 0
-            for j in range(min_len1):
-                for i in range(len(strs)-1):
-                    if strs[i][j] == strs[i+1][j]:
-                        if i == len(strs)-2 and flag >= j:
-                            flag += 1
-                    else:
+            min_len = min(len(s) for s in strs)
+            index = 0
+            for j in range(min_len):
+                for i in range(len(strs)):
+                    if strs[i][j] == strs[0][j]:
+                        if i == len(strs)-1 and index >= j:
+                            index += 1
+                    else: 
                         break
-            if flag > 0:
-                return strs[0][:flag]
+            
+            if index > 0:
+                return strs[0][:index]
             else:
                 return ""

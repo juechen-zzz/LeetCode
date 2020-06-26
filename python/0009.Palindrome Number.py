@@ -1,6 +1,5 @@
 '''
-Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
-
+判断数字是否回文，负数直接False
 Example 1:
 
 Input: 121
@@ -19,18 +18,10 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        """
-        :type x: int
-        :rtype: bool
-        """
-        q = 0
-        p = x
-        if x < 0 :
-            return False
-        elif x == 0:
-            return True
-        while x > 0:
-            q = q * 10 + x % 10
-            x = x // 10		
-        return q == p
-            
+        if (x < 0): return False
+        temp = x
+        ans = 0
+        while temp > 0:
+            ans = ans * 10 + temp % 10
+            temp = temp // 10
+        return ans == x
