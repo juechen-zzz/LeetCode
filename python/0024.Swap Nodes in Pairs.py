@@ -9,33 +9,25 @@ Example:
 
 Given 1->2->3->4, you should return the list as 2->1->4->3.
 '''
-
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
 
-
-class Solution(object):  
-    def swapPairs(self, head):  
-        """ 
-        :type head: ListNode 
-        :rtype: ListNode 
-        """  
-        if head == None:
-            return head
-        cur = ListNode(0)
+class Solution:
+    def swapPairs(self, head: ListNode) -> ListNode:
+        if head == None: return head
+        cur = ListNode(-1)
         cur.next = head
-        first =cur
-        while cur.next and cur.next.next:
-            n1 = cur.next
+        p = cur
+        while p.next and p.next.next:
+            n1 = p.next
             n2 = n1.next
-            nxt = n2.next
-            n1.next = nxt
+            temp = n2.next
+            p.next = n2
             n2.next = n1
-            cur.next = n2
-            
-            cur = n1
-        return first.next
+            n1.next = temp
 
+            p = n1
+        return cur.next

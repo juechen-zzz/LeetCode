@@ -19,11 +19,7 @@ Output: 1->1->2->3->4->4->5->6
 #         self.next = None
 
 class Solution:
-    def mergeKLists(self, lists):
-        """
-        :type lists: List[ListNode]
-        :rtype: ListNode
-        """
+    def mergeKLists(self, lists: List[ListNode]) -> ListNode:
         num_list = []
         if lists == []:
             return []
@@ -32,12 +28,10 @@ class Solution:
                 while i:
                     num_list.append(i.val)
                     i = i.next
-
         num_list.sort()
-        head = ListNode(0)
-        first = head
+        head = ListNode(-1)
+        cur = head
         for i in num_list:
-            head.next = ListNode(i)
-            head = head.next
-
-        return first.next
+            cur.next = ListNode(i)
+            cur = cur.next
+        return head.next

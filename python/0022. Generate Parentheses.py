@@ -12,17 +12,18 @@ For example, given n = 3, a solution set is:
 ]
 '''
 
-class Solution(object):
-    def generateParenthesis(self, N):
+class Solution:
+    def generateParenthesis(self, n: int) -> List[str]:
         ans = []
-        def backtrack(S = '', left = 0, right = 0):
-            if len(S) == 2 * N:
-                ans.append(S)
-                return
-            if left < N:
-                backtrack(S+'(', left+1, right)
-            if right < left:
-                backtrack(S+')', left, right+1)
 
+        def backtrack(s = '', l = 0, r = 0):
+            if len(s) == 2 * n:
+                ans.append(s)
+                return
+            if l < n:
+                backtrack(s+'(', l+1, r)
+            if r < l:
+                backtrack(s+')', l, r+1)
+        
         backtrack()
         return ans

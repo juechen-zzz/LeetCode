@@ -1,5 +1,5 @@
 '''
-Given a linked list, remove the n-th node from the end of list and return its head.
+删除倒数第n个节点，返回头节点
 
 Example:
 

@@ -40,8 +40,7 @@ class Solution:
         for i in s:
             if i in pre_dict.values():  # 表明i为左括号，入栈
                 stack.append(i)
-        # i为右括号，若此时栈空(not stack)或者与出栈的不匹配则
-        # 匹配出错 ，return False
+        # i为右括号，若此时栈空(not stack)或者与出栈的不匹配则匹配出错 ，return False
             elif not stack or pre_dict[i] != stack.pop():
                 return False
         return not stack  # 若结束时栈空则return True,反之return False
