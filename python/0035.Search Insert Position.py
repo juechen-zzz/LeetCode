@@ -1,7 +1,5 @@
 '''
-Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
-
-You may assume no duplicates in the array.
+给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
 
 Example 1:
 
@@ -20,7 +18,12 @@ Example 4:
 Input: [1,3,5,6], 0
 Output: 0
 '''
+# 法一
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        return bisect.bisect_left(nums, target)
 
+# 法二
 class Solution:
     def searchInsert(self, nums, target):
         """

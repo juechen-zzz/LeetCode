@@ -20,36 +20,12 @@ Output: -1
 '''
 
 class Solution:
-    def search(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
-        #先找到两个第二个升序数组的第一项的index
-        l = 0
-        r = len(nums) -1
-        while l < r:
-            mid = (l + r)//2
-            if nums[mid] > nums[r]:
-                l = mid + 1
-            else:
-                r = mid
-        pol = l
-        ans = self.binary_search(target, nums[:pol])
-        if ans == -1:
-            ans = self.binary_search(target, nums[pol:])
-            if ans != -1:
-                ans += len(nums[:pol])
- 
-        return ans
-    
-    def binary_search(self, target, nums):
+    def binary_search(self, nums, target):
         index = -1
-        l = 0
+        l = 0 
         r = len(nums) - 1
         while l <= r:
-            mid = (l+r)//2
+            mid = (l + r) // 2
             if nums[mid] < target:
                 l = mid + 1
             elif nums[mid] > target:
@@ -58,4 +34,20 @@ class Solution:
                 index = mid
                 break
         return index
+
+    def search(self, nums: List[int], target: int) -> int:
+        l = 0
+        r = len(nums) - 1
+        while l < r:
+            mid = (l + r) // 2
+            if nums[mid] > nums[r]:
+                l = mid + 1
+            else:
+                r = mid
+        ans = self.binary_search(nums[:l], target)
+        if ans == -1:
+            ans = self.binary_search(nums[l:], target)
+            if ans != -1: ans += len(nums[:l])
+        return ans
+
         
