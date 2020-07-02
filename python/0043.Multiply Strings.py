@@ -18,11 +18,13 @@ You must not use any built-in BigInteger library or convert the inputs to intege
 '''
 
 class Solution:
+    def con2num(self, num):
+        digit = 0
+        for i in range(len(num)):
+            # 以一个字符（长度为1的字符串）作为参数，返回对应的 ASCII 数值
+            n = (ord(num[i]) - ord('0'))
+            digit += n * (10 ** (len(num) - i - 1))
+        return digit
+
     def multiply(self, num1: str, num2: str) -> str:
-        def con2num(num):
-            digit = 0
-            for i in range(len(num)):
-                n = (ord(num[i]) - ord('0'))
-                digit += n * (10 ** (len(num) - i - 1))
-            return digit
-        return str(con2num(num1) * con2num(num2))
+        return str(self.con2num(num1) * self.con2num(num2))

@@ -9,25 +9,35 @@ Example:
 Input: [0,1,0,2,1,0,1,3,2,1,2,1]
 Output: 6
 '''
-
+# 总面积然后减去所有柱子的面积的方法。这种方法我感觉算不上是双指针，但也是把图从最高点分成两块从两头计算。
 class Solution:
     def trap(self, height: List[int]) -> int:
-        if len(height)<3:
-            return 0
-        l,r = [], []
-        hi,i = 0, 0
-        while i<len(height):
-            l+=hi,
-            hi=max(hi,height[i])
-            i+=1
-        i,hi=i-1,0
-        while i>-1:
-            r+=hi,
-            hi=max(hi,height[i])
-            i-=1
-        ans=0
-        i+=1
-        while i<len(height):
-            ans+=max(0,min(l[i],r[~i])-height[i])
-            i+=1
-        return ans
+        m,minx = 0, 0
+        sumh = 0
+        for idx,num in enumerate(height):
+            sumh += height[idx]
+            if num > m:
+                m = num
+                minx = idx
+        cnt = 0
+        maxi, maxj = 0, 0
+        for i in range(minx):                               # 左边总面积
+            maxi = max(maxi,height[i])
+            cnt += maxi
+        for j in reversed(range(minx,len(height))):         # 右边总面积
+            maxj = max(maxj,height[j])
+            cnt += maxj
+        return cnt-sumh
+
+# 只需要一次循环，用左右两个指针，左指针记录左边遇到的最大值，右指针记录右边遇到的最大值
+# 每轮循环将两个最大值加起来，并且减去当前柱子的高度。
+# 最后减去总体面积即可
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        ans, lmax, rmax = 0, 0, 0
+        for i in range(len(height)):
+            lmax = max(lmax, height[i])
+            rmax = max(rmax, height[-1-i])
+            ans += lmax + rmax - height[i]
+        return ans-lmax*len(height)
+        
