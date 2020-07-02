@@ -1,12 +1,6 @@
 '''
-Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
-
-The same repeated number may be chosen from candidates unlimited number of times.
-
-Note:
-
-All numbers (including target) will be positive integers.
-The solution set must not contain duplicate combinations.
+给定一个无重复元素的数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。
+candidates 中的每个数字在每个组合中可以多次使用。  
 Example 1:
 
 Input: candidates = [2,3,6,7], target = 7,
@@ -28,14 +22,14 @@ A solution set is:
 
 class Solution:
     def combinationSum(self, candidates, target):
-        dp = collections.defaultdict(list)
+      # 该函数返回一个类似字典的对象,默认为None。使用list作第一个参数，可以很容易将键-值对序列转换为列表字典
+        dp = [[] for _ in range(target+1)]
         for val in candidates:
             for j in range(val,target + 1):
                 if j - val == 0:
                     dp[j].append([val])
                 else:
-                    tmp = dp[j - val]
-                    for _list in tmp:
+                    for _list in dp[j-val]:
                         l = _list + [val]
                         dp[j].append(l)
         return dp[target]

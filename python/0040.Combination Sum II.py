@@ -1,12 +1,8 @@
 '''
-Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+给定一个数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。
 
-Each number in candidates may only be used once in the combination.
+candidates 中的每个数字在每个组合中只能使用一次。
 
-Note:
-
-All numbers (including target) will be positive integers.
-The solution set must not contain duplicate combinations.
 Example 1:
 
 Input: candidates = [10,1,2,7,6,1,5], target = 8,
@@ -29,17 +25,17 @@ A solution set is:
 
 class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
-        import copy
         dp = [[] for _ in range(target+1)]
-        for can in candidates:
-            for i in reversed(range(can,target+1)):
-                if dp[i-can]:
-                    for j in dp[i-can]:
-                        met = copy.copy(j)
-                        met.append(can)
-                        dp[i].append(met)
-                elif i==can:
-                    dp[i].append([can])
+        for val in candidates:
+            for i in reversed(range(val,target+1)):     # 返回一个反转的迭代器，也就从这和39题区别开
+                if i==val:
+                    dp[i].append([val])
+                else:
+                    for _list in dp[i-val]:
+                        l = _list + [val]
+                        dp[i].append(l)
+                    
+        # dp[-1]: [[6], [1, 5], [1, 5]], 然后排除重复的组合（同一数字在数组中多次出现的情况）
         res = []
         for i in dp[-1]:
             if sorted(i) not in res:
