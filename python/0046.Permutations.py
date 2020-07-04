@@ -15,27 +15,12 @@ Output:
 ]
 '''
 
-class Solution(object):
-    def permute(self, nums):
-        if len(nums) <= 1:
-            return [nums]
-        result = []
-        self.heapPermutation(nums, len(nums), result)
-        return result
-        
-    def heapPermutation(self, a, size, result):
-        if size == 1:
-            result.append(a[:])
-
-        size1 = size - 1
-        is_size_odd = size % 2 == 1
-
-        for i in range(size):
-            self.heapPermutation(a, size1, result)    
-
-            if is_size_odd:
-                if 0 != size1:
-                    a[0], a[size1] = a[size1], a[0]
-            else:
-                if i != size1:
-                    a[i], a[size1] = a[size1], a[i]
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        if len(nums) <= 1: return [nums]
+        res = []
+        for idx, num in enumerate(nums):
+            res_nums = nums[:idx] + nums[idx + 1:]  # 确定剩余元素
+            for j in self.permute(res_nums):  
+                res.append([num] + j)
+        return res

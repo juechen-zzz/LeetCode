@@ -44,26 +44,58 @@ s = "acdcb"
 p = "a*c?b"
 Output: false
 '''
-
+# 回溯
 class Solution:
+    def remove_duplicate_stars(self, p):
+        if p == '': return p
+        p1 = [p[0],]
+        for x in p[1:]:
+            if p1[-1] != '*' or (p1[-1] == '*' and x != '*'):
+                p1.append(x)
+        return ''.join(p1) 
+        
+    def helper(self, s, p):
+        dp = self.dp
+        if (s, p) in dp: return dp[(s, p)]
+
+        if p == s or p == '*':
+            dp[(s, p)] = True
+        elif p == '' or s == '':
+            dp[(s, p)] = False
+        elif p[0] == s[0] or p[0] == '?':
+            dp[(s, p)] = self.helper(s[1:], p[1:])
+        elif p[0] == '*':
+            dp[(s, p)] = self.helper(s, p[1:]) or self.helper(s[1:], p)
+        else:
+            dp[(s, p)] = False
+
+        return dp[(s, p)]
+        
     def isMatch(self, s, p):
-        si,pi,pr,sr=0,0,-1,-1
-        while si<len(s):
-            if pi<len(p) and p[pi]=='*':
-                pi+=1
-                pr=pi
-                sr=si
-            elif pi<len(p) and (p[pi]=='?' or p[pi]==s[si]):
-                pi+=1
-                si+=1
-            elif pr!=-1:
-                pi=pr
-                sr+=1
-                si=sr
-            else:
-                return False
+        p = self.remove_duplicate_stars(p)
+        self.dp = {}
+        return self.helper(s, p)
 
-        while(pi<len(p) and p[pi]=='*'):
-            pi+=1
+# DP
+class Solution:
+    def isMatch(self, s: str, p: str) -> bool:
+        s = '0'+s
+        p = '0'+p
+        # dp[i][j]表示：s的前i个字符与p的前j个字符是否匹配
+        dp = [[False for _ in range(len(p))] for _ in range(len(s))]
 
-        return pi==len(p)
+        # 初始化
+        dp[0][0] = True  # 空字符串与空字符串相匹配
+        for i in range(1, len(p)):
+            dp[0][i] = dp[0][i-1] and p[i] == '*'
+        for i in range(1, len(s)):
+            dp[i][0] = False
+        
+        # 动态规划
+        for i in range(1, len(s)):
+            for j in range(1, len(p)):
+                if s[i] == p[j] or p[j] == '?':
+                    dp[i][j] = dp[i-1][j-1]
+                elif p[j] == '*':
+                    dp[i][j] = dp[i-1][j] or dp[i][j-1]
+        return dp[-1][-1]
