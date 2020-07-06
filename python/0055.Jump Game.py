@@ -19,15 +19,13 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
 '''
 
 class Solution:
-    def canJump(self, nums):
-        if 0 not in nums or len(nums) == 1:
-            return True
-        for i in range(len(nums)):
-            if nums[i] == 0 and i != len(nums) - 1:
-                cur = i - 1
-                while cur >= 0 and nums[cur] <= i - cur:
-                    cur -= 1
-                if cur == -1:
-                    return False
-        return True
+    def canJump(self, nums: List[int]) -> bool:
+        n, rightmost = len(nums), 0
+        for i in range(n):
+            if i <= rightmost:
+                rightmost = max(rightmost, i + nums[i])
+                if rightmost >= n - 1:
+                    return True
+        return False
+
         

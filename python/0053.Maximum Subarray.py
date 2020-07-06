@@ -1,6 +1,5 @@
 '''
-Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
-
+最大子列和
 Example:
 
 Input: [-2,1,-3,4,-1,2,1,-5,4],
@@ -12,15 +11,13 @@ If you have figured out the O(n) solution, try coding another solution using the
 '''
 
 class Solution:
-    
     def maxSubArray(self, nums: List[int]) -> int:
-        
-        bestSum = min(nums)
-        tailSum = 0
-        
+        if len(nums) == 1: return nums[0]
+        ans = min(nums)
+        s = 0
         for n in nums:
-            tailSum += n
-            bestSum = max(tailSum, bestSum)
-            tailSum = max(tailSum, 0)
+            s += n
+            ans = max(ans, s)
+            s = max(s, 0)
+        return ans
                 
-        return bestSum
