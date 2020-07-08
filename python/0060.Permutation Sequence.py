@@ -26,40 +26,32 @@ Output: "2314"
 
 '''
 
-# python3
-from functools import reduce
-from math import ceil
-
+# 超时
 class Solution:
     def getPermutation(self, n: int, k: int) -> str:
-        s = ''
-        l = list(range(1, n + 1))
-        while n != 1:
-            f = reduce(lambda x, y: x * y, range(1, n))
-            t = ceil(k / f)
-            s += str(l.pop(t - 1))
-            k -= (t - 1) * f
-            n -= 1
-        return s + str(l[0])
+        i = 0
+        nums = list(range(n+1))
+        nums.pop(0)
+        res = self.permute(nums)
+        return ''.join(map(str, list(res[k-1])))
 
-# python2
-class Solution(object):
-    def getPermutation(self, n, k):
-        """
-        :type n: int
-        :type k: int
-        :rtype: str
-        """
-        nums = map(str, range(1, 10))
-        k -= 1
-        factor = 1
-        for i in range(1, n):
-            factor *= i
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        if len(nums) <= 1: return [nums]
         res = []
-        for i in reversed(range(n)):
-            res.append(nums[k / factor])
-            nums.remove(nums[k / factor])
-            if i != 0:
-                k %= factor
-                factor /= i
-        return "".join(res)
+        for idx, num in enumerate(nums):
+            res_nums = nums[:idx] + nums[idx + 1:]  # 确定剩余元素
+            for j in self.permute(res_nums):  
+                res.append([num] + j)
+        return res
+
+# 
+class Solution:
+    def getPermutation(self, n: int, k: int) -> str:
+        from itertools import permutations
+        # 构造[1,2,3,4....n]
+        list_n = list(range(n+1))
+        list_n.pop(0)
+        #构造全排列list
+        arr = list(permutations(list_n))
+        #返回第k个
+        return ''.join(map(str, list(arr[k-1])))

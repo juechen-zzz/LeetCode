@@ -16,22 +16,18 @@ Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
 
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
-        
-        def merge(intervals):
-            if len(intervals)==0:
-                return []
-            intervals.sort(key=lambda x:x[0])
-            ret = [intervals[0]]
-            for interval in intervals[1:]:
-                if interval[0] <= ret[-1][1]:
-                    ret[-1][1] = max(ret[-1][1],interval[1])
-                else:
-                    ret.append(interval)
-            return ret
-            
-        ind = 0
-        for i in range(len(intervals)):
-            if min(intervals[i]) <= min(newInterval):
-                ind = ind + 1
-        intervals.insert(ind, newInterval)
-        return merge(intervals)
+        intervals.append(newInterval)
+        return self.merge(intervals)
+
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        if len(intervals) == 0: return []
+        # 以第一个元素为key进行子数组排序
+        intervals.sort(key = lambda x: x[0])
+
+        ret = [intervals[0]]
+        for x in intervals[1:]:
+            if x[0] <= ret[-1][1]:
+                ret[-1][1] = max(ret[-1][1], x[1])
+            else:
+                ret.append(x)
+        return ret

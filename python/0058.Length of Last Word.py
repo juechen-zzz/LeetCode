@@ -13,13 +13,14 @@ Output: 5
 
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
-        if not s:
-            return 0
+        if len(s) == 0: return 0
+        ans = []
+        ind = 0
         for i in range(len(s)-1, -1, -1):
-            if s[i] != ' ':
-                for j in range(i, -1, -1):
-                    if s[j] == ' ':
-                        return i - j
-                    elif j == 0:
-                        return i + 1
-        return 0
+            if s[i] == ' ' and len(ans) == 0:
+                continue
+            elif s[i] == ' ':
+                break
+            else:
+                ans.append(s[i])
+        return len(ans)
