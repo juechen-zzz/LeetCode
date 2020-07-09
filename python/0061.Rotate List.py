@@ -20,28 +20,52 @@ rotate 4 steps to the right: 2->0->1->NULL
 '''
 
 # Definition for singly-linked list.
-# class ListNode(object):
+# class ListNode:
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
 
-class Solution(object):
-    def rotateRight(self, head, k):
-        if (head is None or head.next is None):
-            return head
-        values = []
-        current = head        
-        while current is not None:
-            values.append(current.val)
-            current = current.next
-        
-        k = k % len(values)
-        rotated_values = values[-k:] + values[:-k]
-        
-        current = head
-        for val in rotated_values:
-            current.val = val
-            current = current.next
+class Solution:
+    def rotateRight(self, head: ListNode, k: int) -> ListNode:
+        if head is None or head.next is None: return head
+        val = []
+        cur = head
+        while cur is not None:
+            val.append(cur.val)
+            cur = cur.next
+        k = k % len(val)
+        r_val = val[-k:] + val[:-k]
+        cur = head
+        for val in r_val:
+            cur.val = val
+            cur = cur.next
         
         return head
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def rotateRight(self, head: ListNode, k: int) -> ListNode:
+        if head is None or head.next is None: return head
+        cur = head
+        num = 0
+        while cur:
+            cur = cur.next
+            num += 1
+        first = second = head
+        k = k % num
+        for i in range(k,0,-1):
+            first = first.next
+        while first.next:
+            first = first.next
+            second = second.next
+        first.next = head 
+        head = second.next
+        second.next = None
+        return head
+
         
