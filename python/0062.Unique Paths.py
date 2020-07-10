@@ -28,7 +28,8 @@ Output: 28
 
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
-        result = [[1]*m]*n
+        if m == 1 or n == 1: return 1
+        result = [[1 for _ in range(m)] for _ in range(n)]
         for i in range(1, n):
             for j in range(1, m):
                 result[i][j] = result[i-1][j] + result[i][j-1]
