@@ -20,7 +20,7 @@ class Solution:
         
         n=len(grid)
         m=len(grid[0])
-        dp=[[0 for x in range(m)] for x in range(n)]
+        dp=[[0 for _ in range(m)] for _ in range(n)]
 		
         dp[0][0]=grid[0][0]
 
