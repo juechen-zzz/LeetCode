@@ -15,13 +15,41 @@ Output:
 ]
 '''
 
-class Solution(object):
-    def combine(self, n, k):
-        results = [[i] for i in range(1, n - k + 2)]
-        for m in range(1, k):
-            new_results = []
-            for result in results:
-                for i in range(result[-1] + 1, n - k + m + 2):
-                    new_results += [result + [i]]
-            results = new_results
-        return results
+# 回溯
+class Solution:
+    def combine(self, n: int, k: int) -> List[List[int]]:
+        def backtrack(first = 1, curr = []):
+            # if the combination is done
+            if len(curr) == k:  
+                output.append(curr[:])
+            for i in range(first, n + 1):
+                # add i into the current combination
+                curr.append(i)
+                # use next integers to complete the combination
+                backtrack(i + 1, curr)
+                # backtrack
+                curr.pop()
+        
+        output = []
+        backtrack()
+        return output
+
+# 字典序
+class Solution:
+    def combine(self, n: int, k: int) -> List[List[int]]:
+        # init first combination
+        nums = list(range(1, k + 1)) + [n + 1]
+        
+        output, j = [], 0
+        while j < k:
+            # add current combination
+            output.append(nums[:k])
+            # increase first nums[j] by one
+            # if nums[j] + 1 != nums[j + 1]
+            j = 0
+            while j < k and nums[j + 1] == nums[j] + 1:
+                nums[j] = j + 1
+                j += 1
+            nums[j] += 1
+            
+        return output

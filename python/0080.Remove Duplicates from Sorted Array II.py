@@ -21,23 +21,22 @@ It doesn't matter what values are set beyond the returned length.
 
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        i=0
-        count=0
-        length=len(nums)
-        
+        i = 0
+        count = 0
+        length = len(nums)
+
         while i < length:
-            if i==0:
-                count+=1
-                i+=1
+            if i == 0: 
+                count += 1
+                i += 1
             else:
-                if nums[i]==nums[i-1] and count<2:
-                    count+=1
-                    i+=1
-                elif nums[i]==nums[i-1] and count==2:
-                    length-=1
+                if nums[i] == nums[i-1] and count < 2:
+                    count += 1
+                    i += 1
+                elif nums[i] == nums[i-1] and count == 2:
+                    length -= 1
                     del nums[i]
                 else:
-                    count=1
-                    i+=1
+                    count = 1
+                    i += 1
         return i
-                

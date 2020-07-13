@@ -28,26 +28,12 @@ class Solution:
 
         self.re_num=[]
         
-        def DFS(nums,num):
-            if len(num)>=0:
-                self.re_num.append(num)
+        def DFS(nums,n):
+            if len(n)>=0:
+                self.re_num.append(n)
             for i in range(len(nums)):
-                DFS(nums[i+1:],num+[nums[i]])
+                DFS(nums[i+1:],n+[nums[i]])
 
         DFS(nums,[])
         return self.re_num
 
-
-class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
-        n = len(nums)
-        res, p = [], 2**n
-        for i in range(p):
-            ans, j, pos = [], i, 0
-            while j:
-                if j & 1:
-                    ans.append(nums[pos])
-                pos += 1
-                j >>= 1
-            res.append(ans)
-        return res
