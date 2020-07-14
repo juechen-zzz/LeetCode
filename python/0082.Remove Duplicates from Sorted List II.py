@@ -19,25 +19,22 @@ Output: 2->3
 
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
-            if not head:
-                return None
-            freq = collections.defaultdict(int)
-            t = []
-            node = head
-            while node != None:
-                freq[node.val] += 1
-                t += node.val,
-                node = node.next
-            rhead = None
-            while t:
-                cur = t.pop(0)
-                if freq[cur] == 1:
-                    rhead = ListNode(cur)
-                    break
-            node = rhead
-            while t:
-                cur = t.pop(0)
-                if freq[cur] == 1:
-                    node.next = ListNode(cur)
-                    node = node.next
-            return rhead
+        if not head: return None
+        freq = collections.defaultdict(int)
+        nums = []
+        curr = head
+
+        while curr:
+            freq[curr.val] += 1
+            nums.append(curr.val)
+            curr = curr.next
+        
+        rhead = ListNode(-1)
+        curr = rhead
+        while nums:
+            n = nums.pop(0)
+            if freq[n] == 1:
+                curr.next = ListNode(n)
+                curr = curr.next
+        
+        return rhead.next
