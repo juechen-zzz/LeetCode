@@ -31,29 +31,21 @@ The above output corresponds to the 5 unique BST's shown below:
 
 class Solution:
     def generateTrees(self, n: int) -> List[TreeNode]:
-        cache = {}
+        if(n==0):return []
 
-        def generateTrees(start, end):
-            print("start: " + str(start) + " - end: " + str(end))
-            if start > end:
-                return [None]
-
-            if str((start,end)) in cache:
-                return cache[str((start,end))]
-
-
-            all_trees = []
-            for i in range(start, end + 1):
-                left_trees = generateTrees(start, i - 1)
-                right_trees = generateTrees(i + 1, end)
-
+        def build_Trees(left,right):
+            all_trees=[]
+            if(left>right): return [None]
+            for i in range(left,right+1):
+                left_trees=build_Trees(left,i-1)
+                right_trees=build_Trees(i+1,right)
                 for l in left_trees:
                     for r in right_trees:
-                        current_tree = TreeNode(i)
-                        current_tree.left = l
-                        current_tree.right = r
-                        all_trees.append(current_tree)
-            cache[str((start,end))] = all_trees
+                        cur_tree=TreeNode(i)
+                        cur_tree.left=l
+                        cur_tree.right=r
+                        all_trees.append(cur_tree)
             return all_trees
 
-        return generateTrees(1, n) if n else []
+        res=build_Trees(1,n)
+        return res
