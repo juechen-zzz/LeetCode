@@ -17,29 +17,20 @@ Output: 1->2->2->4->3->5
 
 class Solution:
     def partition(self, head: ListNode, x: int) -> ListNode:
-        if not head:
-            return None
-        bef = []
-        aft = []
-        node = head
-        while node != None:
-            if node.val < x:
-                bef += node.val,
+        if not head: return None
+        curr1 = ListNode(-1)
+        curr2 = ListNode(-1)
+        c1 = curr1
+        c2 = curr2
+        while head:
+            if head.val < x:
+                c1.next = head
+                c1 = c1.next
             else:
-                aft += node.val,
-            node = node.next
-
-        rhead = None
-        if bef:
-            rhead = ListNode(bef.pop(0))
-        else:
-            rhead = ListNode(aft.pop(0))
-            
-        node = rhead
-        while bef:
-            node.next = ListNode(bef.pop(0))
-            node = node.next
-        while aft:
-            node.next = ListNode(aft.pop(0))
-            node = node.next
-        return rhead
+                c2.next = head
+                c2 = c2.next
+            head = head.next
+        c2.next = None              # 结尾很重要，不然会超时
+        c1.next = curr2.next
+        return curr1.next
+        

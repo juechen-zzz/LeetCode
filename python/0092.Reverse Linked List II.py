@@ -19,10 +19,9 @@ class Solution:
     def reverseBetween(self, head: ListNode, m: int, n: int) -> ListNode:
         stack = []
         l = n - m + 1
-        
-        origin = prev = ListNode(None)
+
+        origin = prev = ListNode(-1)
         prev.next = head
-        
         while head:
             m -= 1
             if m == 0:
@@ -33,11 +32,8 @@ class Solution:
                 while stack:
                     prev.next = stack.pop()
                     prev = prev.next
-                else:
-                    prev.next = head
-                    return origin.next
-                
+                prev.next = head
+                break
             prev = head
             head = head.next
-        
         return origin.next
