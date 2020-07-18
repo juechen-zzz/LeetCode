@@ -41,8 +41,6 @@ Output: false
 
 class Solution:
     def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
-        if (p and not q) or (q and not p):
-            return False
-        if p == q == None:
-            return True
-        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right) and p.val == q.val
+        if (p and not q) or (q and not p): return False
+        if p == q == None: return True
+        return (self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right) and p.val == q.val)

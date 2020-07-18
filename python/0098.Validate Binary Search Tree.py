@@ -42,10 +42,10 @@ class Solution:
         def helper(root):
             if not root:
                 return([])
-            return(helper(root.left)+[root.val]+helper(root.right))
+            return (helper(root.left)+[root.val]+helper(root.right))
 
         new = helper(root)
         for i in range(len(new)-1):
             if(new[i]>=new[i+1]):
-                return(False)
-        return(True)
+                return False
+        return True
