@@ -25,21 +25,13 @@ Return the following binary tree:
 #         self.right = None
 
 class Solution:
-    def buildTree(self, preorder, inorder):
-        """
-        Time Complexity: O(N)
-            Where N is the length of preorder and inorder
-        Space Complexity: O(N)
-            Where N is the length of preorder and inorder
-        """
-        def build(l, r):
-            if l <= r:
-                node = TreeNode(preorder[build.pre_idx])
-                build.pre_idx += 1
-                node.left = build(l, inorder_idxs[node.val] - 1)
-                node.right = build(inorder_idxs[node.val] + 1, r)
-                return node
-        
-        build.pre_idx = 0
-        inorder_idxs = {n: i for i, n in enumerate(inorder)}
-        return build(0, len(inorder) - 1)
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
+        # 实际上inorder 和 postorder一定是同时为空的，因此你无论判断哪个都行
+        if not preorder: return None
+        root = TreeNode(preorder[0])
+
+        i = inorder.index(root.val)
+        root.left = self.buildTree(preorder[1:i + 1], inorder[:i])
+        root.right = self.buildTree(preorder[i + 1:], inorder[i+1:])
+
+        return root

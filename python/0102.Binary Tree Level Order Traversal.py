@@ -23,27 +23,19 @@ return its level order traversal as:
 #         self.left = None
 #         self.right = None
 
-class Solution(object):
-    def levelOrder(self, root):
-        """
-        :type root: TreeNode
-        :rtype: List[List[int]]
-        """
-        queue=[]
-        res=[]
-        if not root:
-            return res
+class Solution:
+    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+        queue = []
+        ans = []
+        if not root: return ans
         queue.append(root)
-        
         while queue:
-            level=len(queue)
-            sub_res=[]
-            for i in range(level):
-                node=queue.pop(0)
-                sub_res.append(node.val)
-                if node.left:
-                    queue.append(node.left)
-                if node.right:
-                    queue.append(node.right)
-            res.append(sub_res)
-        return res
+            sub_ans = []
+            l = len(queue)
+            for i in range(l):
+                node = queue.pop(0)
+                sub_ans.append(node.val)
+                if node.left: queue.append(node.left)
+                if node.right: queue.append(node.right)
+            ans.append(sub_ans)
+        return ans

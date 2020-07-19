@@ -25,22 +25,22 @@ return its zigzag level order traversal as:
 
 class Solution:
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
-        result = []
-        if root is None:
-            return result
-        queue = collections.deque()
+        queue = []
+        ans = []
+        if not root: return ans
         queue.append(root)
         left_to_right = True
         while queue:
-            level_size = len(queue)
-            cur_level = collections.deque()
-            for _ in range(level_size):
-                cur_node = queue.popleft()
-                cur_level.append(cur_node.val) if left_to_right else cur_level.appendleft(cur_node.val)
-                if cur_node.left:
-                    queue.append(cur_node.left)
-                if cur_node.right:
-                    queue.append(cur_node.right)
-            result.append(list(cur_level))
+            sub_ans = []
+            l = len(queue)
+            for i in range(l):
+                node = queue.pop(0)
+                sub_ans.append(node.val)
+                if node.left: queue.append(node.left)
+                if node.right: queue.append(node.right)
+            if left_to_right:
+                ans.append(sub_ans)
+            else:
+                ans.append(sub_ans[::-1])
             left_to_right = not left_to_right
-        return result
+        return ans
