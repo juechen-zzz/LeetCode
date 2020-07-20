@@ -24,30 +24,12 @@ Return the following binary tree:
 #         self.left = None
 #         self.right = None
 
-class Solution(object):
-    def buildTree(self, inorder, postorder):
-        """
-        :type inorder: List[int]
-        :type postorder: List[int]
-        :rtype: TreeNode
-        """
-        if not inorder:
-            return None
-        head = TreeNode(postorder[-1])
-        stack = [head]
-        i = len(postorder)-2
-        j = i+1
-        
-        while i >= 0:
-            tmp = None
-            t = TreeNode(postorder[i])
-            while stack and stack[-1].val == inorder[j]:
-                tmp = stack.pop()
-                j-=1
-            if tmp:
-                tmp.left = t
-            else:
-                stack[-1].right = t
-            i-=1
-            stack.append(t)
-        return head
+class Solution:
+    def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
+        if not inorder: return None
+        root = TreeNode(postorder[-1])
+        i = inorder.index(root.val)
+        root.left = self.buildTree(inorder[:i], postorder[:i])
+        root.right = self.buildTree(inorder[i+1:], postorder[i:-1])
+
+        return root

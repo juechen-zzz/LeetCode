@@ -25,8 +25,17 @@ return its bottom-up level order traversal as:
 
 class Solution:
     def levelOrderBottom(self, root: TreeNode) -> List[List[int]]:
-        q, r = [root] if root else [], collections.deque([])
-        while q:
-            r.appendleft([n.val for n in q])
-            q = [c for n in q for c in [n.left, n.right] if c]
-        return list(r)
+        queue = []
+        ans = []
+        if not root: return ans
+        queue.append(root)
+        while queue:
+            sub_ans = []
+            l = len(queue)
+            for i in range(l):
+                node = queue.pop(0)
+                sub_ans.append(node.val)
+                if node.left: queue.append(node.left)
+                if node.right: queue.append(node.right)
+            ans.append(sub_ans)
+        return ans[::-1]

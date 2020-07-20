@@ -25,8 +25,8 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
 
 class Solution:
     def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
-        if not nums:return
-        mid = len(nums)//2
+        if not nums: return
+        mid = len(nums) // 2
         root = TreeNode(nums[mid])
         root.left = self.sortedArrayToBST(nums[:mid])
         root.right = self.sortedArrayToBST(nums[mid+1:])

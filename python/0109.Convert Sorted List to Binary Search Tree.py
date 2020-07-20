@@ -29,28 +29,20 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
 #         self.left = None
 #         self.right = None
 
-class Solution(object):
-    def sortedListToBST(self, head):
-        """
-        :type head: ListNode
-        :rtype: TreeNode
-        """
-        if not head:
-            return None
-        if not head.next:
-            return TreeNode(head.val)
-        
-        cur1,cur2 = head,head
-        prev = None
-        
-        while cur2 and cur2.next:
-            cur2 = cur2.next.next
-            prev = cur1
-            cur1 = cur1.next
-        
-        prev.next = None
-        root = TreeNode(cur1.val)
-        root.left = self.sortedListToBST(head)
-        root.right = self.sortedListToBST(cur1.next)
-        
+class Solution:
+    def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
+        if not nums: return
+        mid = len(nums) // 2
+        root = TreeNode(nums[mid])
+        root.left = self.sortedArrayToBST(nums[:mid])
+        root.right = self.sortedArrayToBST(nums[mid+1:])
+        return root
+    
+    def sortedListToBST(self, head: ListNode) -> TreeNode:
+        if not head: return
+        nums = []
+        while head:
+            nums.append(head.val)
+            head = head.next
+        root = self.sortedArrayToBST(nums)
         return root
