@@ -32,19 +32,12 @@ The flattened tree should look like:
 
 class Solution:
     def flatten(self, root):
-        """
-        :type root: TreeNode
-        :rtype: None Do not return anything, modify root in-place instead.
-        """
-        
-        
-        q = [root]
-        par = None
-        while q:
-            node = q.pop()
-            if node:
-                q += [node.right, node.left]
-                if par:
-                    par.left = None
-                    par.right = node
-                par = node
+        while root:
+            if root.left:   #左子树存在的话才进行操作
+                sub_left = root.left
+                while sub_left.right:   #左子树的右子树找到最深
+                    sub_left = sub_left.right
+                sub_left.right = root.right #将root的右子树挂到左子树的右子树的最深
+                root.right = root.left      #将root的左子树挂到右子树
+                root.left = None            #将root左子树清空
+            root = root.right               #继续下一个节点的操作

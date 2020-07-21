@@ -26,14 +26,11 @@ return its minimum depth = 2.
 
 class Solution:
     def minDepth(self, root: TreeNode) -> int:
-        def helper(root):
-            if not root:
-                return 0
-            else:
-                l = helper(root.left)
-                r = helper(root.right)
-                if min(l,r) != 0:
-                    return 1 + min(l,r)
-                else:
-                    return 1 + max(l,r) 
-        return helper(root) 
+        if not root: return 0
+        left = self.minDepth(root.left)
+        right = self.minDepth(root.right)
+        if min(left, right) != 0:
+            return 1+min(left, right)
+        else:
+            return 1+max(left, right)
+        return self.minDepth(root)

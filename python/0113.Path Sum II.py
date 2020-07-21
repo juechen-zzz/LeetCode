@@ -29,26 +29,18 @@ Return:
 #         self.left = None
 #         self.right = None
 
-class Solution(object):
-    def pathSum(self, root, target):
-        """
-        :type root: TreeNode
-        :type sum: int
-        :rtype: List[List[int]]
-        """
-        res = []
-        self.check(root,target,[],res)
-        return res
-    
-    def check(self,root,target,items,res):
-        if not root:
-            return
-        
+class Solution:
+    def helper(self, root, target, items, res):
+        if not root: return
         if not root.left and not root.right and root.val == target:
             res.append(items + [root.val])
             return
-        
         items.append(root.val)
-        self.check(root.left,target - root.val,items,res)
-        self.check(root.right,target - root.val,items,res)
+        self.helper(root.left, target-root.val, items, res)
+        self.helper(root.right, target-root.val, items, res)
         items.pop()
+
+    def pathSum(self, root: TreeNode, sum: int) -> List[List[int]]:
+        res = []
+        self.helper(root, sum, [], res)
+        return res
