@@ -18,6 +18,7 @@ Bonus point if you are able to do this using only O(n) extra space, where n is t
 
 class Solution:
     def minimumTotal(self, triangle: List[List[int]]) -> int:
+        # 从下往上加，最后留下的就是最短路径和
         for row in range(len(triangle)-2,-1,-1):
             for column in range(0,row+1):
                 triangle[row][column] += min(triangle[row+1][column],triangle[row+1][column+1]) 

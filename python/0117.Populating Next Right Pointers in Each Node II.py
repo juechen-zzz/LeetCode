@@ -33,43 +33,26 @@ Recursive approach is fine, implicit stack space does not count as extra space f
 """
 # Definition for a Node.
 class Node:
-    def __init__(self, val, left, right, next):
+    def __init__(self, val: int = 0, left: 'Node' = None, right: 'Node' = None, next: 'Node' = None):
         self.val = val
         self.left = left
         self.right = right
         self.next = next
 """
-class Solution(object):
-    def connect(self, root):
-        """
-        :type root: Node
-        :rtype: Node
-        """
-        
-        if root:
-            queue = [root]
-            
-            while len(queue) != 0:
-                
-                c_queue = []
-                prev = None
-                
-                while len(queue) != 0:
-                    
-                    curr = queue.pop(0)
-                    
-                    if prev:
-                        if curr is not prev:
-                            prev.next = curr
 
-                    prev = curr
-                    
-                    if curr.left:
-                        c_queue.append(curr.left)
-                    
-                    if curr.right:
-                        c_queue.append(curr.right)
-                
-                queue = c_queue
-                
-            return root
+class Solution:
+    def connect(self, root: 'Node') -> 'Node':
+        if not root: return root
+        queue = [root]
+        while queue:
+            l = len(queue)
+            while l > 0:
+                node = queue.pop(0)
+                if l == 1: 
+                    node.next = None
+                else:
+                    node.next = queue[0]
+                if node.left: queue.append(node.left)
+                if node.right: queue.append(node.right)
+                l -= 1
+        return root

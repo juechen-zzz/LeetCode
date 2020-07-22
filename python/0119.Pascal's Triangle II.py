@@ -15,7 +15,7 @@ Output: [1,3,3,1]
 class Solution:
     def getRow(self, rowIndex: int) -> List[int]:
         nums = [[1 for i in range(j+1)]for j in range(rowIndex+1)]
-        for i in range(2,rowIndex+1,+1):
-            for j in range(1,i,+1):
+        for i in range(2,rowIndex+1):
+            for j in range(1,i):
                 nums[i][j] = nums[i-1][j-1] + nums[i-1][j]
         return nums[rowIndex]
