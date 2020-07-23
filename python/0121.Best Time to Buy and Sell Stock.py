@@ -18,28 +18,13 @@ Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
 """
 
-## time limit exceeded
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        l = len(prices)
-        max_profit = 0
-        for i in range(l-1):
-            for j in range(i+1, l):
-                if max_profit < (prices[j] - prices[i]):
-                    max_profit = prices[j] - prices[i]
-        return max_profit
+        if len(prices) == 0: return 0
+        minprice = prices[0]
+        ans = 0
+        for n in prices:
+            minprice = min(minprice, n)
+            ans = max(ans, n-minprice)
+        return ans
 
-
-# a good answer which is using dynamic programming
-class Solution(object):
-    def maxProfit(self, prices):
-        if prices is None or len(prices)==0: 
-        	return 0   
-        memo = [0]*len(prices)
-        min_price = float('inf')
-        
-        for i in xrange(len(prices)):
-            min_price = min(min_price, prices[i])
-            if i==0: continue
-            memo[i] = max(prices[i]-min_price, memo[i-1])
-        return memo[-1]
