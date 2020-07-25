@@ -44,19 +44,17 @@ Therefore, sum = 495 + 491 + 40 = 1026.
 
 class Solution:
     def sumNumbers(self, root: TreeNode) -> int:
-        self.totalsum = 0
+        if not root: return 0
+        self.ans = 0
+        self.sumPath(root, 0)
+        return self.ans
 
-        def sumPath(root, currentSum):
-        	if not root:
-        		return
+    def sumPath(self, root, currentSum):
+        if not root: return
+        currentSum = currentSum * 10 + root.val
+        if not root.left and not root.right:
+            self.ans += currentSum
+            return
 
-        	currentSum = currentSum * 10 + root.val
-
-        	if not root.left and not root.right:
-        		self.totalsum += currentSum
-        		return
-
-        	sumPath(root.left, currentSum)
-        	sumPath(root.right, currentSum)
-        sumPath(root, 0)
-        return self.totalsum
+        self.sumPath(root.left, currentSum)
+        self.sumPath(root.right, currentSum)

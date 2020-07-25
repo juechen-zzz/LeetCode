@@ -20,10 +20,8 @@ Note that the answer must be a substring, "pwke" is a subsequence and not a subs
 '''
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        if len(s) == 0:
-            return 0
-        if len(s) == 1:
-            return 1
+        if len(s) == 0: return 0
+        if len(s) == 1: return 1
         
         max_len = 1
         index = 0
