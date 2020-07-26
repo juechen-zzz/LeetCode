@@ -19,27 +19,48 @@ Node 4's value is 4, and it has two neighbors: Node 1 and 3.
 
 """
 # Definition for a Node.
-class Node(object):
-    def __init__(self, val, neighbors):
+class Node:
+    def __init__(self, val = 0, neighbors = []):
         self.val = val
         self.neighbors = neighbors
 """
-# python2
+# DFS
+class Solution:
+    def cloneGraph(self, node: 'Node') -> 'Node':
+        lookup = {}
 
-class Solution(object):
-    def __init__(self):
-        self.map = {}
-        
-    def _cloneGraph(self, node):
-        if node in self.map: return
-        clone_node = Node(node.val, [])
-        self.map[node] = clone_node
-        for adj in node.neighbors:
-            if adj not in self.map:
-                self._cloneGraph(adj)
-        for adj in node.neighbors:
-            self.map[node].neighbors.append(self.map[adj])
-        
-    def cloneGraph(self, node):
-        self._cloneGraph(node)
-        return self.map[node]
+        def dfs(node):
+            if not node: return
+            if node in lookup:
+                return lookup[node]
+            clone = Node(node.val, [])
+            lookup[node] = clone
+            for n in node.neighbors:
+                clone.neighbors.append(dfs(n))
+            
+            return clone
+
+        return dfs(node)
+
+# BFS
+class Solution:
+    def cloneGraph(self, node: 'Node') -> 'Node':
+        from collections import deque
+        lookup = {}
+
+        def bfs(node):
+            if not node: return
+            clone = Node(node.val, [])
+            lookup[node] = clone
+            queue = deque()
+            queue.appendleft(node)
+            while queue:
+                tmp = queue.pop()
+                for n in tmp.neighbors:
+                    if n not in lookup:
+                        lookup[n] = Node(n.val, [])
+                        queue.appendleft(n)
+                    lookup[tmp].neighbors.append(lookup[n])
+            return clone
+
+        return bfs(node)
