@@ -20,38 +20,32 @@ Node 2's value is 2, its next pointer points to null and its random pointer poin
 """
 # Definition for a Node.
 class Node:
-    def __init__(self, val, next, random):
-        self.val = val
+    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
+        self.val = int(x)
         self.next = next
         self.random = random
 """
+
 class Solution:
     def copyRandomList(self, head: 'Node') -> 'Node':
-        if head is None:
-            return None
+        if not head: return None
+
+        # 第一遍遍历，把每个新生成的结点放在对应的旧结点后面
+        p = head
+        while p:
+            new_node = Node(p.val)
+            new_node.next = p.next
+            p.next = new_node
+
+            p = new_node.next       # 下一个旧结点
         
-		# Create node copy next to the original node ( weaving in the solution 3) #
-        ptr = head
-        while ptr:
-            node = Node(ptr.val, None, None)
-            node.next = ptr.next
-            ptr.next = node
-            ptr = node.next
+        # 第二遍修改每个新结点的 next 和 random 
+        p = head
+        while p:
+            next_origin = p.next.next        # 下一个旧结点备份一下
+            p.next.next = next_origin.next if next_origin else None   # 修改新结点的 next
+            p.next.random = p.random.next if p.random else None    # 修改新结点的 random
+
+            p = next_origin         # 下一个旧结点
         
-		# Random pointers are easy to add in the weaved linked list #
-        ptr = head
-        while ptr:
-            ptr.next.random = ptr.random.next if ptr.random else None
-            ptr = ptr.next.next
-        
-		# un-weaving the two linked list, neater than code in the solution 3 #
-        old, new = head, head.next
-        newhead = head.next
-        while old:
-            old.next = new.next
-            old = old.next
-            if old:
-                new.next = old.next
-                new = new.next
-            
-        return newhead
+        return head.next

@@ -17,12 +17,11 @@ Output: 99
 
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        ans = 0
-        for i in range(len(nums)-1):
-            if (nums[i] in nums[i + 1:]) or (nums[i] in nums[:i - 1]):
-                continue
+        nums.sort()
+        i = 0
+        while i < len(nums)-1:
+            if nums[i] == nums[i+1]:
+                i += 3
             else:
-                ans = nums[i]
-        if nums[len(nums)-1] not in nums[:len(nums)-2]:
-            ans = nums[len(nums)-1]
-        return ans
+                return nums[i]
+        return nums[-1]

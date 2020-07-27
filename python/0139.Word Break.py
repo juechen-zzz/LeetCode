@@ -23,15 +23,12 @@ Output: false
 '''
 
 class Solution:
-    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-        wordDict, cache = set(wordDict), [False] * len(s)
-        for idx1 in range(len(s)):
-            sub_s = s[:idx1+1]
-            if sub_s in wordDict:
-                cache[idx1] = True
-            else:
-                for idx2 in range(len(sub_s)-1,-1,-1):
-                    if (cache[idx2]) and (s[idx2+1:idx1+1] in wordDict): 
-                        cache[idx1] = True
-                        break
-        return cache[-1]
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:       
+        n = len(s)
+        dp = [False]*(n+1)
+        dp[0] = True
+        for i in range(n):
+            for j in range(i+1,n+1):
+                if(dp[i] and (s[i:j] in wordDict)):
+                    dp[j]=True
+        return dp[-1]
