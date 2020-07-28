@@ -20,23 +20,10 @@ Output: [1,3,2]
 #         self.left = None
 #         self.right = None
 
-class Solution:
-    def inorderTraversal(self, root: TreeNode) -> List[int]:     
-        def helper(root,lst):
-            if not root: 
-            	return
-            helper(root.left,lst)
-            lst.append(root.val)
-            helper(root.right,lst)
-        
-        lst = []
-        helper(root,lst)
-        return lst
-
-
+# 栈
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
-        rnres, stack = [], []
+        res, stack = [], []
         while True:
             while root:
                 stack.append(root)
@@ -46,3 +33,19 @@ class Solution:
             node = stack.pop()
             res.append(node.val)
             root = node.right
+
+# 回溯
+class Solution:
+    def inorderTraversal(self, root: TreeNode) -> List[int]:
+        res = []
+        
+        def helper(root):
+            if root == None:
+                return   # 叶节点没有子树，递归终止
+            helper(root.left)   # 遍历左
+            res.append(root.val)  # 根
+            helper(root.right)  # 遍历右
+            
+        helper(root)
+        return res
+

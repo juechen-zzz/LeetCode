@@ -19,28 +19,30 @@ Given 1->2->3->4->5, reorder it to 1->5->2->4->3.
 #         self.next = None
 
 
-class Solution:
+class Solution(object):
     def reorderList(self, head):
         """
         :type head: ListNode
-        :rtype: void Do not return anything, modify head in-place instead.
+        :rtype: None Do not return anything, modify head in-place instead.
         """
-        if head and head.next and head.next.next:
-            node = head
-            linklist = []
-            while(node):
-                linklist.append(node)
-                node = node.next
-            revlinklist = list(reversed(linklist))
-            if len(linklist) % 2 == 0:
-                for i in range(len(linklist)/2):
-                    linklist[i].next = revlinklist[i]
-                    revlinklist[i].next = linklist[i+1]
-                    if i == len(linklist)/2-1:
-                         revlinklist[i].next = None
-            else:
-                for i in range(len(linklist) / 2 + 1):
-                    linklist[i].next = revlinklist[i]
-                    revlinklist[i].next = linklist[i+1]
-                    if i == len(linklist)/2:
-                         revlinklist[i].next = None
+        if not head: return None
+        p = head
+        stack = []
+        while p:
+            stack.append(p)
+            p = p.next
+
+        n = len(stack)
+        # 找到中点前一个位置 
+        count = (n - 1) // 2
+        p = head
+        while count:
+            # 弹出栈顶
+            tmp = stack.pop()
+            # 与链头拼接
+            tmp.next = p.next
+            p.next  = tmp
+            # 移动一个位置
+            p = tmp.next
+            count -= 1
+        stack.pop().next = None

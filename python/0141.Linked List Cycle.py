@@ -32,19 +32,23 @@ Explanation: There is no cycle in the linked list.
 #         self.val = x
 #         self.next = None
 
-class Solution(object):
-    def hasCycle(self, head):
-        """
-        :type head: ListNode
-        :rtype: bool
-        """
-        other = ListNode(0)
-        
+# use set
+class Solution:
+    def hasCycle(self, head: ListNode) -> bool:
+        node = set()
         while head:
-            if head.next == other:
+            if head in node: return True
+            node.add(head)
+            head = head.next
+        return False
+
+# double *
+class Solution:
+    def hasCycle(self, head: ListNode) -> bool:
+        slow = fast = head
+        while fast and fast.next:  # 防止head为空和出现空指针的next的情况
+            slow = slow.next
+            fast = fast.next.next
+            if slow is fast:
                 return True
-            temp = head.next
-            head.next = other
-            head = temp
-        
         return False

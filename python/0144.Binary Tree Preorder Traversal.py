@@ -22,34 +22,33 @@ Output: [1,2,3]
 
 
 
-# Recursive solution
+# 栈
 class Solution:
     def preorderTraversal(self, root: TreeNode) -> List[int]:
-        def dfs(node):
-            if not node:
-                return
-            pre_order.append(node.val)
-            dfs(node.left)
-            dfs(node.right)
+        res, stack = [], []
+        while True:
+            while root:
+                res.append(root.val)
+                stack.append(root)
+                root = root.left
+            if not stack: 
+            	return res
+            node = stack.pop()
+            root = node.right
+
+
+
+# 回溯
+class Solution:
+    def preorderTraversal(self, root: TreeNode) -> List[int]:
+        res = []
         
-        pre_order = []
-        dfs(root)
-        return pre_order
-
-
-
-# Iterative solution
-class Solution:
-    def preorderTraversal(self, root: TreeNode) -> List[int]:
-        if not root:
-            return []
-        pre_order = []
-        stack = [root]
-        while stack:
-            top = stack.pop()
-            pre_order.append(top.val)
-            if top.right:
-                stack.append(top.right)
-            if top.left:
-                stack.append(top.left)
-        return pre_order
+        def helper(root):
+            if root == None:
+                return   # 叶节点没有子树，递归终止
+            res.append(root.val)  # 根
+            helper(root.left)   # 遍历左
+            helper(root.right)  # 遍历右
+            
+        helper(root)
+        return res

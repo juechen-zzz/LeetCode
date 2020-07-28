@@ -34,23 +34,11 @@ Explanation: There is no cycle in the linked list.
 #         self.val = x
 #         self.next = None
 
-class Solution(object):
-    def detectCycle(self, head):
-        """
-        :type head: ListNode
-        :rtype: ListNode
-        """
-        if not head or not head.next:
-            return
-        slow=fast=head
-        k = 0
-        while fast and fast.next:
-            fast=fast.next.next
-            slow=slow.next
-            if fast is slow:
-                pre = head
-                while pre != slow:
-                    pre = pre.next
-                    slow = slow.next
-                return pre
+class Solution:
+    def detectCycle(self, head: ListNode) -> ListNode:
+        node = set()
+        while head:
+            if head in node: return head
+            node.add(head)
+            head = head.next
         return None
