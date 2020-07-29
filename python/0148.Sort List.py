@@ -19,48 +19,18 @@ Output: -1->0->3->4->5
 
 class Solution:
     def sortList(self, head: ListNode) -> ListNode:
-        # * merge sort
-        def helper(head, dummy):
-            if head.next is None:
-                return head
-            
-            fast = head
-            slow = head
-            
-            while fast and fast.next:
-                prev = slow
-                slow = slow.next
-                fast = fast.next.next
+        if not head or not head.next: return head
+        slow, fast = head, head.next
+        while fast and fast.next:
+            slow, fast = slow.next, fast.next.next
+        mid, slow.next = slow.next, None
 
-            # slow now is at the center of the list
-            # break the list into two sublists
-            prev.next = None
+        left, right = self.sortList(head), self.sortList(mid)
 
-            # merge-sort the two sublists
-            list0 = helper(head, dummy)
-            list1 = helper(slow, dummy)
-
-            # merge the two sublists
-            node = dummy
-            while list0 is not None or list1 is not None:
-                if list0 is not None and list1 is not None:
-                    if list0.val < list1.val:
-                        node.next = list0
-                        list0 = list0.next
-                    else:
-                        node.next = list1
-                        list1 = list1.next
-                    node = node.next
-                elif list0 is None:
-                    node.next = list1
-                    break
-                elif list1 is None:
-                    node.next = list0
-                    break            
-
-            return dummy.next
-
-        if head is None:
-            return head
-        
-        return helper(head, ListNode(-1))
+        res = p = ListNode(-1)
+        while left and right:
+            if left.val < right.val: p.next, left = left, left.next
+            else: p.next, right = right, right.next
+            p = p.next
+        p.next = left if left else right
+        return res.next

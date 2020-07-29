@@ -29,16 +29,17 @@ Output: -1->0->3->4->5
 #         self.next = None
 
 
-class Solution(object):
-	def insertionSortList(self, head):
-		frist = ListNode(-1)
-		cur = frist
-		while head:
-			if cur and cur.val > head.val:
-				cur = frist
-			while cur.next and cur.next.val < head.val:
-				cur = cur.next
+class Solution:
+    def insertionSortList(self, head: ListNode) -> ListNode:
+        first = ListNode(-1)
+        cur = first
+        while head:
+            if cur.val > head.val:
+                cur = first
+            while cur.next and cur.next.val < head.val:
+                cur = cur.next
+            
+            cur.next, cur.next.next, head = head, cur.next, head.next
 
-			cur.next, cur.next.next, head = head, cur.next, head.next
-		return frist.next
+        return first.next
 	

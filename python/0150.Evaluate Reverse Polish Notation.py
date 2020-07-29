@@ -39,6 +39,7 @@ class Solution:
                 a = stack.pop()
                 b = stack.pop()
                 if i == '/':
+                    # eval() 函数用来执行一个字符串表达式，并返回表达式的值
                     stack.append(str(int(eval(b + i + a))))
                 else:
                     stack.append(str(eval(b + i + a)))   
