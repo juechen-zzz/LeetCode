@@ -13,26 +13,16 @@ Output: 0
 Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 '''
 
-def maxProduct(self, nums):
-	if len(nums) == 0:
-		return 0
-
-	ans = nums[0]
-	negtive, positive = 0, 0
-	for x in nums:
-		if x < 0:
-			negtive, positive = positive * x, negtive * x
-			if negtive == 0:
-				negtive = x
-		elif x > 0:
-			negtive, positive = negtive * x, positive * x
-			if positive == 0:
-				positive = x
-		else:
-			ans = max(ans, 0)
-			negtive, positive = 0, 0 
-		if negtive < 0:
-			ans = max(ans, negtive)
-		if positive > 0:
-			ans = max(ans, positive)
-	return ans 
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        if not nums: return 
+        res = nums[0]
+        pre_max = nums[0]
+        pre_min = nums[0]
+        for num in nums[1:]:
+            cur_max = max(pre_max * num, pre_min * num, num)
+            cur_min = min(pre_max * num, pre_min * num, num)
+            res = max(res, cur_max)
+            pre_max = cur_max
+            pre_min = cur_min
+        return res

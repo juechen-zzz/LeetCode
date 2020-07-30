@@ -30,7 +30,24 @@ You need to reduce multiple spaces between two words to a single space in the re
 class Solution:
     def reverseWords(self, s: str) -> str:
         seq = s.split()[::-1]
-        ans = ' '.join(seq)
+        ans = ' '.join(seq)     # 返回通过指定字符连接序列中元素后生成的新字符串
         return ans
 
-
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        stack = []
+        ans = ''
+        for i in range(len(s)):
+            if s[i] == ' ':
+                stack.append(ans)
+                ans = ''
+            else:
+                ans = ans + s[i]
+        
+        while stack:
+            temp = stack.pop()
+            if len(ans) > 0 and len(temp) > 0:
+                ans = ans + ' ' + temp
+            else:
+                ans = ans + temp
+        return ans

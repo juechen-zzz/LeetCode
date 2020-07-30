@@ -17,26 +17,11 @@ Input: [2,2,2,0,1]
 Output: 0
 '''
 
-# answer 1
-class Solution:
-    def findMin(self, nums: List[int]) -> int:
-        if len(nums) < 1:
-            return
-        if len(nums) == 1:
-            return nums[0]
-        ans = nums[0]
-        for i in range(len(nums)):
-            if nums[i] < ans:
-                ans = nums[i]
-        return ans
 
-# answer 2
 class Solution:
     def findMin(self, nums: List[int]) -> int:
-        if len(nums) == 1:
-            return nums[0]
-        if nums[0] < nums[-1]:
-            return nums[0]
+        if len(nums) == 1: return nums[0]
+        if nums[0] < nums[-1]: return nums[0]
         else:
             mid = len(nums) // 2
             return min(self.findMin(nums[:mid]), self.findMin(nums[mid:]))

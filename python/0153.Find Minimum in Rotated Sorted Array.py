@@ -16,6 +16,9 @@ Example 2:
 Input: [4,5,6,7,0,1,2]
 Output: 0
 '''
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        return min(nums)
 
 class Solution:
     def findMin(self, nums: List[int]) -> int:
