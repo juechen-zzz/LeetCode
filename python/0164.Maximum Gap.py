@@ -20,12 +20,9 @@ Explanation: The array contains less than 2 elements, therefore return 0.
 
 class Solution:
     def maximumGap(self, nums: List[int]) -> int:
-        if len(nums) == 1:
-            return 0
-        else:
-            nums.sort()
-            ans = 0
-            for i in range(1, len(nums)):
-                if nums[i] - nums[i-1] > ans:
-                    ans = nums[i] - nums[i-1]
-        return ans 
+        if len(nums) < 2: return 0
+        nums.sort()
+        ans = 0
+        for i in range(1, len(nums)):
+            ans = max(ans, nums[i]-nums[i-1])
+        return ans

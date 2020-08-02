@@ -41,30 +41,15 @@ class Solution:
     def compareVersion(self, version1: str, version2: str) -> int:
         v1 = version1.split('.')
         v2 = version2.split('.')
-        s1 = s2 = 0 # stands for sum
-        # sum each segment of the version number
-        while(v1 and v2):  
-            s1+=int(v1.pop(0))
-            s2+=int(v2.pop(0))
-            # if the sum is different before adding everythign up, break
-            if (s1 != s2):
-                break
-        if(s1>s2):
-            return 1
-        elif(s1<s2):
-            return -1
-        # if the sum loop is completely executed
-        # and if there's anything left within v1 or v2, we add them to the sums
-        if(v2 == []) and (v1!=[]):
-            while(v1):
-                s1+=int(v1.pop(0))
-        elif(v1 ==[]) and (v2!=[]):
-            while(v2):
-                s2+=int(v2.pop(0))
-        # then compare
-        if(s1>s2):
-            return 1
-        elif(s1<s2):
-            return -1
-        else:
-            return 0
+        if len(v1) < len(v2):
+            v1 = v1 + ['0']*(len(v2)-len(v1))
+        elif len(v1) > len(v2):
+            v2 = v2 + ['0']*(len(v1)-len(v2))
+        s1 = s2 = 0
+        while (v1 and v2):
+            s1 += int(v1.pop(0))
+            s2 += int(v2.pop(0))
+            if (s1 != s2): break
+        if s1 > s2: return 1
+        elif s1 < s2: return -1
+        else: return 0

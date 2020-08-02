@@ -47,64 +47,16 @@ Your code should preferably run in O(n) time and use only O(1) memory.
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
+# 分别为链表A和链表B设置指针A和指针B，然后开始遍历链表，
+# 如果遍历完当前链表，则将指针指向另外一个链表的头部继续遍历，直至两个指针相遇。
 
-class Solution(object):
-    def getIntersectionNode(self, headA, headB):
-        """
-        :type head1, head1: ListNode
-        :rtype: ListNode
-        
-        """
-        # Edge cases
-        if not (headA and headB): return None
-        if headA == headB: return headA
-        
-        a = headA
-        anodes = 1
-        b = headB
-        bnodes = 1
-        # Move pointers together at first.
-        # If len(A)==len(B) we can find the
-        # intersection point this way and return
-        # early.
-        while a.next and b.next:
-            a = a.next
-            b = b.next
-            if a == b: return a
-            anodes += 1
-            bnodes += 1
-        
-        # Move pointer on longer list to the end.
-        while a.next:
-            a = a.next
-            anodes += 1
-        while b.next:
-            b = b.next
-            bnodes += 1
-            
-        # Both pointers are now at tails of A and
-        # B. If they are not the same this means
-        # they do not intersect.
-        if a != b:
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
+        if not headA or not headB:
             return None
-        
-        # Start from the heads and give the pointer
-        # on the longer list a headstart.
-        a = headA
-        b = headB
-        aoffset = anodes - bnodes
-        while aoffset != 0:
-            if aoffset > 0:
-                a = a.next
-                aoffset -= 1
-            else:
-                b = b.next
-                aoffset += 1
-                
-        # Then move the pointers together until
-        # they point to the same node.
-        while a != b:
-            a = a.next
-            b = b.next
-        
-        return a
+        nodeA = headA
+        nodeB = headB
+        while(nodeA != nodeB):
+            nodeA = nodeA.next if nodeA else headB
+            nodeB = nodeB.next if nodeB else headA
+        return nodeA

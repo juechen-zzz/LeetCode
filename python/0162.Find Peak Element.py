@@ -20,10 +20,18 @@ Explanation: Your function can return either index number 1 where the peak eleme
              or index number 5 where the peak element is 6.
 '''
 
-class Solution(object):
-    def findPeakElement(self, nums):
-        nums.append(- float("inf"))
-        #print (nums)
-        for i in range(len(nums)):
-            if nums[i] > nums[i+1] and nums[i] > nums[i-1]:
-                return i
+class Solution:
+    def findPeakElement(self, nums: List[int]) -> int:
+        return nums.index(max(nums))  # 返回最大值的index就好了
+
+class Solution:
+    def findPeakElement(self, nums: List[int]) -> int:
+        left, right = 0, len(nums) - 1
+        while left < right:
+            mid = left + (right - left) // 2 # 防止溢出
+            if nums[mid] > nums[mid + 1]:  # 如果满足该条件说明山峰可能是在 mid 的左侧，因为各个元素不同，所以if的条件是 >
+                right = mid
+            else:
+                left = mid + 1
+        return left
+
