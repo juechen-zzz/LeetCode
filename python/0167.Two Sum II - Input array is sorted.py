@@ -14,25 +14,12 @@ Output: [1,2]
 Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 '''
 
-from typing import List
-
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        for i in range(len(numbers) - 1):
-            if target - numbers[i] in numbers[i + 1:]:
-                a = numbers[i + 1:]
-                return [i + 1, a.index(target - numbers[i]) + i + 2]
-
-
-class Solution(object):
-    def twoSum(self, numbers, target):
-        left, right = 0, len(numbers) - 1
-        while left <= right:
-            if numbers[left] + numbers[right] == target:
-                return [left+1, right+1]
-            elif numbers[left] + numbers[right] < target:
-                left += 1
-            elif numbers[left] + numbers[right] > target:
-                right -= 1
-        return [0, 0]
-    
+        d = {}
+        for i, n in enumerate(numbers):
+            m = target - n
+            if m in d:
+                return [d[m], i+1]
+            else:
+                d[n] = i + 1

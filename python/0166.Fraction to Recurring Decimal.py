@@ -17,52 +17,33 @@ Input: numerator = 2, denominator = 3
 Output: "0.(6)"
 '''
 
-
-class Solution(object):
-    def fractionToDecimal(self, numerator, denominator):
-        """
-        :type numerator: int
-        :type denominator: int
-        :rtype: str
-        """
-        if not numerator:
-            return '0'
-        
-        fuhao=''
-        if numerator<0 and denominator<0:
-            numerator*=(-1)
-            denominator*=(-1)
-        elif numerator<0:
-            fuhao+='-'
-            numerator*=(-1)
-        elif denominator<0:
-            fuhao+='-'
-            denominator*=(-1)
-        
-        zhengshu=str(numerator//denominator)
-
-        yushu=numerator%denominator
-
-        if not yushu:
-            return(fuhao+str(zhengshu))
-
-        dic={}
-        xiaoshu=''
-        index=0
-
-        while True:
-            if yushu in dic:
-                return(fuhao+zhengshu+'.'+xiaoshu[:dic[yushu]]+'('+xiaoshu[dic[yushu]:]+')')
-
-            dic[yushu]=index
-            yushu*=10
-            if yushu//denominator>=1:
-                xiaoshu+=str(yushu//denominator)
-                yushu%=denominator
-            else:
-                xiaoshu+='0' 
-
-            if yushu==0:
-                return(fuhao+zhengshu+'.'+xiaoshu)
-
-            index+=1
+class Solution:
+    def fractionToDecimal(self, numerator: int, denominator: int) -> str:
+        if numerator == 0: return "0"
+        res = []
+        # 首先判断结果正负, 异或作用就是 两个数不同 为 True 即 1 ^ 0 = 1 或者 0 ^ 1 = 1
+        if (numerator > 0) ^ (denominator > 0):
+            res.append("-")
+        numerator, denominator = abs(numerator), abs(denominator)
+        # 判读到底有没有小数，返回商和余数
+        a, b = divmod(numerator, denominator)
+        res.append(str(a))
+        # 无小数
+        if b == 0:
+            return "".join(res)
+        res.append(".")
+        # 处理余数
+        # 把所有出现过的余数记录下来
+        loc = {b: len(res)}
+        while b:
+            b *= 10
+            a, b = divmod(b, denominator)
+            res.append(str(a))
+            # 余数前面出现过,说明开始循环了,加括号
+            if b in loc:
+                res.insert(loc[b], "(")
+                res.append(")")
+                break
+            # 在把该位置的记录下来
+            loc[b] = len(res)
+        return "".join(res)
