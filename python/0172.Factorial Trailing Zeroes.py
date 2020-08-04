@@ -13,26 +13,13 @@ Output: 1
 Explanation: 5! = 120, one trailing zero.
 """
 
+# 实际就是在找5的倍数
+# 返回 n//5 + n//25 + n//125 + n//(125×5) + n//(125×5×5) + ... 直到 n//(125×5×5×...) == 0
 
 class Solution:
     def trailingZeroes(self, n: int) -> int:
-        num = 1
-        for i in range(1,n+1):
-            num = num * i
-        ans = 0
-        while num % 10 == 0:
-            num = num // 10
-            ans += 1
-        return ans
-
-
-class Solution:
-    def trailingZeroes(self, n: int) -> int:
-        f = 5
-        pieces = int(n / f)
-        result = 0
-        while pieces >= 1:
-            result += pieces
-            f *= 5
-            pieces = int(n / f)
-        return result
+        p = 0
+        while n >= 5:
+            n = n // 5
+            p += n
+        return p

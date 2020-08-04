@@ -32,5 +32,4 @@ class Solution:
         num = 0
         for i in range(len(s)):
             num += (d.find(s[i]) + 1) * (26 ** (len(s) - i - 1))
-
         return num
