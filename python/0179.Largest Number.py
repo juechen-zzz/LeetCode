@@ -11,33 +11,17 @@ Input: [3,30,34,5,9]
 Output: "9534330"
 """
 
-class Solution:
-    def largestNumber(self, nums: List[int]) -> str:
-        def quickSortHelper(alist, first, last):
-            if first < last:
-                splitpoint = self.partition(alist, first, last)
-                quickSortHelper(alist, first, splitpoint - 1)
-                quickSortHelper(alist, splitpoint + 1, last)
-        nums = list(map(str, nums))
-        quickSortHelper(nums, 0, len(nums) - 1)
-        return ''.join(nums).lstrip('0') or '0'
+class Solution(object):
+    def bi(self, i):
+        if i == 0: return 0
+        s = 0
+        k = i
+        while i >= 1:
+            i=i/ 10
+            s+=1
+        return k /( 10 **s -1)          # 12/99=0.1212...
 
-    def compare(self, a, b):
-        return str(a) + str(b) < str(b) + str(a)
-
-    def partition(self, alist, first, last):
-
-        pivotvalue = alist[last]
-        leftmark = first
-        rightmark = last - 1
-
-        while leftmark <= rightmark:
-            if not self.compare(alist[leftmark], pivotvalue):
-                leftmark = leftmark + 1
-
-            else:
-                alist[rightmark], alist[leftmark] = alist[leftmark], alist[rightmark]
-                rightmark = rightmark - 1
-
-        alist[last], alist[leftmark] = alist[leftmark], alist[last]
-        return leftmark  
+    def largestNumber(self, nums):
+        nums = sorted(nums,key = self.bi,reverse=True)
+        if nums[0] == 0: return "0"
+        return "".join([str(i) for i in nums])
