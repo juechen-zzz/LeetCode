@@ -26,5 +26,6 @@ class Solution:
     # @param n, an integer
     # @return an integer
     def reverseBits(self, n):
+        # bin(x) 返回0bXXX(字符串), zfill返回指定长度的字符串，原字符串右对齐，前面填充0
         ret_val=str(bin(n)[2:].zfill(32))[::-1]
         return (int(ret_val, 2))
