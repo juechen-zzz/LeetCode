@@ -23,27 +23,16 @@ Explanation:
 #         self.right = None
 
 class Solution:
-    def rightSideView(self, root):
-        """
-        :type root: TreeNode
-        :rtype: List[int]
-        """
-        # find the right most node on each level
-        # do a bread first search and find the one last element on each level
-        stack = []
+    def rightSideView(self, root: TreeNode) -> List[int]:
         out = []
-        if not root:
-            return out
-        stack.append(root)
-        out.append(root.val)
-        while(stack):
-            next_level = []
-            for ele in stack:
-                if ele.left:
-                    next_level.append(ele.left)
-                if ele.right:
-                    next_level.append(ele.right)
-            if next_level:
-                out.append(next_level[-1].val)
-            stack = next_level
+        queue = []
+        if not root: return []
+        queue.append(root)
+        while queue:
+            l = len(queue)
+            for i in range(l):
+                node = queue.pop(0)
+                if node.left: queue.append(node.left)
+                if node.right: queue.append(node.right)
+                if i == l-1: out.append(node.val)
         return out

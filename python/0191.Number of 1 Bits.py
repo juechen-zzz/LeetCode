@@ -26,15 +26,8 @@ Note that in some languages such as Java, there is no unsigned integer type. In 
 In Java, the compiler represents the signed integers using 2's complement notation. Therefore, in Example 3 above the input represents the signed integer -3.
 """
 
-class Solution(object):
-    def hammingWeight(self, n):
-        """
-        :type n: int
-        :rtype: int
-        """
-        cnt = 0
-        while n != 0:
-            if n % 2 == 1:
-                cnt += 1
-            n /= 2
-        return cnt
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        n_bin = bin(n)[2:]
+        count = n_bin.count('1')
+        return count
