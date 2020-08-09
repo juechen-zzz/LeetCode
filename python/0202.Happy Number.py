@@ -14,41 +14,15 @@ Explanation:
 12 + 02 + 02 = 1
 """
 
-# solution 1
-def isHappy(n):
-    ans = []
-    while n // 10 > 0:
-        ans.append(n % 10)
-        n = n // 10
-    ans.append(n)
-    print(ans)
-    s = 0
-    for i in range(len(ans)):
-        s += ans[i] ** 2
-    print(s)
-    if s == 1:
-        return True
-    else:
-        isHappy(s)
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        visited = set()
+        # 当 n != 1，并且没见过 n 时进行判断, 这个set用来做无线循环时的截止条件
+        while n != 1 and n not in visited:
+            nxt = 0
+            while n != 0:
+                nxt += (n % 10) ** 2
+                n //= 10
+            n = nxt
+        return n == 1
 
-
-# solution 2
-def isHappy(n):
-    dictionary = {}
-    for i in range(10):
-        dictionary[i] = i * i
-    visited = {n: True}
-    while True:
-        new_n = 0
-        while n != 0:
-            new_n += dictionary[n % 10]
-            n //= 10
-        if new_n == 1:
-            return True
-        if new_n in visited:
-            return False
-        visited[new_n] = True
-        n = new_n
-    return True
-
-isHappy(19)

@@ -16,15 +16,16 @@ Output: 1->2->3->4->5
 
 class Solution:
     def removeElements(self, head: ListNode, val: int) -> ListNode:
-        current = head
-        prev = None
-        while current is not None:
-            if current.val == val:
-                if prev:
-                    prev.next = current.next
+        if not head: return None
+        cur = head
+        pre = None
+        while cur is not None:
+            if cur.val == val:
+                if pre:
+                    pre.next = cur.next
                 else:
                     head = head.next
             else:
-                prev = current
-                current = current.next
+                pre = cur
+            cur = cur.next
         return head
