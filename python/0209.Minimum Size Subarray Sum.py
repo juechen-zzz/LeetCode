@@ -13,20 +13,16 @@ If you have figured out the O(n) solution, try coding another solution of which 
 
 
 class Solution:
-    def minSubArrayLen(self, s, nums):
-
-        # sliding window
+    def minSubArrayLen(self, s: int, nums: List[int]) -> int:
         n = len(nums)
         cur_sum = 0
         min_len = float('inf')
-        j = 0
+        index = 0
         for i in range(n):
-            while (cur_sum < s and j < n):
-                cur_sum += nums[j]
-                j += 1
+            while cur_sum < s and index < n:
+                cur_sum += nums[index]
+                index += 1
             if cur_sum >= s:
-                min_len = min(j - i, min_len)
+                min_len = min(min_len, index-i)
                 cur_sum = cur_sum - nums[i]
-                print(min_len, cur_sum)
         return 0 if min_len == float('inf') else min_len
-

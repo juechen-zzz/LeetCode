@@ -27,7 +27,6 @@ def isIsomorphic(s: str, t: str) -> bool:
         if a in d1 and d1[a] != b or b in d2 and d2[b] != a:
             return False
         d1[a], d2[b] = b, a
-    print(d1, d2)
     return True
 
 

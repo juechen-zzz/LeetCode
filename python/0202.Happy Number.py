@@ -17,7 +17,7 @@ Explanation:
 class Solution:
     def isHappy(self, n: int) -> bool:
         visited = set()
-        # 当 n != 1，并且没见过 n 时进行判断, 这个set用来做无线循环时的截止条件
+        # 当 n != 1，并且没见过 n 时进行判断, 这个set用来做无限循环时的截止条件
         while n != 1 and n not in visited:
             nxt = 0
             while n != 0:
