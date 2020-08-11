@@ -19,18 +19,12 @@ Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
 
 
 class Solution:
-    def rob(self, nums: List[int]) -> int:
+    def my_rob(self, nums):
+        cur, pre = 0, 0
+        for num in nums:
+            cur, pre = max(pre + num, cur), cur
+        return cur
 
-        def basicRob(start, end):
-            rob, nonRob = nums[start], 0
-            for i in range(start + 1, end):
-                preRob, preno = rob, nonRob
-                rob = preno + nums[i]
-                nonRob = max(preRob, preno)
-            return max(rob, nonRob)
-
-        n = len(nums)
-        if n <= 1:
-            return sum(nums)
-        else:
-            return max(basicRob(0, len(nums) - 1), basicRob(1, len(nums)))
+    def rob(self, nums: [int]) -> int:
+        if len(nums) == 1: return nums[0]
+        return max(self.my_rob(nums[:-1]), self.my_rob(nums[1:]))
