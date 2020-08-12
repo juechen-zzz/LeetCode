@@ -21,8 +21,7 @@ class Solution:
         out = []
 
         def sumHelper(n, k, level, sol):
-            if n < 0:
-                return
+            if n < 0: return
             if n == 0 and k == len(sol):
                 out.append(sol[:])
             for i in range(level, 10):
