@@ -38,7 +38,7 @@ Output: false
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
         s_len, p_len = len(s), len(p)
-        if p_len == 0:return s_len == 0
+        if p_len == 0: return s_len == 0
 
         # 首先判断len(p)>1 and p[1]=="*"，如果是的话，说明*在p的第二位，我们就要判断s[0]和p[0]能否匹配，
         # 如果可以匹配的话，我们继续判断isMatch(s[1:], p)（也就是*匹配了一次，我们会继续使用.*或者?*去参与比较），
