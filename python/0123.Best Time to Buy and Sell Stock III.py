@@ -26,18 +26,14 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 '''
 
 class Solution(object):
-    def maxProfit(self, prices):
-        """
-        :type prices: List[int]
-        :rtype: int
-        """
-        buy1, sell1 = float('-inf'), 0
-        buy2, sell2 = float('-inf'), 0
+    def maxProfit(self, prices: List[int]) -> int:
+        buy_1 = buy_2 = float('inf') # 第一二次买之前的最低价
+        pro_1 = pro_2 = 0
         
         for p in prices:
-            buy1 = max(buy1, -p)
-            sell1 = max(sell1, buy1 + p)
-            buy2 = max(buy2, sell1 - p)
-            sell2 = max(sell2, buy2 + p)
+            buy_1 = min(buy_1, p)
+            pro_1 = max(pro_1, p - buy_1)
+            buy_2 = min(buy_2, p - pro_1) # p - pro_1 是用第一次的钱抵消了一部分第二次买的钱
+            pro_2 = max(pro_2, p - buy_2)
+        return pro_2
 
-        return sell2

@@ -43,9 +43,8 @@ class Solution:
         # 首先判断len(p)>1 and p[1]=="*"，如果是的话，说明*在p的第二位，我们就要判断s[0]和p[0]能否匹配，
         # 如果可以匹配的话，我们继续判断isMatch(s[1:], p)（也就是*匹配了一次，我们会继续使用.*或者?*去参与比较），
         # 同时需要判断isMatch(s,p[2:])是不是成立（也就是*表示匹配0次）
-        if p_len > 1 and p[1] == "*":
-            return self.isMatch(s, p[2:]) or \
-                (s_len != 0 and (s[0] == p[0] or p[0] == '.') and self.isMatch(s[1:], p))
+        if p_len > 1 and p[1] == "*":          # return 只有两种情况
+            return self.isMatch(s, p[2:]) or (s_len != 0 and (s[0] == p[0] or p[0] == '.') and self.isMatch(s[1:], p))
         # 如果*不在p的第二位，我们就要判断s[0]和p[0]能否匹配
         else:
             return s_len != 0 and (s[0] == p[0] or p[0] == '.') and self.isMatch(s[1:], p[1:]) 
