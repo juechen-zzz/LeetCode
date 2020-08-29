@@ -13,29 +13,21 @@ Given n will always be valid.
 
 # Definition for singly-linked list.
 # class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
-    def removeNthFromEnd(self, head, n):
-        """
-        :type head: ListNode
-        :type n: int
-        :rtype: ListNode
-        """
-        if head.next == None:
-            return []
-        else:
-            pre = head
-            end = head
-            for i in range(n):
-                end = end.next
-            if end == None:
-                return head.next
-            while end.next:
-                end = end.next
-                pre = pre.next
-            pre.next = pre.next.next
-            return head
+    def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
+        if head.next == None: return 
+        
+        cur = head
+        pre = head
+        for i in range(n):
+            pre = pre.next
+        if pre == None: return head.next
+        while pre.next:
+            pre = pre.next
+            cur = cur.next
+        cur.next = cur.next.next
+        return head
         

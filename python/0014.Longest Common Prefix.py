@@ -20,15 +20,10 @@ class Solution:
         else:
             min_len = min(len(s) for s in strs)
             index = 0
-            for j in range(min_len):
-                for i in range(len(strs)):
-                    if strs[i][j] == strs[0][j]:
-                        if i == len(strs)-1 and index >= j:
-                            index += 1
-                    else: 
-                        break
-            
-            if index > 0:
-                return strs[0][:index]
-            else:
-                return ""
+            while index < min_len:
+                ch = strs[0][index]
+                for i, c in enumerate(strs):
+                    if c[index] != ch:
+                        return strs[0][:index]
+                index += 1
+            return strs[0][:index]
