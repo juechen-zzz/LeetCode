@@ -17,17 +17,18 @@ Given 1->2->3->4, you should return the list as 2->1->4->3.
 
 class Solution:
     def swapPairs(self, head: ListNode) -> ListNode:
-        if head == None: return head
+        if head == None: return None
         cur = ListNode(-1)
         cur.next = head
         p = cur
         while p.next and p.next.next:
-            n1 = p.next
-            n2 = n1.next
-            temp = n2.next
-            p.next = n2
-            n2.next = n1
-            n1.next = temp
-
-            p = n1
+            n2 = p.next
+            n1 = n2.next
+            n3 = n1.next
+            
+            p.next = n1
+            n1.next = n2
+            n2.next = n3
+            
+            p = n2
         return cur.next

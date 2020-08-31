@@ -16,8 +16,8 @@ Output: -1
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
         if len(haystack) < len(needle): return -1
-        if needle == "": return 0
+        n_len = len(needle)
         for i in range(len(haystack)-len(needle)+1):
-            if haystack[i:i+len(needle)] == needle:
+            if haystack[i: i+n_len] == needle:
                 return i
         return -1

@@ -17,15 +17,11 @@ It doesn't matter what values are set beyond the returned length.
 '''
 
 class Solution:
-    def removeDuplicates(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+    def removeDuplicates(self, nums: List[int]) -> int:
         if len(nums) <= 1: return len(nums)
-        j = 0
+        index = 0
         for i in range(1, len(nums)):
-            if nums[i] != nums[j]:
-                j += 1
-                nums[j] = nums[i]
-        return j + 1
+            if nums[index] != nums[i]:
+                index += 1
+                nums[index] = nums[i]
+        return index+1

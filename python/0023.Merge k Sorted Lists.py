@@ -21,8 +21,7 @@ Output: 1->1->2->3->4->4->5->6
 class Solution:
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
         num_list = []
-        if lists == []:
-            return []
+        if lists == []: return None
         else:
             for i in lists:
                 while i:
@@ -34,4 +33,4 @@ class Solution:
         for i in num_list:
             cur.next = ListNode(i)
             cur = cur.next
-        return head.next
+        return head.nex
