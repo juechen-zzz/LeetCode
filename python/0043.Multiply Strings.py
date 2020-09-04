@@ -23,7 +23,7 @@ class Solution:
         for i in range(len(num)):
             # 以一个字符（长度为1的字符串）作为参数，返回对应的 ASCII 数值
             n = (ord(num[i]) - ord('0'))
-            digit += n * (10 ** (len(num) - i - 1))
+            digits = digits * 10 + n
         return digit
 
     def multiply(self, num1: str, num2: str) -> str:

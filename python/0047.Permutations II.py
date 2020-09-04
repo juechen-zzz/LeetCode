@@ -16,7 +16,8 @@ class Solution:
     def back_track(self, nums, temp, res_all):
             if len(nums)==0: res_all.append(temp)
             for i in range(len(nums)):
-                if  i>0 and nums[i]==nums[i-1]: continue
+                if  i>0 and nums[i]==nums[i-1]: 
+                    continue
                 else:
                     self.back_track(nums[:i]+nums[i+1:],temp+[nums[i]], res_all)  
     
