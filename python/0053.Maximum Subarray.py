@@ -13,7 +13,7 @@ If you have figured out the O(n) solution, try coding another solution using the
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         if len(nums) == 1: return nums[0]
-        ans = min(nums)
+        ans = max(nums)
         s = 0
         for n in nums:
             s += n
