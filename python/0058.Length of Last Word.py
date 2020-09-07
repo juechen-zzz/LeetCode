@@ -10,7 +10,18 @@ Example:
 Input: "Hello World"
 Output: 5
 '''
+# split
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        sub_s = s.split(' ')
+        while sub_s:
+            if sub_s[-1] == '':
+                sub_s.pop()
+            else:
+                return len(sub_s[-1])
+        return 0
 
+# tradition
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
         if len(s) == 0: return 0

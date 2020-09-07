@@ -19,14 +19,12 @@ Explanation: The array represents the integer 4321.
 # 只有有一次加非9加1就停，如果第一位是9，就补一个1
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-        l = len(digits)
-        digits.reverse()
-        for i in range(l):
-            if digits[i] == 9:
-                digits[i] = 0
-                if i == l - 1: digits.append(1)
-            else:
+        for i in range(len(digits)-1, -1, -1):
+            if digits[i] != 9:
                 digits[i] += 1
                 break
-        digits.reverse()
+            else:
+                digits[i] = 0
+                if i == 0: digits.insert(0, 1)
         return digits
+    

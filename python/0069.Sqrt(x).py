@@ -19,9 +19,9 @@ Explanation: The square root of 8 is 2.82842..., and since
 '''
 class Solution:
     def mySqrt(self, x: int) -> int:
-        if x == 0 :
+        if x == 0:
             return 0
         else:
-            for i in range(x+2):
+            for i in range(1, x+2):
                 if i * i > x:
                     return i-1

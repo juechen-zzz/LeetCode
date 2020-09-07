@@ -47,11 +47,5 @@ class Solution:
 # 
 class Solution:
     def getPermutation(self, n: int, k: int) -> str:
-        from itertools import permutations
-        # 构造[1,2,3,4....n]
-        list_n = list(range(n+1))
-        list_n.pop(0)
-        #构造全排列list
-        arr = list(permutations(list_n))
-        #返回第k个
-        return ''.join(map(str, list(arr[k-1])))
+        arr = list(permutations(list(range(1, n+1))))
+        return ''.join(map(str, arr[k-1]))
