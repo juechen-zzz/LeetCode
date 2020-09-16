@@ -18,16 +18,19 @@ Output: [[1,2,6], [1,3,5], [2,3,4]]
 
 class Solution:
     def combinationSum3(self, k: int, n: int) -> List[List[int]]:
-        out = []
-
-        def sumHelper(n, k, level, sol):
-            if n < 0: return
-            if n == 0 and k == len(sol):
-                out.append(sol[:])
-            for i in range(level, 10):
-                sol.append(i)
-                sumHelper(n - i, k, i + 1, sol)
-                sol.pop()
-
-        sumHelper(n, k, 1, [])
-        return out
+        res = []
+        
+        def DFS(num, k, n, cur_sum, tmp):
+            if len(tmp) == k and cur_sum == n:
+                res.append(tmp[:])
+                return
+            for i in range(num, 10):
+                if cur_sum + i <= n and len(tmp) < k:
+                    tmp.append(i)
+                    cur_sum += i
+                    DFS(i+1, k, n, cur_sum, tmp)
+                    tmp.pop()
+                    cur_sum -= i
+                    
+        DFS(1, k, n, 0, [])
+        return res
