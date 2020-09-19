@@ -9,23 +9,7 @@ Input: [100, 4, 200, 1, 3, 2]
 Output: 4
 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
 '''
-# BFS
-class Solution:
-    def sumNumbers(self, root: TreeNode) -> int:
-        if not root: return 0
-        stack = [(root, str(root.val))]
-        res = 0
-        while stack:
-            node,s = stack.pop(0)
-            if node.left:
-                stack.append((node.left,s+str(node.left.val)))
-            if node.right:
-                stack.append((node.right,s+str(node.right.val)))
-            if not node.left and not node.right:
-                res += int(s)
-        return res
 
-# 回溯
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         if len(nums) == 0: return 0

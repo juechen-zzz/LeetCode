@@ -20,45 +20,46 @@ Node 4's value is 4, and it has two neighbors: Node 1 and 3.
 """
 # Definition for a Node.
 class Node:
-    def __init__(self, val = 0, neighbors = []):
+    def __init__(self, val = 0, neighbors = None):
         self.val = val
-        self.neighbors = neighbors
+        self.neighbors = neighbors if neighbors is not None else []
 """
+
 # DFS
 class Solution:
+    def __init__(self):
+        self.visited = {}
+    
     def cloneGraph(self, node: 'Node') -> 'Node':
-        lookup = {}
-
-        def dfs(node):
-            if not node: return
-            if node in lookup: return lookup[node]      # 判断是否遍历过
-            clone = Node(node.val, [])
-            lookup[node] = clone
-            for n in node.neighbors:
-                clone.neighbors.append(dfs(n))
-            return clone
-
-        return dfs(node)
-
+        if not node: return node
+        
+        if node in self.visited:
+            return self.visited[node]
+        
+        clone_node = Node(node.val, [])
+        
+        self.visited[node] = clone_node
+        
+        if node.neighbors:
+            clone_node.neighbors = [self.cloneGraph(n) for n in node.neighbors]
+        
+        return clone_node
+        
 # BFS
 class Solution:
-    def cloneGraph(self, node: 'Node') -> 'Node':
-        from collections import deque
-        lookup = {}
+    def cloneGraph(self, node):
+        if not node: return node
 
-        def bfs(node):
-            if not node: return
-            clone = Node(node.val, [])
-            lookup[node] = clone
-            queue = deque()
-            queue.appendleft(node)
-            while queue:
-                tmp = queue.pop()
-                for n in tmp.neighbors:
-                    if n not in lookup:
-                        lookup[n] = Node(n.val, [])
-                        queue.appendleft(n)
-                    lookup[tmp].neighbors.append(lookup[n])
-            return clone
+        visited = {}
 
-        return bfs(node)
+        queue = deque([node])
+        visited[node] = Node(node.val, [])
+
+        while queue:
+            n = queue.popleft()
+            for neighbor in n.neighbors:
+                if neighbor not in visited:
+                    visited[neighbor] = Node(neighbor.val, [])
+                    queue.append(neighbor)
+                visited[n].neighbors.append(visited[neighbor])
+        return visited[node]
