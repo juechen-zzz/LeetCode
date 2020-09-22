@@ -46,7 +46,7 @@ class Solution:
         elif len(v1) > len(v2):
             v2 = v2 + ['0']*(len(v1)-len(v2))
         s1 = s2 = 0
-        while (v1 and v2):
+        while v1:
             s1 += int(v1.pop(0))
             s2 += int(v2.pop(0))
             if (s1 != s2): break

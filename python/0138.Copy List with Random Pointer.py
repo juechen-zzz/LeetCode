@@ -33,19 +33,19 @@ class Solution:
         # 第一遍遍历，把每个新生成的结点放在对应的旧结点后面
         p = head
         while p:
-            new_node = Node(p.val)
-            new_node.next = p.next
-            p.next = new_node
+            newNode = Node(p.val)
+            newNode.next = p.next
+            p.next = newNode
 
-            p = new_node.next       # 下一个旧结点
+            p = newNode.next       # 下一个旧结点
         
         # 第二遍修改每个新结点的 next 和 random 
         p = head
         while p:
-            next_origin = p.next.next        # 下一个旧结点备份一下
-            p.next.next = next_origin.next if next_origin else None   # 修改新结点的 next
+            nextOrigin = p.next.next        # 下一个旧结点备份一下
+            p.next.next = nextOrigin.next if nextOrigin else None   # 修改新结点的 next
             p.next.random = p.random.next if p.random else None    # 修改新结点的 random
 
-            p = next_origin         # 下一个旧结点
+            p = nextOrigin         # 下一个旧结点
         
         return head.next

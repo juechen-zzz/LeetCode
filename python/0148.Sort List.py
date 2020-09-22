@@ -29,8 +29,10 @@ class Solution:
 
         res = p = ListNode(-1)
         while left and right:
-            if left.val < right.val: p.next, left = left, left.next
-            else: p.next, right = right, right.next
+            if left.val < right.val: 
+                p.next, left = left, left.next
+            else: 
+                p.next, right = right, right.next
             p = p.next
         p.next = left if left else right
         return res.next
