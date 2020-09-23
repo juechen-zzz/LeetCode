@@ -13,7 +13,7 @@ Output: ["AAAAACCCCC", "CCCCCAAAAA"]
 class Solution(object):
     def findRepeatedDnaSequences(self, s):
         res, dic = [], {}
-        for i in range(0, len(s)-9):
+        for i in range(len(s)-9):
             substring = s[i:i+10]
             if substring in dic and dic[substring] == False:
                 res.append(substring)

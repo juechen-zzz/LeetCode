@@ -32,9 +32,6 @@ class Solution:
         abc="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         while n:
             n -= 1
-            ans = abc[n%26] + ans
+            ans = abc[n % 26] + ans
             n = n // 26
         return ans
-
-
-

@@ -22,7 +22,8 @@ Explanation: Your function can return either index number 1 where the peak eleme
 
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
-        return nums.index(max(nums))  # 返回最大值的index就好了
+        return nums.index(max(nums))
+          # 返回最大值的index就好了
 
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
