@@ -19,10 +19,10 @@ class Solution:
         visited = set()
         # 当 n != 1，并且没见过 n 时进行判断, 这个set用来做无限循环时的截止条件
         while n != 1 and n not in visited:
+            visited.add(n)
             nxt = 0
             while n != 0:
                 nxt += (n % 10) ** 2
                 n //= 10
             n = nxt
         return n == 1
-

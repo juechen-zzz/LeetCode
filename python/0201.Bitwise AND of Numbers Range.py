@@ -9,11 +9,14 @@ Example 2:
 
 Input: [0,1]
 Output: 0
+
+性质：n个连续数字求与的时候，前m位都是1.
+
+举题目给的例子：[5,7] 共 5， 6，7三个数字， 用二进制表示 101, 110,111, 这三个数字特点是第一位都是1，后面几位求与一定是0
 """
 
 class Solution:
     def rangeBitwiseAnd(self, m: int, n: int) -> int:
-        diff, power = (n - m), 0
-        while (diff > 2 ** power):
-            power += 1
-        return m & n & (0xFFFFFFFF << power)
+        while n > m:
+            n &= n - 1      # 将二进制的n最后的1置为0
+        return n
