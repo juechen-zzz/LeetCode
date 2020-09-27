@@ -25,9 +25,9 @@ class Solution:
             if nums[i] not in dic:
                 dic[nums[i]] = i
             else:
-                if i-dic[nums[i]] <= k:
+                if i - dic[nums[i]] <= k:
                     return True
                 else:
-                    dic[nums[i]]=i
+                    dic[nums[i]] = i
         return False
  

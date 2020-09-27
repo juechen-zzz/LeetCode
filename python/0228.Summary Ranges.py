@@ -17,7 +17,7 @@ Explanation: 2,3,4 form a continuous range; 8,9 form a continuous range.
 class Solution:
     def summaryRanges(self, nums: List[int]) -> List[str]:
         n = len(nums)
-        if(n == 1): return [str(nums[0])]
+        if n == 1: return [str(nums[0])]
         res = []
         l, r, cur = 0, 0, 0
         while cur < n:

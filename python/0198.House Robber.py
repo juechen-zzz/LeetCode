@@ -17,11 +17,11 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
              Total amount you can rob = 2 + 9 + 1 = 12.
 """
 
+# 此方法为优化后的DP，即将空间压缩到常数级
 class Solution:
     def rob(self, nums: List[int]) -> int:
         if len(nums) <= 0: return 0
-        pre = 0
-        cur = 0
+        pre, cur = 0, 0
         for n in nums:
             cur, pre = max(pre+n, cur), cur
         return cur
