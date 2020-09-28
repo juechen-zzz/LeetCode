@@ -13,7 +13,7 @@ cur = 2,high = 0,low=593,[1-2593]中不能出现5xxx,因此5在千位0次.
 
 总结规律:
 base = 10^(i-1)
-cur >k,结果为 (high+1)*base
+cur > k,结果为 (high+1)*base
 cur ==k,结果为 (high)base + low + 1
 cur < k,结果为 highbase
 """
