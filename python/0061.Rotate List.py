@@ -28,29 +28,6 @@ rotate 4 steps to the right: 2->0->1->NULL
 class Solution:
     def rotateRight(self, head: ListNode, k: int) -> ListNode:
         if head is None or head.next is None: return head
-        val = []
-        cur = head
-        while cur is not None:
-            val.append(cur.val)
-            cur = cur.next
-        k = k % len(val)
-        r_val = val[-k:] + val[:-k]
-        cur = head
-        for val in r_val:
-            cur.val = val
-            cur = cur.next
-        
-        return head
-
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
-class Solution:
-    def rotateRight(self, head: ListNode, k: int) -> ListNode:
-        if head is None or head.next is None: return head
         cur = head
         num = 0
         while cur:
