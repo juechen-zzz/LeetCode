@@ -19,23 +19,23 @@ Output: 1
 
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
-        num_islands = 0
+        num = 0
         self.grid = grid
         for i in range(len(grid)):
             for j in range(len(grid[0])):
-                if self.grid[i][j] == "1":    
+                if self.grid[i][j] == '1':
                     self.dfs(i, j)
-                    num_islands += 1  
-        return num_islands
+                    num += 1
+        return num
     
-    def dfs(self, i, j):
-        if i >= len(self.grid) or j >= len(self.grid[0]) or i < 0 or j < 0: return
+    def dfs(self, row, col):
+        if row < 0 or row > len(self.grid) - 1 or col < 0 or col > len(self.grid[0]) - 1: return
         
-        if self.grid[i][j] == "1": 
-            self.grid[i][j] = "0"
-            
-            self.dfs(i-1, j)
-            self.dfs(i+1, j)
-            self.dfs(i, j-1)
-            self.dfs(i, j+1)
-        return   
+        if self.grid[row][col] == '1':
+            self.grid[row][col] = '0'
+            self.dfs(row - 1, col)
+            self.dfs(row + 1, col)
+            self.dfs(row, col - 1)
+            self.dfs(row, col + 1)
+        
+        return 

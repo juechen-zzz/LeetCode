@@ -39,7 +39,11 @@ class Solution:
             while cur.next and cur.next.val < head.val:
                 cur = cur.next
             
-            cur.next, cur.next.next, head = head, cur.next, head.next
+            # cur.next, cur.next.next, head = head, cur.next, head.next
+            tmp = head.next
+            head.next = cur.next
+            cur.next = head
+            head = tmp
 
         return first.next
 	
