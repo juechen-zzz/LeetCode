@@ -22,6 +22,7 @@ class Solution:
         m = [0] * k
         for x in range(n-1):
             for y in range(k):
+                # 取index[y]是可以从numbers中拿出在走了index[y]步后的最小值再进行下一步乘法
                 m[y] = numbers[index[y]] * primes[y]
             ans = min(m)
             numbers.append(ans)
