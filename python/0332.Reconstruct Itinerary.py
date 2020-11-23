@@ -36,6 +36,6 @@ class Solution(object):
 
     def dfs(self, graph, source, res):
         while graph[source]:
-            v = graph[source].pop(0)
-            self.dfs(graph, v, res)
+            location = graph[source].pop(0)
+            self.dfs(graph, location, res)
         res.append(source)
