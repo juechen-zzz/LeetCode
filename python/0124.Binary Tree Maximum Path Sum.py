@@ -21,17 +21,14 @@ Output: 6
 #         self.left = left
 #         self.right = right
 class Solution:
-    def max_sum(self, root):
-        if not root: return 0
-        sum1 = self.max_sum(root.left) + root.val
-        sum2 = self.max_sum(root.right) + root.val
-        sum3 = sum1 + sum2 - root.val
-        sum4 = root.val
-        self.ans = max(self.ans, sum1, sum2, sum3, sum4)
-        return max(sum1, sum2, sum4)
-
     def maxPathSum(self, root: TreeNode) -> int:
         self.ans = root.val
-        self.max_sum(root)
+        self.helper(root)
         return self.ans
     
+    def helper(self, root):
+        if not root: return 0
+        left = max(0, self.helper(root.left))
+        right = max(0, self.helper(root.right))
+        self.ans = max(self.ans, left + right + root.val)
+        return max(left, right) + root.val
