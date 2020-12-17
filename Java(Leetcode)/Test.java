@@ -11,6 +11,8 @@ ArrayList:
     nums.add(1)
     nums.get(1)
 
+    List<List<Integer>> res = new LinkedList<>();
+
 return:
     return dp[amount] > amount ? -1 : dp[amount];
 */
@@ -27,5 +29,10 @@ public class Test{
         System.out.println(nums[1]);
         System.out.println(nums[2]);
 
+        char[][] board = new char[n][n];
+        for (char[] i : board){
+            Arrays.fill(i, '.');
+        }
+        System.out.println(board);
     }
 }
