@@ -20,6 +20,7 @@
 
  */
 
+// 1 BFS
 class Solution {
     public int openLock(String[] deadends, String target) {
         // 记录需要跳过的（包括限制不能出现的和已经访问过的）
@@ -53,6 +54,64 @@ class Solution {
                 }
             }
             step++;
+        }
+        return -1;
+    }
+
+    public List<String> nextOne(String s, int index){
+        List<String> res = new LinkedList<>();
+
+        char[] upCh = s.toCharArray();
+        if (upCh[index] == '9') {upCh[index] = '0';}
+        else {upCh[index] += 1;}
+        res.add(new String(upCh));
+        
+        char[] downCh = s.toCharArray();
+        if (downCh[index] == '0') {downCh[index] = '9';}
+        else {downCh[index] -= 1;}
+        res.add(new String(downCh));
+
+        return res;
+    }
+}
+
+// 2 双向BFS
+class Solution {
+    public int openLock(String[] deadends, String target) {
+        // 记录需要跳过的（包括限制不能出现的和已经访问过的）
+        Set<String> deads = new HashSet<>();
+        for (String s : deadends){deads.add(s);}
+        // 用集合不用队列，能快速判断元素是否存在
+        Set<String> q1 = new HashSet<>();
+        Set<String> q2 = new HashSet<>();
+        Set<String> visited = new HashSet<>();
+
+        q1.add("0000");
+        q2.add(target);
+        int step = 0;
+
+        while (!q1.isEmpty() && !q2.isEmpty()){
+            // 遍历过程中不能修改HashSet，用temp存
+            Set<String> temp = new HashSet<>();
+            for (String cur: q1){
+                if (deads.contains(cur)){continue;}
+                if (q2.contains(cur)){return step;}
+                visited.add(cur);
+
+                for (int j = 0; j < 4; j++){
+                    String up = nextOne(cur, j).get(0);
+                    if (!visited.contains(up)){
+                        temp.add(up);
+                    }
+                    String down = nextOne(cur, j).get(1);
+                    if (!visited.contains(down)){
+                        temp.add(down);
+                    }
+                }
+            }
+            step++;
+            q1 = q2;
+            q2 = temp;
         }
         return -1;
     }
