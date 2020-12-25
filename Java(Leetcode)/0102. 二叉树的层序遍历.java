@@ -11,6 +11,8 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+
+// BFS
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         if (root == null) {return new LinkedList<>();}
