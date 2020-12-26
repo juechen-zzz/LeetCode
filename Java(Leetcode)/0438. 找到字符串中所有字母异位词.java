@@ -33,6 +33,7 @@ s: "abab" p: "ab"
 
  */
 
+// 滑动窗口
 class Solution {
     public List<Integer> findAnagrams(String s, String p) {
         HashMap<Character, Integer> need = new HashMap<>();
