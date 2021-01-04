@@ -28,24 +28,25 @@ class Solution {
     public boolean isMatch(String s, String p) {
         //初始化dp[0][0]=true,dp[0][1]和dp[1][0]~dp[s.length][0]默认值为false所以不需要显式初始化
         //填写第一行dp[0][2]~dp[0][p.length]
-        boolean[][] dp = new boolean[s.length() + 1][p.length() + 1];
+        int m = s.length(), n = p.length();
+        boolean[][] dp = new boolean[m + 1][n + 1];
         dp[0][0] = true;
         for (int k = 2; k <= p.length(); k++){
-            dp[0][k] = p.charAt(k - 1) == '*' && dp[0][k-2];
+            dp[0][k] = (p.charAt(k - 1) == '*' && dp[0][k-2]);
         }
 
-        for (int i = 0; i < s.length(); i++){
-            for (int j = 0; j < p.length(); j++){
+        for (int i = 0; i < m; i++){
+            for (int j = 0; j < n; j++){
                 if (p.charAt(j) == '*'){
                     // 1.只匹配0次，s不变[i+1], p移除两个元素[j+1-2]。
                     // 2.比较s的i元素和p的j-1(因为此时j元素为*)元素,相等则移除首元素[i+1-1],p不变。
-                    dp[i+1][j+1] = dp[i+1][j-1] || (dp[i][j+1] && headMatched(s, p, i, j-1));
+                    dp[i + 1][j + 1] = (dp[i + 1][j - 1] || (dp[i][j + 1] && headMatched(s, p, i, j - 1)));
                 }else {
-                    dp[i+1][j+1] =  dp[i][j] && headMatched(s, p, i, j);
+                    dp[i + 1][j + 1] =  (dp[i][j] && headMatched(s, p, i, j));
                 }
             }
         }
-        return dp[s.length()][p.length()];
+        return dp[m][n];
     }
     //判断s第i个字符和p第j个字符是否匹配
     public boolean headMatched(String s,String p,int i,int j){
