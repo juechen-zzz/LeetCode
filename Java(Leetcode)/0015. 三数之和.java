@@ -26,7 +26,7 @@ class Solution {
             if (nums[i] > 0){break;}
             if (i > 0 && nums[i] == nums[i - 1]){continue;}
 
-            int first = i, left = i + 1, right = nums.length - 1;
+            int left = i + 1, right = nums.length - 1;
             while (left < right){
                 int total = nums[i] + nums[left] + nums[right];
                 if (total < 0) {left++;}
