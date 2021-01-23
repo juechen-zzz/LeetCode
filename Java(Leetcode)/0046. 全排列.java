@@ -16,62 +16,27 @@
 */
 
 // 回溯
-// 1 用 ArrayList
 class Solution {
-    List<List<Integer>> res = new ArrayList<>();
-
     public List<List<Integer>> permute(int[] nums) {
-        ArrayList<Integer> track = new ArrayList<>();
-        backtrack(nums, track);
-        return res;
+        List<List<Integer>> ans = new ArrayList<>();
+        List<Integer> track = new ArrayList<>();
+        Arrays.sort(nums);
+        backtrack(nums, ans, track, 0);
+        return ans;
     }
 
-    void backtrack(int[] nums, ArrayList<Integer> track){
-        // 触发结束条件
+    public void backtrack(int[] nums, List<List<Integer>> ans, List<Integer> track, int idx) {
         if (track.size() == nums.length) {
-            res.add(new ArrayList(track));
+            ans.add(new ArrayList(track));
             return;
         }
 
-        for (int i = 0; i < nums.length; i++){
-            // 排除不合法的选择
-            if (track.contains(nums[i])){       // O(N)时间复杂度
-                continue;
-            }
-            // 做选择
+        for (int i = 0; i < nums.length; i++) {
+            if (track.contains(nums[i])) {continue;}
             track.add(nums[i]);
-            backtrack(nums, track);
-            track.remove(track.size()-1);
+            backtrack(nums, ans, track, idx + 1);
+            track.remove(track.size() - 1);
         }
     }
 }
 
-// 2 用 LinkedList
-class Solution {
-    List<List<Integer>> res = new LinkedList<>();
-
-    public List<List<Integer>> permute(int[] nums) {
-        LinkedList<Integer> track = new LinkedList<>();
-        backtrack(nums, track);
-        return res;
-    }
-
-    void backtrack(int[] nums, LinkedList<Integer> track){
-        // 触发结束条件
-        if (track.size() == nums.length) {
-            res.add(new LinkedList(track));
-            return;
-        }
-
-        for (int i = 0; i < nums.length; i++){
-            // 排除不合法的选择
-            if (track.contains(nums[i])){       // O(N)时间复杂度
-                continue;
-            }
-            // 做选择
-            track.add(nums[i]);
-            backtrack(nums, track);
-            track.removeLast();
-        }
-    }
-}

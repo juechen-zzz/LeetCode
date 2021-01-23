@@ -1,25 +1,17 @@
-/*
-根据一棵树的前序遍历与中序遍历构造二叉树。
+/* 
+输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。
 
-注意:
-你可以假设树中没有重复的元素。
+示例1
 
-例如，给出
+输入
+[1,2,3,4,5,6,7],[3,2,4,1,6,5,7]
 
-前序遍历 preorder = [3,9,20,15,7]
-中序遍历 inorder = [9,3,15,20,7]
-返回如下的二叉树：
-
-    3
-   / \
-  9  20
-    /  \
-   15   7
-
-*/
+返回值
+{1,2,5,3,4,6,7}
+ */
 
 /**
- * Definition for a binary tree node.
+ * Definition for binary tree
  * public class TreeNode {
  *     int val;
  *     TreeNode left;
@@ -27,6 +19,7 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+import java.util.HashMap;
 public class Solution {
     HashMap<Integer, Integer> map = new HashMap<>();
     
