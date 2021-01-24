@@ -23,12 +23,12 @@ class Solution {
         List<Integer> track = new ArrayList<>();
         boolean[] visited = new boolean[nums.length];
         Arrays.sort(nums);
-        backtrack(nums, ans, 0, track, visited);
+        backtrack(nums, ans, track, visited);
         return ans;
     }
 
-    public void backtrack(int[] nums, List<List<Integer>> ans, int idx, List<Integer> track, boolean[] visited) {
-        if (idx == nums.length) {
+    public void backtrack(int[] nums, List<List<Integer>> ans, List<Integer> track, boolean[] visited) {
+        if (track.size() == nums.length) {
             ans.add(new ArrayList(track));
             return;
         }
@@ -38,7 +38,7 @@ class Solution {
             }
             track.add(nums[i]);
             visited[i] = true;
-            backtrack(nums, ans, idx + 1, track, visited);
+            backtrack(nums, ans, track, visited);
             visited[i] = false;
             track.remove(track.size() - 1);
         }

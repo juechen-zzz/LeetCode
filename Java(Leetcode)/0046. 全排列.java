@@ -21,11 +21,11 @@ class Solution {
         List<List<Integer>> ans = new ArrayList<>();
         List<Integer> track = new ArrayList<>();
         Arrays.sort(nums);
-        backtrack(nums, ans, track, 0);
+        backtrack(nums, ans, track);
         return ans;
     }
 
-    public void backtrack(int[] nums, List<List<Integer>> ans, List<Integer> track, int idx) {
+    public void backtrack(int[] nums, List<List<Integer>> ans, List<Integer> track) {
         if (track.size() == nums.length) {
             ans.add(new ArrayList(track));
             return;
@@ -34,9 +34,8 @@ class Solution {
         for (int i = 0; i < nums.length; i++) {
             if (track.contains(nums[i])) {continue;}
             track.add(nums[i]);
-            backtrack(nums, ans, track, idx + 1);
+            backtrack(nums, ans, track);
             track.remove(track.size() - 1);
         }
     }
 }
-
