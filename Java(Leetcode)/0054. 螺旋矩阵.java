@@ -31,24 +31,24 @@ class Solution {
         int rows = matrix.length, columns = matrix[0].length;
         int left = 0, right = columns - 1, top = 0, bottom = rows - 1;
         while (left <= right && top <= bottom) {
-            for (int column = left; column <= right; column++) {
-                order.add(matrix[top][column]);
+            for (int i = left; i <= right; i++) {
+                order.add(matrix[top][i]);
             }
-            for (int row = top + 1; row <= bottom; row++) {
-                order.add(matrix[row][right]);
-            }
-            if (left < right && top < bottom) {
-                for (int column = right - 1; column > left; column--) {
-                    order.add(matrix[bottom][column]);
-                }
-                for (int row = bottom; row > top; row--) {
-                    order.add(matrix[row][left]);
-                }
-            }
-            left++;
-            right--;
             top++;
-            bottom--;
+            for (int j = top; j <= bottom; j++) {
+                order.add(matrix[j][right]);
+            }
+            right--;
+            if (left <= right && top <= bottom) {
+                for (int i = right; i >= left; i--) {
+                    order.add(matrix[bottom][i]);
+                }
+                bottom--;
+                for (int j = bottom; j >= top; j--) {
+                    order.add(matrix[j][left]);
+                }
+                left++;
+            }
         }
         return order;
     }
