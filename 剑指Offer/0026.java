@@ -36,7 +36,7 @@ public class Solution {
         cur.left = pre;
         if (pre != null) {pre.right = cur;}
         pre = cur;
-        
+         
         if (cur.right != null) {helper(cur.right);}
     }
 }
