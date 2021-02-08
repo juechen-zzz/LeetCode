@@ -1,13 +1,13 @@
-/*
-根据一棵树的前序遍历与中序遍历构造二叉树。
+/* 
+根据一棵树的中序遍历与后序遍历构造二叉树。
 
 注意:
 你可以假设树中没有重复的元素。
 
 例如，给出
 
-前序遍历 preorder = [3,9,20,15,7]
-中序遍历 inorder = [9,3,15,20,7]
+中序遍历 inorder = [9,3,15,20,7]
+后序遍历 postorder = [9,15,7,20,3]
 返回如下的二叉树：
 
     3
@@ -16,7 +16,7 @@
     /  \
    15   7
 
-*/
+ */
 
 /**
  * Definition for a binary tree node.
@@ -36,23 +36,24 @@
 class Solution {
     Map<Integer, Integer> map = new HashMap<>();
 
-    public TreeNode buildTree(int[] preorder, int[] inorder) {
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
         for (int i = 0; i < inorder.length; i++) {
             map.put(inorder[i], i);
         }
-        return helper(preorder, 0, preorder.length, inorder, 0, inorder.length);
+        return helper(inorder, 0, inorder.length, postorder, 0, postorder.length);
     }
 
-    public TreeNode helper(int[] preorder, int preStart, int preEnd, int[] inorder, int inStart, int inEnd) {
-        if (preStart == preEnd) {return null;}
+    public TreeNode helper(int[] inorder, int inStart, int inEnd, int[] postorder, int postStart, int postEnd) {
+        if (postStart == postEnd) {return null;}
 
-        int rootVal = preorder[preStart];
+        int rootVal = postorder[postEnd - 1];
         TreeNode root = new TreeNode(rootVal);
+
         int inRootIndex = map.get(rootVal);
         int leftNum = inRootIndex - inStart;
 
-        root.left = helper(preorder, preStart + 1, preStart + 1 + leftNum, inorder, inStart, inRootIndex);
-        root.right = helper(preorder, preStart + 1 + leftNum, preEnd, inorder, inRootIndex + 1, inEnd);
+        root.left = helper(inorder, inStart, inRootIndex, postorder, postStart, postStart + leftNum);
+        root.right = helper(inorder, inRootIndex + 1, inEnd, postorder, postStart + leftNum, postEnd - 1);
 
         return root;
     }
