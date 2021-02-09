@@ -21,25 +21,20 @@
  *     }
  * }
  */
-
-
-// BFS
 class Solution {
     public int minDepth(TreeNode root) {
         if (root == null) {return 0;}
+        int depth = 1;
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
-        int depth = 1;
-
-        while (!queue.isEmpty()){
-            int n = queue.size();
-            for (int i = 0; i < n; i++){
+        while (!queue.isEmpty()) {
+            int n  = queue.size();
+            while (n > 0) {
                 TreeNode node = queue.poll();
-                if (node.left == null && node.right == null){
-                    return depth;
-                }
+                if (node.left == null && node.right == null) {return depth;}
                 if (node.left != null) {queue.offer(node.left);}
                 if (node.right != null) {queue.offer(node.right);}
+                n--;
             }
             depth++;
         }
