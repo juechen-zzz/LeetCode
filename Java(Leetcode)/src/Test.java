@@ -19,6 +19,8 @@ return:
 
 import java.util.*;
 
+import static java.util.Collections.*;
+
 public class Test{
     public static void main(String[] args){
         Map<Integer, Integer> map = new HashMap<>();
@@ -37,5 +39,7 @@ public class Test{
             Arrays.fill(i, '.');
         }
         System.out.println(board);
+
+
     }
 }
