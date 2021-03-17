@@ -1,45 +1,57 @@
-/*
-    int ans = Integer.MIN_VALUE;
-
-    int[] n = new int[]{1, 2}
-
-    int[] dp = new int[10];
-    Arrays.fill(dp, 2);
-
-ArrayList:
-    List<Integer> nums = new ArrayList<Integer>();
-    nums.add(1)
-    nums.get(1)
-
-    List<List<Integer>> res = new LinkedList<>();
-
-return:
-    return dp[amount] > amount ? -1 : dp[amount];
-*/
-
 import java.util.*;
-
-import static java.util.Collections.*;
 
 public class Test{
     public static void main(String[] args){
-        Map<Integer, Integer> map = new HashMap<>();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("输入表达式：");
+        String s = scanner.nextLine();
 
-        double result = Math.pow(4, 2);
-        System.out.println(result);
-
-        int[] nums = new int[3];
-        System.out.println(nums[0]);
-        System.out.println(nums[1]);
-        System.out.println(nums[2]);
-
-        int n = 23;
-        char[][] board = new char[n][n];
-        for (char[] i : board){
-            Arrays.fill(i, '.');
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == '{' || chars[i] == '[') {chars[i] = '(';}
+            if (chars[i] == '}' || chars[i] == ']') {chars[i] = ')';}
         }
-        System.out.println(board);
+        s = String.valueOf(chars);
 
+        System.out.println(s);
+        Deque<Character> deque = new LinkedList<>();
+        for (int i = 0; i < s.length(); i++) {
+            deque.offerLast(s.charAt(i));
+        }
+        System.out.println(myMethod(deque));
+    }
 
+    private static int myMethod(Deque<Character> deque) {
+        Stack<Integer> stack = new Stack<>();
+
+        char sign = '+';
+        int num = 0;
+        while (deque.size() > 0) {
+            char c = deque.pollFirst();
+            if (Character.isDigit(c)) {
+                num = 10 * num + (c - '0');
+            }
+            if (c == '(') {
+                num = myMethod(deque);
+            }
+
+            if ((!Character.isDigit(c) && c !=' ') || deque.size() == 0) {
+                if (sign == '+') {stack.push(num);}
+                else if (sign == '-') {stack.push(-num);}
+                else if (sign == '*') {stack.push(stack.pop() * num);}
+                else if (sign == '/') {stack.push(stack.pop() / num);}
+
+                num = 0;
+                sign = c;
+            }
+
+            if (c == ')') {break;}
+        }
+
+        int ans = 0;
+        for (int n : stack) {
+            ans += n;
+        }
+        return ans;
     }
 }

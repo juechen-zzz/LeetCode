@@ -1,8 +1,6 @@
 /* 
 实现一个基本的计算器来计算一个简单的字符串表达式 s 的值。
 
- 
-
 示例 1：
 
 输入：s = "1 + 1"
@@ -18,6 +16,7 @@
 
  */
 
+// + - ()
 class Solution {
     public int calculate(String s) {
         Stack<Integer> stack = new Stack<>();
@@ -56,6 +55,51 @@ class Solution {
             }
         }
 
+        return ans;
+    }
+}
+
+// + - * / ()
+class Solution {
+    public int calculate(String s) {
+        Deque<Character> deque = new LinkedList<>();
+        for (int i = 0; i < s.length(); i++) {
+            deque.offerLast(s.charAt(i));
+        }
+        return myMethod(deque);
+    }
+
+    private static int myMethod(Deque<Character> deque) {
+        Stack<Integer> stack = new Stack<>();
+
+        char sign = '+';
+        int num = 0;
+        while (deque.size() > 0) {
+            char c = deque.pollFirst();
+            if (Character.isDigit(c)) {
+                num = 10 * num + (c - '0');
+            }
+            if (c == '(') {
+                num = myMethod(deque);
+            }
+
+            if ((!Character.isDigit(c) && c !=' ') || deque.size() == 0) {
+                if (sign == '+') {stack.push(num);}
+                else if (sign == '-') {stack.push(-num);}
+                else if (sign == '*') {stack.push(stack.pop() * num);}
+                else if (sign == '/') {stack.push(stack.pop() / num);}
+
+                num = 0;
+                sign = c;
+            }
+
+            if (c == ')') {break;}
+        }
+
+        int ans = 0;
+        for (int n : stack) {
+            ans += n;
+        }
         return ans;
     }
 }

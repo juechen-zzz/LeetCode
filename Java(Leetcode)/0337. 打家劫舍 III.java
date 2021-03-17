@@ -48,6 +48,7 @@ class Solution {
         dfs(node.left);
         dfs(node.right);
         f.put(node, node.val + g.getOrDefault(node.left, 0) + g.getOrDefault(node.right, 0));
-        g.put(node, Math.max(f.getOrDefault(node.left, 0), g.getOrDefault(node.left, 0)) + Math.max(f.getOrDefault(node.right, 0), g.getOrDefault(node.right, 0)));
+        g.put(node, Math.max(f.getOrDefault(node.left, 0), g.getOrDefault(node.left, 0)) 
+            + Math.max(f.getOrDefault(node.right, 0), g.getOrDefault(node.right, 0)));
     }
 }
