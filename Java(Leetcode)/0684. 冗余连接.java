@@ -29,16 +29,13 @@
 class Solution {
     public int[] findRedundantConnection(int[][] edges) {
         int n = edges.length;
-        int[] parent = new int[n + 1];
-        for (int i = 1; i <= n; i++) {
-            parent[i] = i;
-        }
+        UnionFind uf = new UnionFind(n + 1);
 
         for (int i = 0; i < n; i++) {
             int[] edge = edges[i];
             int node1 = edge[0], node2 = edge[1];
-            if (find(parent, node1) != find(parent, node2)) {
-                union(parent, node1, node2);
+            if (uf.find(node1) != uf.find(node2)) {
+                uf.union(node1, node2);
             }
             else {
                 return edge;
@@ -46,15 +43,26 @@ class Solution {
         }
         return new int[0];
     }
+}
 
-    private void union(int[] parent, int index1, int index2) {
-        parent[find(parent, index1)] = find(parent, index2);
+class UnionFind {
+    int[] ancestor;
+
+    public UnionFind(int n) {
+        ancestor = new int[n];
+        for (int i = 0; i < n; i++) {
+            ancestor[i] = i;
+        }
     }
 
-    private int find(int[] parent, int index) {
-        if (parent[index] != index) {
-            parent[index] = find(parent, parent[index]);
+    public void union(int index1, int index2) {
+        ancestor[find(index1)] = find(index2);
+    }
+
+    public int find(int index) {
+        if (ancestor[index] != index) {
+            ancestor[index] = find(ancestor[index]);
         }
-        return parent[index];
+        return ancestor[index];
     }
 }
