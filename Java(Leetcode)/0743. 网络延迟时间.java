@@ -25,12 +25,10 @@ class Solution {
             if (!graph.containsKey(edge[0])) {
                 graph.put(edge[0], new ArrayList<int[]>());
             }
-            graph.get(edge[0]).add(new int[]{edge[2], edge[1]});
+            graph.get(edge[0]).add(new int[]{edge[1], edge[2]});
         }
 
-        for (int node : graph.keySet()) {
-            Collections.sort(graph.get(node), (a, b) -> a[0] - b[0]);
-        }
+        for (int node : graph.keySet()) {Collections.sort(graph.get(node), (a, b) -> a[0] - b[0]);}
         for (int i = 1; i <= n; i++) {dist.put(i, Integer.MAX_VALUE);}
 
         dfs(graph, k, 0);
@@ -48,7 +46,7 @@ class Solution {
         dist.put(node, time);
         if (graph.containsKey(node)) {
             for (int[] info : graph.get(node)) {
-                dfs(graph, info[1], time + info[0]);
+                dfs(graph, info[0], time + info[1]);
             }
         }
     }
