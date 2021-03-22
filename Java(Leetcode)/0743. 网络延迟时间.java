@@ -29,7 +29,7 @@ class Solution {
         }
 
         for (int node : graph.keySet()) {Collections.sort(graph.get(node), (a, b) -> a[0] - b[0]);}
-        for (int i = 1; i <= n; i++) {dist.put(i, Integer.MAX_VALUE);}
+        t
 
         dfs(graph, k, 0);
 
