@@ -25,29 +25,24 @@
 
 // 1 dfs
 class Solution {
-    int ans = 0;
-
     public int sumOfLeftLeaves(TreeNode root) {
         if (root == null) {return 0;}
-        dfs(root);
+        return dfs(root);
+    }
+
+    private int dfs(TreeNode root) {
+        int ans = 0;
+        if (root.left != null) {
+            ans += (isLeaf(root.left) ? root.left.val : dfs(root.left));
+        }
+        if (root.right != null && !isLeaf(root.right)) {
+            ans += dfs(root.right);
+        }
         return ans;
     }
 
-    public void dfs(TreeNode node){
-        if (node.left != null){
-            if (isLeafNode(node.left)){
-                ans += node.left.val;
-            } else{
-                dfs(node.left);
-            }
-        }
-        if (node.right != null && !isLeafNode(node.right)){
-            dfs(node.right);
-        }
-    }
-
-    public boolean isLeafNode(TreeNode node) {
-        return node.left == null && node.right == null;
+    private boolean isLeaf(TreeNode root) {
+        return (root.left == null && root.right == null);
     }
 }
 

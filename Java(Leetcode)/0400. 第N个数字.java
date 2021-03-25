@@ -24,7 +24,7 @@ class Solution {
 
         while (n > 0){
             if (num - size * max > 0){
-                num = num - size * max;
+                num -= size * max;
                 size++;
                 max = max * 10;
             }

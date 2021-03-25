@@ -49,30 +49,28 @@ class Solution {
 class Solution {
     public String removeKdigits(String num, int k) {
         Deque<Character> deque = new LinkedList<>();
-        for (int i = 0; i < num.length(); i++){
-            char n = num.charAt(i);
-            while (!deque.isEmpty() && k > 0 && deque.peekLast() > n){
+        for (int i = 0; i < num.length(); i++) {
+            char c = num.charAt(i);
+            while (!deque.isEmpty() && k > 0 && deque.peekLast() > c) {
                 deque.pollLast();
                 k--;
             }
-            deque.offerLast(n);
+            deque.offerLast(c);
         }
 
-        // 特殊情况：当数为递增时，不走while，要删除最后的K个数
-        for (int i = 0; i < k; ++i) {
+        for (int i = 0; i < k; i++) {
             deque.pollLast();
         }
 
         StringBuilder ans = new StringBuilder();
         boolean leadingZero = true;
         while (!deque.isEmpty()) {
-            char digit = deque.pollFirst();
-            if (leadingZero && digit == '0') {
-                continue;
-            }
+            char curNum = deque.pollFirst();
+            if (leadingZero && curNum == '0') {continue;}
             leadingZero = false;
-            ans.append(digit);
+            ans.append(curNum);
         }
+
         return ans.length() == 0 ? "0" : ans.toString();
     }
 }

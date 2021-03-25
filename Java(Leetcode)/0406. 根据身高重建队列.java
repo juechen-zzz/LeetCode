@@ -22,28 +22,27 @@
 
 class Solution {
     public int[][] reconstructQueue(int[][] people) {
-        Arrays.sort(people, new Comparator<int[]>() {
-            public int compare(int[] person1, int[] person2) {
-                return person1[0] == person2[0] ? person2[1] - person1[1] : person1[0] - person2[0];
-            }
+        Arrays.sort(people, new Comparator<int[]>(){
+            public int compare(int[] A, int[] B) {
+                return A[0] == B[0] ? B[1] - A[1] : A[0] - B[0];
+            } 
         });
 
         int n = people.length;
         int[][] ans = new int[n][];
-
-        for (int[] person : people) {
-            int spaces = person[1] + 1;
+        for (int[] cur : people) {
+            int space = cur[1] + 1;
             for (int i = 0; i < n; i++) {
                 if (ans[i] == null) {
-                    spaces--;
-                    if (spaces == 0) {
-                        ans[i] = person;
+                    space--;
+                    if (space == 0) {
+                        ans[i] = cur;
                         break;
                     }
                 }
             }
         }
+
         return ans;
     }
 }
-

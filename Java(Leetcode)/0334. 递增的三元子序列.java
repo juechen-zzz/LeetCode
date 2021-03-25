@@ -21,12 +21,12 @@
 class Solution {
     public boolean increasingTriplet(int[] nums) {
         if (nums.length < 3) {return false;}
-        int left = Integer.MAX_VALUE, mid = Integer.MAX_VALUE;
+        int left = Integer.MAX_VALUE, right = Integer.MAX_VALUE;
         for (int n : nums) {
             if (left >= n) {left = n;}
-            else if (mid >= n) {mid = n;}
+            else if (right >= n) {right = n;}
             else {return true;}
-        } 
+        }
         return false;
     }
 }

@@ -17,24 +17,24 @@
 */
 
 class Solution {
-    List<String> res = new ArrayList<>();
+    List<String> ans = new ArrayList<>();
     int[] dic = new int[]{1, 2, 4, 8, 1, 2, 4, 8, 16, 32};
-    
+
     public List<String> readBinaryWatch(int num) {
         dfs(num, 0, 0, 0);
-        return res;
+        return ans;
     }
 
-    void dfs(int count, int h, int m, int index){
-        if (count == 0){
-            res.add(h + ":" + (m > 9 ? m : "0" + m));
+    private void dfs(int count, int hour, int minute, int index) {
+        if (count == 0) {
+            ans.add(hour + ":" + (minute > 9 ? minute : "0" + minute));
         }
-        for (int i = index; i < 10; i++){
-            if (i < 4 && h + dic[i] < 12){
-                dfs(count - 1, h + dic[i], m, i + 1);
+        for (int i = index; i < 10; i++) {
+            if (i < 4 && hour + dic[i] < 12) {
+                dfs(count - 1, hour + dic[i], minute, i + 1);
             }
-            if (i >= 4 && m + dic[i] < 60){
-                dfs(count - 1, h, m + dic[i], i + 1);
+            if (i >= 4 && minute + dic[i] < 60) {
+                dfs(count - 1, hour, minute + dic[i], i + 1);
             }
         }
     }
