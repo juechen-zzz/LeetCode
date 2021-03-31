@@ -20,7 +20,7 @@
 
 class Solution {
     List<List<Integer>> ans = new ArrayList<>();
-    List<Integer> tmp = new ArrayList<>();
+    List<Integer> path = new ArrayList<>();
 
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         Arrays.sort(nums);
@@ -28,13 +28,15 @@ class Solution {
         return ans;
     }
 
-    public void backtrack(int[] nums, int idx) {
-        Collections.sort(tmp);
-        if (!ans.contains(tmp)) {ans.add(new ArrayList<>(tmp));}
+    private void backtrack(int[] nums, int idx) {
+        if (!ans.contains(path)) {
+            ans.add(new ArrayList<>(path));
+        }
+
         for (int i = idx; i < nums.length; i++) {
-            tmp.add(nums[i]);
+            path.add(nums[i]);
             backtrack(nums, i + 1);
-            tmp.remove(tmp.size() - 1);
+            path.remove(path.size() - 1);
         }
     }
 }

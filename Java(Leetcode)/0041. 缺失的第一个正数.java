@@ -36,7 +36,7 @@ class Solution {
     }
 }
 
-// HashMap
+// 2 hash
 class Solution {
     public int firstMissingPositive(int[] nums) {
         int n = nums.length;
