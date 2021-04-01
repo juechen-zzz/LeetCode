@@ -29,8 +29,8 @@
 
 // DFS
 class Solution {
-    int num;
-    boolean[] visited;
+    private static int num;
+    private static boolean[] visited;
 
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
         int n = rooms.size();
@@ -38,11 +38,11 @@ class Solution {
         num = 0;
 
         dfs(rooms, 0);
-        
+
         return num == n;
     }
 
-    private void dfs(List<List<Integer>> rooms, int idx) {
+    private static void dfs(List<List<Integer>> rooms, int idx) {
         visited[idx] = true;
         num++;
         for (int neigh : rooms.get(idx)) {
