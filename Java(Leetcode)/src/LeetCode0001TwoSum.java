@@ -14,7 +14,7 @@ import java.util.Map;
  * 空间复杂度：O(n)
  */
 
-public class LeetCode0001 {
+public class LeetCode0001TwoSum {
     private static int[] twoSum(int[] nums, int target) {
         // 用一个Map存对应的 值-索引 组合，判断target-nums[i]是否存在，存在即返回
         Map<Integer, Integer> map = new HashMap<>();

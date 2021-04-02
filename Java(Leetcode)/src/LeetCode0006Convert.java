@@ -18,7 +18,7 @@ import java.util.List;
  * 空间复杂度：O(n)
  */
 
-public class LeetCode0006 {
+public class LeetCode0006Convert {
     private static String convert(String s, int numRows) {
         if (numRows == 1) {return s;}
         List<StringBuilder> rows = new ArrayList<>();

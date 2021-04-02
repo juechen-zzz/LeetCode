@@ -12,7 +12,7 @@
  * 空间复杂度：O(max(m,n))
  */
 
-public class LeetCode0002 {
+public class LeetCode0002AddTwoNumbers {
     private ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         // 定义一个carry来记录和超过10的情况，其余正常相加保存即可
         int carry = 0;

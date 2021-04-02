@@ -18,7 +18,7 @@ import java.util.Map;
  */
 
 // 维持一个滑动窗口，一定窗口中出现某个字符出现超过一次，则左指针开始右移
-public class LeetCode0003 {
+public class LeetCode0003LengthofLongestSubstring {
     private static int lengthofLongestSubstring(String s) {
         Map<Character, Integer> window = new HashMap<>();
 

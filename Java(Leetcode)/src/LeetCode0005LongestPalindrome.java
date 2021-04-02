@@ -11,7 +11,7 @@
  *
  */
 
-public class LeetCode0005 {
+public class LeetCode0005LongestPalindrome {
     // 时间复杂度：O(n^2)  空间复杂度：O(n^2)
     // 设置DP，dp[i][j]表示从i到j的字符串是否回文，金字塔由下往上遍历
     private static String longestPalindrome(String s) {

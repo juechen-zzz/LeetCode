@@ -19,7 +19,7 @@
  * 时间复杂度：O(n)
  * 空间复杂度：O(1)
  */
-public class LeetCode0008 {
+public class LeetCode0008MyAtoi {
     private static int myAtoi(String str) {
         int len = str.length();
         char[] charArray = str.toCharArray();

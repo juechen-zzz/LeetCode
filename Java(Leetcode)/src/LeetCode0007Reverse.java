@@ -10,7 +10,7 @@
  * 空间复杂度：O(1)
  */
 
-public class LeetCode0007 {
+public class LeetCode0007Reverse {
     private static int reverse(int x) {
         int ans = 0;
         while (x != 0) {

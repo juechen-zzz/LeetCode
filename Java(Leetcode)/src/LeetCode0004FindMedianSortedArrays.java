@@ -14,7 +14,7 @@
  * 空间复杂度：O(1)
  */
 
-public class LeetCode0004 {
+public class LeetCode0004FindMedianSortedArrays {
     private static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int length1 = nums1.length, length2 = nums2.length;
         int totalLength = length1 + length2;
