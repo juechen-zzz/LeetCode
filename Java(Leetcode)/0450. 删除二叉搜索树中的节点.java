@@ -75,14 +75,14 @@ class Solution {
     }
 
     // 代表的是中序遍历序列的下一个节点
-    public int successor(TreeNode root) {
+    private static int successor(TreeNode root) {
         root = root.right;
         while (root.left != null) {root = root.left;}
         return root.val;
     }
 
     // 代表的是中序遍历序列的上一个节点
-    public int predecessor(TreeNode root) {
+    private static int predecessor(TreeNode root) {
         root = root.left;
         while (root.right != null) {root = root.right;}
         return root.val;

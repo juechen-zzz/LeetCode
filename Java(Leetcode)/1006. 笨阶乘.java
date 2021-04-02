@@ -27,7 +27,7 @@
 // stack
 class Solution {
     public int clumsy(int N) {
-        Deque<Integer> stack = new LinkedList<>();
+        Stack<Integer> stack = new Stack<>();
         stack.push(N);
         N--;
 
@@ -42,7 +42,7 @@ class Solution {
             else if (index % 4 == 2) {
                 stack.push(N);
             }
-            else if (index % 4 == 3) {
+            else {
                 stack.push(-N);
             }
             index++;
@@ -53,6 +53,7 @@ class Solution {
         while (!stack.isEmpty()) {
             ans += stack.pop();
         }
+
         return ans;
     }
 }
