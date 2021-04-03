@@ -11,11 +11,11 @@ val：储存叶子结点所代表的区域的值。1 对应 True，0 对应 Fals
 isLeaf: 当这个节点是一个叶子结点时为 True，如果它有 4 个子节点则为 False 。
 class Node {
     public boolean val;
-    public boolean isLeaf;
-    public Node topLeft;
-    public Node topRight;
-    public Node bottomLeft;
-    public Node bottomRight;
+    public boolean isLeaf;
+    public Node topLeft;
+    public Node topRight;
+    public Node bottomLeft;
+    public Node bottomRight;
 }
 
  */

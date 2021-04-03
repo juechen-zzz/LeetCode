@@ -12,8 +12,8 @@ s = "catsanddog"
 wordDict = ["cat", "cats", "and", "sand", "dog"]
 输出:
 [
-  "cats and dog",
-  "cat sand dog"
+  "cats and dog",
+  "cat sand dog"
 ]
 
  */

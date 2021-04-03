@@ -7,10 +7,10 @@
 
 返回规则如下：
 
-如果 version1 > version2 返回 1，
-如果 version1 < version2 返回 -1，
+如果 version1 > version2 返回 1，
+如果 version1 < version2 返回 -1，
 除此之外返回 0。
- 
+
 示例 1：
 输入：version1 = "1.01", version2 = "1.001"
 输出：0
