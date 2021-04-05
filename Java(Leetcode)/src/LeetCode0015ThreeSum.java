@@ -1,21 +1,27 @@
-/* 
-给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有满足条件且不重复的三元组。
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-注意：答案中不可以包含重复的三元组。
-示例：
-
-给定数组 nums = [-1, 0, 1, 2, -1, -4]，
-
-满足要求的三元组集合为：
-[
-  [-1, 0, 1],
-  [-1, -1, 2]
-]
-
+/**
+ * @description:
+ *      给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？
+ *      请你找出所有满足条件且不重复的三元组。
+ *      注意：答案中不可以包含重复的三元组。
+ *
+ * 示例：
+ *      给定数组 nums = [-1, 0, 1, 2, -1, -4]，
+ *      满足要求的三元组集合为：
+ *      [
+ *        [-1, 0, 1],
+ *        [-1, -1, 2]
+ *      ]
+ *
+ * 时间复杂度：O(n^2)
+ * 空间复杂度：O(logn)  排序
  */
 
-class Solution {
-    public List<List<Integer>> threeSum(int[] nums) {
+public class LeetCode0015ThreeSum {
+    private static List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> ans = new ArrayList<>();
         if (nums.length < 3) {return ans;}
@@ -41,5 +47,10 @@ class Solution {
         }
 
         return ans;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{-1, 0, 1, 2, -1, -4};
+        System.out.println(threeSum(nums));
     }
 }
