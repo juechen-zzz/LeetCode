@@ -30,9 +30,9 @@ class Solution {
             int index = 0;
             while (index < minLength){
                 char ch = strs[0].charAt(index);
-                for (int i = 0; i < strs.length; i++){
-                    if (strs[i].charAt(index) != ch) {
-                        return strs[0].substring(0, index);
+                for (String s : strs) {
+                    if (s.charAt(idx) != c) {
+                        return strs[0].substring(0, idx);
                     }
                 }
                 index++;
