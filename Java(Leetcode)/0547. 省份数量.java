@@ -20,20 +20,19 @@
 // BFS
 class Solution {
     public int findCircleNum(int[][] isConnected) {
-        int num = isConnected.length;
-        boolean[] visited = new boolean[num];
+        int n = isConnected.length;
+        boolean[] visited = new boolean[n];
         int ans = 0;
         Queue<Integer> queue = new LinkedList<>();
-        
-        for (int i = 0; i < num; i++){
-            // 首先判定这个点没访问过
-            if (!visited[i]){
+
+        for (int i = 0; i < n; i++) {
+            if (!visited[i]) {
                 queue.offer(i);
-                while (!queue.isEmpty()){
-                    int j = queue.poll();
-                    visited[j] = true;
-                    for (int k = 0; k < num; k++){
-                        if (isConnected[j][k] == 1 && !visited[k]){
+                while (!queue.isEmpty()) {
+                    int cur = queue.poll();
+                    visited[cur] = true;
+                    for (int k = 0; k < n; k++) {
+                        if (isConnected[cur][k] == 1 && !visited[k]) {
                             queue.offer(k);
                         }
                     }
@@ -41,6 +40,7 @@ class Solution {
                 ans++;
             }
         }
+
         return ans;
     }
 }
@@ -48,23 +48,23 @@ class Solution {
 // DFS 
 class Solution {
     public int findCircleNum(int[][] isConnected) {
-        int provinces = isConnected.length;
-        boolean[] visited = new boolean[provinces];
-        int circles = 0;
-        for (int i = 0; i < provinces; i++) {
+        int n = isConnected.length;
+        boolean[] visited = new boolean[n];
+        int ans = 0;
+        for (int i = 0; i < n; i++) {
             if (!visited[i]) {
-                dfs(isConnected, visited, provinces, i);
-                circles++;
+                dfs(isConnected, visited, n, i);
+                ans++;
             }
         }
-        return circles;
+        return ans;
     }
 
-    public void dfs(int[][] isConnected, boolean[] visited, int provinces, int i) {
-        for (int j = 0; j < provinces; j++) {
+    private static void dfs(int[][] isConnected, boolean[] visited, int n, int i) {
+        for (int j = 0; j < n; j++) {
             if (isConnected[i][j] == 1 && !visited[j]) {
                 visited[j] = true;
-                dfs(isConnected, visited, provinces, j);
+                dfs(isConnected, visited, n, j);
             }
         }
     }
@@ -107,9 +107,9 @@ class UnionFind {
         }
         
         while(x != root){
-            int original_father = father.get(x);
+            int originFather = father.get(x);
             father.put(x,root);
-            x = original_father;
+            x = originFather;
         }
         
         return root;
