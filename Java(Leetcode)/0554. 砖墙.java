@@ -30,9 +30,12 @@ class Solution {
                 map.put(sum, map.getOrDefault(sum, 0) + 1);
             }
         }
+
         int ans = wall.size();
-        for (int key: map.keySet())
+        for (int key : map.keySet()) {
             ans = Math.min(ans, wall.size() - map.get(key));
+        }
+
         return ans;
     }
 }

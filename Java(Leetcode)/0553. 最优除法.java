@@ -31,6 +31,7 @@ class Solution {
             ans.append("/" + nums[i]);
         }
         ans.append(")");
+
         return ans.toString();
     }
 }
