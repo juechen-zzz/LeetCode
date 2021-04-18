@@ -31,8 +31,7 @@ class Solution {
     public int findJudge(int N, int[][] trust) {
         int n = trust.length;
         if (n == 0) {return N == 1 ? 1 : -1;}
-        int m = 2;
-
+        
         int[][] graph = new int[N + 1][N + 1];
         for (int i = 0; i < n; i++) {graph[trust[i][0]][trust[i][1]] = 1;}
 
@@ -42,7 +41,7 @@ class Solution {
             for (int j = 1; j <= N && vote == 0; j++) {
                 vote += graph[i][j];
             }
-            
+
             int ticket = 0;
             if (vote > 0) {continue;}
             else {
@@ -55,7 +54,7 @@ class Solution {
                 ans = i;
                 break;
             }
-        } 
+        }
 
         return ans;
     }

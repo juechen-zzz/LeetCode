@@ -20,32 +20,35 @@
 // 滑动窗口
 class Solution {
     public boolean checkInclusion(String s1, String s2) {
-        HashMap<Character, Integer> need = new HashMap<>();
-        HashMap<Character, Integer> window = new HashMap<>();
-        for (int i = 0; i < s1.length(); i++){
+        Map<Character, Integer> need = new HashMap<>();
+        Map<Character, Integer> window = new HashMap<>();
+        for (int i = 0; i < s1.length(); i++) {
             char c = s1.charAt(i);
             need.put(c, need.getOrDefault(c, 0) + 1);
         }
 
         int left = 0, right = 0;
         int valid = 0;
-        
-        while (right < s2.length()){
+
+        while (right < s2.length()) {
             char c = s2.charAt(right);
             right++;
-            if (need.containsKey(c)){
+            if (need.containsKey(c)) {
                 window.put(c, window.getOrDefault(c, 0) + 1);
                 if (window.get(c) - need.get(c) == 0) {valid++;}
             }
-            while (right - left >= s1.length()){
-                if (valid == need.size()){return true;}
+
+            while (right - left >= s1.length()) {
+                if (valid == need.size()) {return true;}
                 char d = s2.charAt(left);
                 left++;
-                if (need.containsKey(d)){
+                if (need.containsKey(d)) {
                     if (window.get(d) - need.get(d) == 0) {valid--;}
                     window.put(d, window.getOrDefault(d, 0) - 1);
                 }
             }
         }
+
         return false;
+    }
 }
