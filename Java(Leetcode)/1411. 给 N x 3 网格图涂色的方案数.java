@@ -18,7 +18,6 @@
 输出：54
  */
 
-
 class Solution {
     public int numOfWays(int n) {
         long dp2 = 6, dp3 = 6, mod = 1000000007;
