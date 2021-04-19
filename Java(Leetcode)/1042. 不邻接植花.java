@@ -33,7 +33,6 @@ class Solution {
     public int[] gardenNoAdj(int n, int[][] paths) {
         /* 这是一道简单题，限制每个节点的度为3，同时提供四种颜色，因此不需要回溯 */
         /* 初始化节点，使用map保存节点与其临界点的关系 */
-        /* 第一版本采用了内部类构建，参考评论区的HashMap更简洁 */
         Map<Integer, Set<Integer>> graph = new HashMap<>();
         for (int i = 0; i < n; i++) {
             graph.put(i, new HashSet<>());
