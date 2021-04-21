@@ -23,14 +23,15 @@
 class Solution {
     public List<List<String>> findDuplicate(String[] paths) {
         Map<String, List<String>> map = new HashMap<>();
-        for (String p : paths) {
-            String[] values = p.split(" ");
+        for (String s : paths) {
+            String[] values = s.split(" ");
             for (int i = 1; i < values.length; i++) {
-                String[] nameContent = values[i].split("\\(");
-                nameContent[1] = nameContent[1].replace(")", "");
-                List<String> list = map.getOrDefault(nameContent[1], new ArrayList<String>());
-                list.add(values[0] + "/" + nameContent[0]);
-                map.put(nameContent[1], list);
+                String[] contents = values[i].split("\\(");
+                contents[1] = contents[1].replace(")", "");
+
+                List<String> list = map.getOrDefault(contents[1], new ArrayList<String>());
+                list.add(values[0] + "/" + contents[0]);
+                map.put(contents[1], list);
             }
         }
 
