@@ -35,7 +35,7 @@ class MyHashSet {
     /** Initialize your data structure here. */
     public MyHashSet() {
         data = new LinkedList[BASE];
-        for (int i = 0; i < BASE; ++i) {
+        for (int i = 0; i < BASE; i++) {
             data[i] = new LinkedList<Integer>();
         }
     }
@@ -45,9 +45,7 @@ class MyHashSet {
         Iterator<Integer> iterator = data[h].iterator();
         while (iterator.hasNext()) {
             Integer element = iterator.next();
-            if (element == key) {
-                return;
-            }
+            if (element == key) {return;}
         }
         data[h].offerLast(key);
     }
@@ -70,9 +68,7 @@ class MyHashSet {
         Iterator<Integer> iterator = data[h].iterator();
         while (iterator.hasNext()) {
             Integer element = iterator.next();
-            if (element == key) {
-                return true;
-            }
+            if (element == key) {return true;}
         }
         return false;
     }
@@ -81,3 +77,11 @@ class MyHashSet {
         return key % BASE;
     }
 }
+
+/**
+ * Your MyHashSet object will be instantiated and called as such:
+ * MyHashSet obj = new MyHashSet();
+ * obj.add(key);
+ * obj.remove(key);
+ * boolean param_3 = obj.contains(key);
+ */
