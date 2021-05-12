@@ -33,13 +33,13 @@ class Solution {
         int[] sum = new int[maxVal + 1];
         for (int n : nums) {sum[n] += n;}
 
-        int len = sum.length;
         int first = sum[0], second = Math.max(sum[0], sum[1]);
-        for (int i = 2; i < len; i++) {
+        for (int i = 2; i < maxVal + 1; i++) {
             int tmp = second;
             second = Math.max(first + sum[i], second);
             first = tmp;
         }
+        
         return second;
     }
 }
