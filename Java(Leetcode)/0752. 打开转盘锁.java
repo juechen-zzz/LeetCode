@@ -23,9 +23,9 @@
 // 1 BFS
 class Solution {
     public int openLock(String[] deadends, String target) {
-        // 记录需要跳过的（包括限制不能出现的和已经访问过的）
         Set<String> deads = new HashSet<>();
-        for (String s : deadends){deads.add(s);}
+        for (String s : deadends) {deads.add(s);}
+
         Queue<String> queue = new LinkedList<>();
         Set<String> visited = new HashSet<>();
 
@@ -33,21 +33,21 @@ class Solution {
         queue.offer("0000");
         visited.add("0000");
 
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             int n = queue.size();
-            for (int i = 0; i < n; i++){
+            for (int i = 0; i < n; i++) {
                 String cur = queue.poll();
-                if (deads.contains(cur)){continue;}
-                if (cur.equals(target)){return step;}
+                if (deads.contains(cur)) {continue;}
+                if (cur.equals(target)) {return step;}
 
-                for (int j = 0; j < 4; j++){
+                for (int j = 0; j < 4; j++) {
                     String up = nextOne(cur, j).get(0);
-                    if (!visited.contains(up)){
+                    if (!visited.contains(up)) {
                         queue.offer(up);
                         visited.add(up);
                     }
                     String down = nextOne(cur, j).get(1);
-                    if (!visited.contains(down)){
+                    if (!visited.contains(down)) {
                         queue.offer(down);
                         visited.add(down);
                     }
@@ -58,20 +58,20 @@ class Solution {
         return -1;
     }
 
-    public List<String> nextOne(String s, int index){
-        List<String> res = new LinkedList<>();
+    private List<String> nextOne(String s, int idx) {
+        List<String> ans = new LinkedList<>();
 
-        char[] upCh = s.toCharArray();
-        if (upCh[index] == '9') {upCh[index] = '0';}
-        else {upCh[index] += 1;}
-        res.add(new String(upCh));
-        
-        char[] downCh = s.toCharArray();
-        if (downCh[index] == '0') {downCh[index] = '9';}
-        else {downCh[index] -= 1;}
-        res.add(new String(downCh));
+        char[] upChar = s.toCharArray();
+        if (upChar[idx] == '9') {upChar[idx] = '0';}
+        else {upChar[idx] += 1;}
+        ans.add(new String(upChar));
 
-        return res;
+        char[] downChar = s.toCharArray();
+        if (downChar[idx] == '0') {downChar[idx] = '9';}
+        else {downChar[idx] -= 1;}
+        ans.add(new String(downChar));
+
+        return ans;
     }
 }
 
