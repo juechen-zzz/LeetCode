@@ -31,7 +31,8 @@ class Solution {
         int sum = 0;
         for (int k : count.keySet()) {
             int v = count.get(k);
-            sum += (k + v) / (k + 1) * (k + 1);
+            // 如果有x只兔子回答y,那么至少有x / (y + 1)种不同的颜色，且每种颜色有 y + 1只兔子 
+            sum += (k + v) / (k + 1) * (k + 1);         
         }
 
         return sum;

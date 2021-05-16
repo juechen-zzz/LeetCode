@@ -43,3 +43,14 @@ class Solution {
         return ans;
     }
 }
+
+// 暴力
+class Solution {
+    public int findMaximumXOR(int[] nums) {
+        int ans = Integer.MIN_VALUE;
+        for (int i = 0; i < nums.length; i++)
+            for (int j = i; j < nums.length; j++)
+                ans = Math.max(nums[i] ^ nums[j], ans);
+        return ans;
+    }
+}
