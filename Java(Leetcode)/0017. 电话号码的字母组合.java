@@ -11,27 +11,28 @@
  */
 
 class Solution {
-    public String[] map = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-    public StringBuilder sb = new StringBuilder();
-    public List<String> ans = new ArrayList<>();
+    private static String[] map = new String[]{"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
     public List<String> letterCombinations(String digits) {
-        if (digits.length() == 0) {return ans;}
-        backtrack(digits, 0);
+        if (digits.length() == 0) {return new ArrayList<>();}
+        
+        StringBuilder sb = new StringBuilder();
+        List<String> ans = new ArrayList<>();
+        myMethod(digits, ans, sb, 0);
         return ans;
     }
 
-    public void backtrack(String digits, int index) {
+    private static void myMethod(String digits, List<String> ans, StringBuilder sb,  int idx) {
         if (sb.length() == digits.length()) {
             ans.add(sb.toString());
             return;
         }
 
-        String val = map[digits.charAt(index) - '2'];
+        String val = map[digits.charAt(idx) - '2'];
 
-        for (char ch : val.toCharArray()) {
-            sb.append(ch);
-            backtrack(digits, index + 1);
+        for (char c : val.toCharArray()) {
+            sb.append(c);
+            myMethod(digits, ans, sb, idx + 1);
             sb.deleteCharAt(sb.length() - 1);
         }
     }

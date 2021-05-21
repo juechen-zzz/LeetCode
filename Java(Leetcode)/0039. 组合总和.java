@@ -31,27 +31,25 @@ class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         Arrays.sort(candidates);
         List<List<Integer>> ans = new ArrayList<>();
-        List<Integer> track = new ArrayList<>();
-        backtrack(candidates, target, ans, track, 0, 0);
+        List<Integer> path = new ArrayList<>();
+        myMethod(candidates, target, ans, path, 0, 0);
         return ans;
     }
 
-    public void backtrack(int[] candidates, int target, List<List<Integer>> ans, List<Integer> track, int sum, int begin) {
+    private static void myMethod(int[] candidates, int target, List<List<Integer>> ans, List<Integer> path, int sum, int begin) {
         if (sum == target) {
-            ans.add(new ArrayList(track));
+            ans.add(new ArrayList<>(path));
             return;
         }
+
         for (int i = begin; i < candidates.length; i++) {
-            if (i > begin && candidates[i] == candidates[i - 1]) {continue;}
-            int curSum = candidates[i] + sum;
+            int curSum = sum + candidates[i];
             if (curSum <= target) {
-                track.add(candidates[i]);
-                backtrack(candidates, target, ans, track, curSum, i);
-                track.remove(track.size() - 1);
+                path.add(candidates[i]);
+                myMethod(candidates, target, ans, path, curSum, i);
+                path.remove(path.size() - 1);
             }
-            else {
-                break;
-            }
+            else {break;}
         }
     }
 }

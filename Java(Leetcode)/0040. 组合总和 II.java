@@ -43,6 +43,7 @@ class Solution {
         }
 
         for (int i = begin; i < candidates.length; i++) {
+            // 解集不能包含重复的组合
             if (i > begin && candidates[i] == candidates[i - 1]) {continue;}
             int curSum = candidates[i] + sum;
             if (curSum <= target) {

@@ -16,26 +16,27 @@
  */
 
 class Solution {
-    List<List<Integer>> ans = new ArrayList<>();
-    List<Integer> tmp = new ArrayList<>();
-
     public List<List<Integer>> combine(int n, int k) {
-        dfs(n, k, 1);
+        int[] nums = new int[n];
+        for (int i = 0; i < n; i++) {nums[i] = i + 1;}
+
+        List<List<Integer>> ans = new ArrayList<>();
+        List<Integer> path = new ArrayList<>();
+        myMethod(nums, k, ans, path, 0);
+
         return ans;
     }
 
-    public void dfs(int n, int k, int cur) {
-        if (tmp.size() + (n - cur + 1) < k) {return;}
-
-        if (tmp.size() == k) {
-            ans.add(new ArrayList<>(tmp));
+    private static void myMethod(int[] nums, int k, List<List<Integer>> ans, List<Integer> path, int begin) {
+        if (path.size() == k) {
+            ans.add(new ArrayList<>(path));
             return;
         }
 
-        tmp.add(cur);
-        dfs(n, k, cur + 1);
-        tmp.remove(tmp.size() - 1);
-
-        dfs(n, k, cur + 1);
+        for (int i = begin; i < nums.length; i++) {
+            path.add(nums[i]);
+            myMethod(nums, k, ans, path, i + 1);
+            path.remove(path.size() - 1);
+        }
     }
 }
