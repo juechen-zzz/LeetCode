@@ -19,23 +19,22 @@
  */
 
 class Solution {
-    List<List<Integer>> ans = new ArrayList<>();
-    List<Integer> path = new ArrayList<>();
-
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         Arrays.sort(nums);
-        backtrack(nums, 0);
+
+        List<List<Integer>> ans = new ArrayList<>();
+        List<Integer> path = new ArrayList<>();
+        myMethod(nums, ans, path, 0);
+
         return ans;
     }
 
-    private void backtrack(int[] nums, int idx) {
-        if (!ans.contains(path)) {
-            ans.add(new ArrayList<>(path));
-        }
-
-        for (int i = idx; i < nums.length; i++) {
+    private static void myMethod(int[] nums, List<List<Integer>> ans, List<Integer> path, int begin) {
+        Collections.sort(path);
+        if (!ans.contains(path)) {ans.add(new ArrayList<>(path));}
+        for (int i = begin; i < nums.length; i++) {
             path.add(nums[i]);
-            backtrack(nums, i + 1);
+            myMethod(nums, ans, path, i + 1);
             path.remove(path.size() - 1);
         }
     }
