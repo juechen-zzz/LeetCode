@@ -62,17 +62,17 @@ class Solution {
         return ans;
     }
 
-    private static void dfs(int u, List<Integer>[] graph, Set<Integer>[] visited) {
-        if (visited[u] != null) {return;}
+    private static void dfs(int node, List<Integer>[] graph, Set<Integer>[] visited) {
+        if (visited[node] != null) {return;}
 
-        visited[u] = new HashSet<>();
-        visited[u].add(u);
+        visited[node] = new HashSet<>();
+        visited[node].add(node);
 
         // 将子节点的后修课程加入父节点的后修课程
-        for (int neigh : graph[u]) {
+        for (int neigh : graph[node]) {
             dfs(neigh, graph, visited);
             for (int cur : visited[neigh]) {
-                visited[u].add(cur);
+                visited[node].add(cur);
             }
         }
     }
